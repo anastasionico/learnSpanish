@@ -46,12 +46,12 @@ return [
         ],
 
         'mysql' => [
+            'host' => env(RDS_HOSTNAME, '127.0.0.1'),
+            'port' => env(RDS_PORT, '3306'),
+            'database' => env(RDS_DB_NAME, 'learnSpanish'),
+            'username' => env(RDS_USERNAME, 'root'),
+            'password' => env(RDS_PASSWORD, ''),
             'driver' => 'mysql',
-            'host' => RDS_HOSTNAME,
-            'port' => env('DB_PORT', '3306'),
-            'database' => RDS_DB_NAME,
-            'username' => RDS_USERNAME,
-            'password' => RDS_PASSWORD,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
