@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Learn Spanish with AWS
+                    Learn Spanish with AWS (2rd day)
                 </div>
 
                 <div class="links">
