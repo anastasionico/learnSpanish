@@ -59,8 +59,10 @@ $response->send();
 
 $kernel->terminate($request, $response);
 
+/*
+Test connection to database
 if(DB::connection()->getDatabaseName())
 {
-   echo "Connected to database ".DB::connection()->getDatabaseName();
+	echo "Connected to database ".DB::connection()->getDatabaseName();
 }
-
+*/
