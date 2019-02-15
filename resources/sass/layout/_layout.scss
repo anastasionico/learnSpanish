@@ -1,0 +1,26 @@
+.navbar-nav {
+	.nav-item{
+		.nav-link {
+			border:2px solid $greenLight;	
+			padding: 0 4rem;
+			margin: 0 0.5rem;
+			font-size: 0.9rem;
+			color: $greenLight;
+			@include borderRadius(30px)
+			transition: all 0.3s ease-in-out;
+			&:hover{
+				background: $greenLight;
+				color:$white;
+			}			
+			&.filled{
+				background: $greenLight;
+				color: $white;
+				&:hover{
+					background: $white;
+					color:$greenLight;
+				}			
+			}
+			
+		}
+	}	
+}

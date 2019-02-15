@@ -1,0 +1,5 @@
+@mixin borderRadius($percentage){
+  -webkit-border-radius: $percentage;
+  -moz-border-radius: $percentage;
+  border-radius: $percentage;
+}

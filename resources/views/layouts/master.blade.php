@@ -25,8 +25,13 @@
        	@include('layouts.header')	
     
        	<main class="py-4">
-            @yield('content')
-        </main>
+            @yield('hero')
+			@yield('contentOne')
+			@yield('contentTwo')
+			@yield('contentThree')
+			@yield('contentFour')
+			@yield('contentFive')
+		</main>
     
        	@include('layouts.footer')	
     </div>
