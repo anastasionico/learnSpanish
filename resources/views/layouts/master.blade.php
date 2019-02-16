@@ -24,7 +24,7 @@
     <div id="app">
        	@include('layouts.header')	
     
-       	<main class="py-4">
+       	<main>
             <div class="container-fluid">
                 @yield('hero')
     			@yield('contentOne')

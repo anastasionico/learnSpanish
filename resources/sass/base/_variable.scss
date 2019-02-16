@@ -29,10 +29,13 @@ $success :#28B959;
 .bg-grayLight{
 		background-color:$grayLight !important;
 }
+.bg-transparent{
+		background-color:transparent; !important;
+}
 
-// // border
-// .border-blue{
-// 	border-color:$blue;
+// Border
+.border-greenLight{
+	border-color:$greenLight;
 // }
 // .border-white{
 // 	border-color:$white;
