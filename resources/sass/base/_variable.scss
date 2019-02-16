@@ -3,14 +3,61 @@ $greenDark:#080;
 $orange:#f75;
 
 
-$grayLight:#bbb;
+$grayLight:#eee;
 $gray:#888;
 $grayDark:#555;
 $white:#fff;
 
 $orange:#E87009;
+$alert :#f82329;
 $warning :#E8C309;
 $info :#69c;
 $danger:#f82009;
-
 $success :#28B959;
+
+
+// Background
+.bg-greenLight{
+		background-color:$greenLight !important;
+}
+.bg-orange{
+		background-color:$orange !important;
+}
+.bg-white{
+		background-color:$white !important;
+}
+.bg-grayLight{
+		background-color:$grayLight !important;
+}
+
+// // border
+// .border-blue{
+// 	border-color:$blue;
+// }
+// .border-white{
+// 	border-color:$white;
+// }
+
+
+// cClor
+.c-white{
+	color:$white !important;
+}
+.c-greenLight{
+	color:$greenLight !important;
+}
+.c-greenDark{
+	color:$greenDark !important;
+}
+.c-orange{
+	color:$orange !important;
+}
+.c-alert{
+	color:$alert !important;
+}
+.c-warning{
+	color:$warning !important;
+}
+.c-info{
+	color:$info !important;
+}

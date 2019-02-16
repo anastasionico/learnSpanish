@@ -25,12 +25,15 @@
        	@include('layouts.header')	
     
        	<main class="py-4">
-            @yield('hero')
-			@yield('contentOne')
-			@yield('contentTwo')
-			@yield('contentThree')
-			@yield('contentFour')
-			@yield('contentFive')
+            <div class="container-fluid">
+                @yield('hero')
+    			@yield('contentOne')
+    			@yield('contentTwo')
+    			@yield('contentThree')
+    			@yield('contentFour')
+    			@yield('contentFive')
+                @yield('contentSix')
+            </div>
 		</main>
     
        	@include('layouts.footer')	
