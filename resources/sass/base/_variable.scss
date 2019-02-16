@@ -1,66 +1,66 @@
-$greenLight: #8f8;
-$greenDark:#080;
-$orange:#f75;
+$greenLight: #92bf2a;
+$greenDark:#608019;
+$orange:#ea6837;
 
 
-$grayLight:#eee;
-$gray:#888;
+$grayLight:#f7f5f5;
+$gray:#272b20;
 $grayDark:#555;
 $white:#fff;
+$black:#111;
 
-$orange:#E87009;
 $alert :#f82329;
-$warning :#E8C309;
-$info :#69c;
-$danger:#f82009;
+$warning :#f5c640;
+$info :#3eaca9;
+$danger:#d73d31;
 $success :#28B959;
 
 
 // Background
 .bg-greenLight{
-		background-color:$greenLight !important;
+		background-color:$greenLight;
 }
 .bg-orange{
-		background-color:$orange !important;
+		background-color:$orange;
 }
 .bg-white{
-		background-color:$white !important;
+		background-color:$white;
 }
 .bg-grayLight{
-		background-color:$grayLight !important;
+		background-color:$grayLight;
 }
-.bg-transparent{
-		background-color:transparent; !important;
+.bg-empty{
+		background-color:transparent;
 }
 
 // Border
 .border-greenLight{
 	border-color:$greenLight;
-// }
-// .border-white{
-// 	border-color:$white;
-// }
+}
 
 
-// cClor
+// Color
 .c-white{
-	color:$white !important;
+	color:$white;
 }
 .c-greenLight{
-	color:$greenLight !important;
+	color:$greenLight;
 }
 .c-greenDark{
-	color:$greenDark !important;
+	color:$greenDark;
 }
 .c-orange{
-	color:$orange !important;
+	color:$orange;
 }
 .c-alert{
-	color:$alert !important;
+	color:$alert;
 }
 .c-warning{
-	color:$warning !important;
+	color:$warning;
 }
 .c-info{
-	color:$info !important;
+	color:$info;
+}
+.c-grayLight{
+	color:$grayLight;
 }

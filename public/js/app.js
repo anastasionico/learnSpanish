@@ -48865,7 +48865,7 @@ if (false) {
 /* 44 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n\t\tbackground-color:transparent; !important;\n                              ^\n      Invalid CSS after \"...or:transparent;\": expected \"}\", was \"!important;\"\n      in /var/www/LearnSpanish/resources/sass/base/_variable.scss (line 33, column 32)\n    at runLoaders (/var/www/LearnSpanish/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /var/www/LearnSpanish/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /var/www/LearnSpanish/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/var/www/LearnSpanish/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/var/www/LearnSpanish/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/var/www/LearnSpanish/node_modules/neo-async/async.js:8077:18)\n    at options.error (/var/www/LearnSpanish/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

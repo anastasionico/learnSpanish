@@ -1,36 +1,44 @@
-<footer>
-	<div class="row p-3 text-center c-greenLight" style='background: black'>
-        <div class="col-sm-12 col-lg-4">
+<footer  class="container-fluid">
+	<div class="row p-5 c-greenLight">
+        <div class="col-sm-12 col-lg-4 text-left slogan">
         	<p>Logo espapaya.com</p>
-        	<p class="c-orange">Learn Spanish verbs</p>
-        	<p class="">More efficiently</p>
+        	<p class="c-orange mb-0">Learn Spanish verbs.</p>
+        	<p class="mb-0">More efficiently.</p>
         </div>
-        <div class="col-sm-12 col-lg-4">
-        	<p>Contact Us</p>
+        <div class="col-sm-12 col-lg-4  text-left">
+        	<h5 class="mb-3">Contact Us</h5>
 
         	<form action="/messages">
         		@csrf
 			  	
-			  	<div class="form-group">
-			    	<input type="name" class="form-control" id="name">
+			  	<div class="form-group m-0 mb-3">
+			    	<input type="name" class="form-control p-0" id="name" placeholder="Name (required)">
 			  	</div>
-			  	<div class="form-group">
-			    	<input type="email" class="form-control" id="email">
+			  	<div class="form-group m-0 mb-3">
+			    	<input type="email" class="form-control p-0" id="email"  placeholder="E-mail Address (required)">
 			  	</div>
 			  	
 
-			  	<div class="form-group">
-			      	<textarea name='message' class="form-control">
-						Insert message
+			  	<div class="form-group m-0 mb-3">
+			      	<textarea name='message' class="form-control p-0" rows="1">Message
 					</textarea>
 			  	</div>
-			  	<button type="submit" class="button border-greenLight c-greenLight bg-transparent">GET IN TOUCH</button>
+			  	<button type="submit" class="button border-greenLight c-greenLight bg-empty">
+                    <b>GET IN TOUCH</b>
+                </button>
 			</form>
         </div>
-        <div class="col-sm-12 col-lg-4  c-greenLight">
-        	<p>insta logo</p>
-        	<p>insta logo</p>
-        	<p>insta logo</p>
+        <div class="col-sm-12 col-lg-4  c-greenLight  text-left"> 
+        	<p>Twitter</p>
+            <p>Terms & Conditions</p>
+        	<p>Privacy & Cookie Policy</p>
         </div>
+    </div>
+    <div class="row p-2 text-center c-greenLight copyright">
+        <div class="col-sm-12 col-lg-4 text-left"></div>
+        <div class="col-sm-12 col-lg-4 text-left c-greenLight">
+                <small>Copyright &copy; 2019</small>
+        </div>
+        <div class="col-sm-12 col-lg-4 text-left"></div>
     </div>
 </footer>
