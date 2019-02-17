@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/*!
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,900);/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -11639,29 +11639,6 @@ a.text-dark:focus {
   }
 }
 
-p {
-  font-size: 1.5rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Nunito-Black", "Nunito", sans-serif;
-  font-weight: 900;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
 .bg-greenLight {
   background-color: #92bf2a;
 }
@@ -11718,11 +11695,38 @@ a:hover {
   color: #f7f5f5;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .navbar-nav .nav-item .nav-link {
   border: 2px solid #92bf2a;
   padding: 0.2rem 3rem;
   margin: 0 0.5rem;
   font-size: 0.9rem;
+  font-family: 'Montserrat-Black', sans-serif;
   color: #92bf2a;
   border-radius: 30px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -11778,7 +11782,7 @@ a:hover {
 .hero,
 .description,
 .section-cta {
-  font-size: 2.1rem;
+  font-size: 1.9rem;
 }
 
 .hero .button,
@@ -11794,6 +11798,10 @@ a:hover {
 
 .hero-sub {
   background: #92bf2a;
+}
+
+.hero-sub p {
+  font-size: 2.1rem;
 }
 
 footer {
