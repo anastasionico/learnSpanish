@@ -11788,11 +11788,16 @@ a:hover {
 }
 
 .hero {
+  background-size: cover;
+  height: 39rem;
+}
+
+.hero-sub {
   background: #92bf2a;
 }
 
 footer {
-  background: #272b20;
+  background-size: cover;
 }
 
 footer p {
@@ -11801,6 +11806,10 @@ footer p {
 
 footer .slogan p {
   font-size: 1.2rem;
+}
+
+footer .social {
+  width: 20px;
 }
 
 footer .button {

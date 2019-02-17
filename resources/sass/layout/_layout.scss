@@ -50,11 +50,15 @@
 	}
 }
 .hero {
-	background:$greenLight;
+	background-size:cover;
+	height: 39rem;
+	&-sub {
+		background:$greenLight;
+	}
 }
 
 footer{
-	background:$gray;
+	background-size:cover;
 	p{
 		font-size: 0.8rem;		
 	}
@@ -63,6 +67,9 @@ footer{
 			font-size: 1.2rem;			
 			
 		}
+	}
+	.social {
+		width: 20px;
 	}
 	.button {
 		font-size: 0.8rem;			

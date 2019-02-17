@@ -1,13 +1,11 @@
 @extends('layouts.master')
 
 @section('hero')
-    <div class="row p-5 text-center hero">
+    <div class="row hero" style="background-image: url({{asset('img/home/hero.jpg')}});">
+    </div>
+    <div class="row pb-5 text-center hero-sub">
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 col-lg-8">
-
-            <h1 class="c-white">
-                Logo Hola!
-            </h1>
             <p class="c-white">
                 Learn Spanish Verbs. <b>More Efficiently.</b>
             </p  class="c-white bg-orange">
@@ -16,6 +14,7 @@
             </a>
         </div>
         <div class="col-sm-12 col-lg-2"></div>
+
     </div>
 @endsection
 
@@ -35,16 +34,16 @@
             <h2 class="c-orange">Verb Practice Gameplay</h2>
             <p>Our verb practice gamelplay brings together the most important Spanish verb conjugations over all tenses. present, preterite, imperfect, conditional,future,present subjunctive, imperfect subjunctive, affirmative and negative iperatives.</p>
         </div>
-        <div class="col-sm-12 col-lg-4">
-            <p>Target Logo</p>
+        <div class="col-sm-12 col-lg-4 text-center">
+            <img src="{{asset('img/home/target.png')}}" class="w-50">
         </div>
         
     </div>
 @endsection
 @section('contentThree')
     <div class="row p-5 text-left bg-white warning">
-        <div class="col-sm-12 col-lg-4">
-            <p>user Logo</p>
+        <div class="col-sm-12 col-lg-4 text-center">
+            <img src="{{asset('img/home/userIcon.png')}}" class="w-50">
         </div>
         <div class="col-sm-12 col-lg-8">
             <h2 class="c-warning">Efficient Learning</h2>
@@ -66,16 +65,16 @@
                 Our advanced system also group together identica and similar verb form. so that you don't waste time learning the same verb forms.
             </p>
         </div>
-        <div class="col-sm-12 col-lg-4">
-            <p>Brain Logo</p>
+        <div class="col-sm-12 col-lg-4 text-center">
+            <img src="{{asset('img/home/brain.png')}}" class="w-50">
         </div>
         
     </div>
 @endsection
 @section('contentFive')
     <div class="row p-5 text-left bg-white danger">
-        <div class="col-sm-12 col-lg-4">
-            <p>user Logo</p>
+        <div class="col-sm-12 col-lg-4 text-center">
+            <img src="{{asset('img/home/adFree.png')}}" class="w-50">
         </div>
         <div class="col-sm-12 col-lg-8">
             <h2 class="c-alert">Ad-free learning</h2>
