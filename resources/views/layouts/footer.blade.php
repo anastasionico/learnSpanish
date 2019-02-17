@@ -1,7 +1,7 @@
 <footer  class="container-fluid"  style="background-image: url({{asset('img/footer.jpg')}});">>
 	<div class="row p-5 c-greenLight">
         <div class="col-sm-12 col-lg-4 text-left slogan">
-        	<img src="{{asset('img/EspapyaLogo.png')}}" class="w-50 pb-4">
+            <a href="{{ url('/') }}"><img src="{{asset('img/EspapyaLogo.png')}}" class="w-50 pb-4"></a>
         	<p class="c-orange mb-0">Learn Spanish verbs.</p>
         	<p class="mb-0">More efficiently.</p>
         </div>
@@ -30,8 +30,8 @@
         </div>
         <div class="col-sm-12 col-lg-4 c-greenLight text-left"> 
         	<img src="{{asset('img/social/twitterLogo.svg')}}" class="mb-3 social">
-            <p><a href="#">Terms & Conditions</a></p>
-        	<p><a href="#">Privacy & Cookie Policy</a></p>
+            <p><a href="terms">Terms & Conditions</a></p>
+        	<p><a href="privacy">Privacy & Cookie Policy</a></p>
         </div>
     </div>
     <div class="row p-2 text-center c-greenLight copyright">

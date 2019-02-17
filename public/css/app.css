@@ -11718,7 +11718,10 @@ a {
 }
 
 a:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
+  color: #ea6837;
 }
 
 .navbar-nav .nav-item .nav-link {
