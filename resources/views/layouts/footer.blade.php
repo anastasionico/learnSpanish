@@ -1,4 +1,4 @@
-<footer  class="container-fluid"  style="background-image: url({{asset('img/footer.jpg')}});">>
+<footer  class="container-fluid"  style="background-image: url({{asset('img/footer.jpg')}});">
 	<div class="row p-5 c-greenLight">
         <div class="col-sm-12 col-lg-4 text-left slogan">
             <a href="{{ url('/') }}"><img src="{{asset('img/EspapyaLogo.png')}}" class="w-50 pb-4"></a>

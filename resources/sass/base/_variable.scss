@@ -29,6 +29,12 @@ $success :#28B959;
 .bg-grayLight{
 		background-color:$grayLight;
 }
+.bg-warning{
+		background-color:$warning;
+}
+.bg-danger{
+		background-color:$danger;
+}
 .bg-empty{
 		background-color:transparent;
 }
@@ -36,6 +42,9 @@ $success :#28B959;
 // Border
 .border-greenLight{
 	border:2px solid $greenLight;
+}
+.border-danger{
+	border:2px solid $danger;
 }
 
 
@@ -57,6 +66,9 @@ $success :#28B959;
 }
 .c-warning{
 	color:$warning;
+}
+.c-danger{
+	color:$danger;
 }
 .c-info{
 	color:$info;

@@ -11655,12 +11655,24 @@ a.text-dark:focus {
   background-color: #f7f5f5;
 }
 
+.bg-warning {
+  background-color: #f5c640;
+}
+
+.bg-danger {
+  background-color: #d73d31;
+}
+
 .bg-empty {
   background-color: transparent;
 }
 
 .border-greenLight {
   border: 2px solid #92bf2a;
+}
+
+.border-danger {
+  border: 2px solid #d73d31;
 }
 
 .c-white {
@@ -11685,6 +11697,10 @@ a.text-dark:focus {
 
 .c-warning {
   color: #f5c640;
+}
+
+.c-danger {
+  color: #d73d31;
 }
 
 .c-info {

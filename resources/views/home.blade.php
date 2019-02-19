@@ -85,7 +85,7 @@
             Work smart, not hard, with <b>espapaya.com</b>
         </div>
         <div class="col-sm-12 col-lg-4 text-center">
-            <a href='#' class="button bg-orange">
+            <a href='/start-quiz' class="button bg-orange">
                 Start Today
             </a>
         </div>
