@@ -9,7 +9,7 @@
             <p class="c-white">
                 Learn Spanish Verbs. <b>More Efficiently.</b>
             </p  class="c-white bg-orange">
-            <a href='#' class="button bg-orange">
+            <a href='/start-quiz' class="button bg-orange">
                 Start Today
             </a>
         </div>

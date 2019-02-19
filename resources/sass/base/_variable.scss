@@ -4,7 +4,7 @@ $orange:#ea6837;
 
 
 $grayLight:#f7f5f5;
-$gray:#272b20;
+// $gray:#272b20;
 $grayDark:#555;
 $white:#fff;
 $black:#111;
@@ -35,7 +35,7 @@ $success :#28B959;
 
 // Border
 .border-greenLight{
-	border-color:$greenLight;
+	border:2px solid $greenLight;
 }
 
 

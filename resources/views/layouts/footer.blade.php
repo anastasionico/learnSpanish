@@ -12,7 +12,7 @@
         		@csrf
 			  	
 			  	<div class="form-group m-0 mb-3">
-			    	<input type="name" class="form-control p-0" id="name" placeholder="Name (required)">
+			    	<input type="text" class="form-control p-0" id="name" placeholder="Name (required)">
 			  	</div>
 			  	<div class="form-group m-0 mb-3">
 			    	<input type="email" class="form-control p-0" id="email"  placeholder="E-mail Address (required)">

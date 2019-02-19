@@ -20,7 +20,12 @@ Route::get('/terms', function () {
 Route::get('/privacy', function () {
     return view('privacy');
 });
-
+Route::get('/start-quiz', function () {
+    return view('start-quiz');
+});
+Route::get('/quiz', function () {
+    return view('quiz');
+});
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
