@@ -37,8 +37,15 @@
     <div class="row p-2 text-center c-greenLight copyright">
         <div class="col-sm-12 col-lg-4 text-left"></div>
         <div class="col-sm-12 col-lg-4 text-left c-greenLight">
-                <small>Copyright &copy; 2019</small>
+            <small>Copyright &copy; 2019</small>
         </div>
-        <div class="col-sm-12 col-lg-4 text-left"></div>
+        <div class="col-sm-12 col-lg-4 text-left">
+            <a href="http://anastasionico.uk">
+                <small style="font-size: 8px">
+                    developed by <img src="{{asset('img/anastasionico.ico')}}" style="width: 10px">
+                </small>    
+            </a>
+            
+        </div>
     </div>
 </footer>
