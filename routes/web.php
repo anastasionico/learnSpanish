@@ -26,6 +26,13 @@ Route::get('/start-quiz', function () {
 Route::get('/quiz', function () {
     return view('quiz');
 });
+
+Route::get('/admin/login', function () {
+    return view('admin/login');
+});
+Route::get('/admin/index', function () {
+    return view('admin/index');
+});
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
