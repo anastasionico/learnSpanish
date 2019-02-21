@@ -23,7 +23,7 @@
 <![endif]-->
 </head>
 
-<body>
+<body >
     <div class="main-wrapper">
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
@@ -49,7 +49,7 @@
                         </span>
                     </div>
                     <!-- Form -->
-                    <form class="form-horizontal m-t-20" id="loginform" action="index.html">
+                    <form class="form-horizontal m-t-20" id="loginform" action="index">
                         <div class="row p-b-30">
                             <div class="col-12">
                                 <div class="input-group mb-3">
