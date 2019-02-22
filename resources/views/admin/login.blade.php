@@ -45,7 +45,7 @@
                 <div id="loginform">
                     <div class="text-center p-t-20 p-b-20">
                         <span class="db">
-                            <img src="{{asset('img/EspapyaLogo.png')}}" alt="logo" style="width:50%;" />
+                            <img src="{{asset('img/EspapayaLogo.png')}}" alt="logo" style="width:50%;" />
                         </span>
                     </div>
                     <!-- Form -->

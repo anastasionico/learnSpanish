@@ -9,10 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    {{-- <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png"> --}}
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
     <title>Matrix Template - The Ultimate Multipurpose admin template</title>
     <!-- Custom CSS -->
     <link href="{{asset('admin/assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">
+    {{-- <link href="../../assets/libs/flot/css/float-chart.css" rel="stylesheet"> --}}
     <!-- Custom CSS -->
     <link href="{{asset('admin/dist/css/style.min.css')}}" rel="stylesheet">
     {{-- <link href="../../dist/css/style.min.css" rel="stylesheet"> --}}
@@ -28,12 +29,12 @@
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
-    {{-- <div class="preloader">
+    <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
-    </div> --}}
+    </div>
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
@@ -51,17 +52,17 @@
                     <!-- ============================================================== -->
                     <a class="navbar-brand" href="index.html">
                         <!-- Logo icon -->
-                        <b class="logo-icon p-l-10">
+                        {{-- <b class="logo-icon p-l-10">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="{{asset('admin/assets/images/logo-icon.png')}}" alt="homepage" class="light-logo" />
+                            <img src="{{asset('img/EspapayaLogo.png')}}" alt="homepage" class="light-logo" style="width:100px;" />
                            
-                        </b>
+                        </b> --}}
                         <!--End Logo icon -->
                          <!-- Logo text -->
                         <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="{{asset('admin/assets/images/logo-text.png')}}" alt="homepage" class="light-logo" />
+                             <img src="{{asset('img/EspapayaLogo.png')}}" alt="homepage" class="light-logo" style="width:100px;" />
                             
                         </span>
                         <!-- Logo icon -->
@@ -197,9 +198,7 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="{{asset('admin/assets/images/users/1.jpg')}}" alt="user" class="rounded-circle" width="31">
-                            </a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('admin/assets/images/users/1.jpg')}}" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
@@ -552,10 +551,9 @@
                                                 </label>
                                             </div>
                                             <ul class="list-style-none assignedto">
-                                                <li class="assignee"><img class="rounded-circle" width="40" src="
-                                                    {{asset('admin/assets/images/users/.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave"></li>
-                                                <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica"></li>
-                                                <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
+                                                <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/1.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave"></li>
+                                                <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/2.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica"></li>
+                                                <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/3.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
                                                 <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina"></li>
                                             </ul>
                                         </li>
@@ -576,7 +574,7 @@
                                                 </label>
                                             </div>
                                             <ul class="list-style-none assignedto">
-                                                <li class="assignee"><img class="rounded-circle" width="40" src=".{{asset('admin/assets/images/users/4.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
+                                                <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/3.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
                                                 <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina"></li>
                                             </ul>
                                         </li>
@@ -597,7 +595,7 @@
                                                 </label>
                                             </div>
                                             <ul class="list-style-none assignedto">
-                                                <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
+                                                <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/3.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
                                                 <li class="assignee"><img class="rounded-circle" width="40" src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina"></li>
                                             </ul>
                                         </li>
@@ -741,7 +739,7 @@
                                     <ul class="chat-list">
                                         <!--chat Row -->
                                         <li class="chat-item">
-                                            <div class="chat-img"><img src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user"></div>
+                                            <div class="chat-img"><img src="{{asset('admin/assets/images/users/1.jpg')}}" alt="user"></div>
                                             <div class="chat-content">
                                                 <h6 class="font-medium">James Anderson</h6>
                                                 <div class="box bg-light-info">Lorem Ipsum is simply dummy text of the printing &amp; type setting industry.</div>
@@ -750,7 +748,7 @@
                                         </li>
                                         <!--chat Row -->
                                         <li class="chat-item">
-                                            <div class="chat-img"><img src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user"></div>
+                                            <div class="chat-img"><img src="{{asset('admin/assets/images/users/2.jpg')}}" alt="user"></div>
                                             <div class="chat-content">
                                                 <h6 class="font-medium">Bianca Doe</h6>
                                                 <div class="box bg-light-info">It’s Great opportunity to work.</div>
@@ -774,7 +772,7 @@
                                         </li>
                                         <!--chat Row -->
                                         <li class="chat-item">
-                                            <div class="chat-img"><img src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user"></div>
+                                            <div class="chat-img"><img src="{{asset('admin/assets/images/users/3.jpg')}}" alt="user"></div>
                                             <div class="chat-content">
                                                 <h6 class="font-medium">Angelina Rhodes</h6>
                                                 <div class="box bg-light-info">Well we have good budget for the project</div>
@@ -806,7 +804,7 @@
                             <div class="comment-widgets scrollable" style="max-height: 130px;">
                                 <!-- Comment Row -->
                                 <div class="d-flex flex-row comment-row m-t-0">
-                                    <div class="p-2"><img src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" width="50" class="rounded-circle"></div>
+                                    <div class="p-2"><img src="{{asset('admin/assets/images/users/1.jpg')}}" alt="user" width="50" class="rounded-circle"></div>
                                     <div class="comment-text w-100">
                                         <h6 class="font-medium">James Anderson</h6>
                                         <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry. </span>
@@ -834,7 +832,7 @@
                                 </div>
                                 <!-- Comment Row -->
                                 <div class="d-flex flex-row comment-row">
-                                    <div class="p-2"><img src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" width="50" class="rounded-circle"></div>
+                                    <div class="p-2"><img src="{{asset('admin/assets/images/users/5.jpg')}}" alt="user" width="50" class="rounded-circle"></div>
                                     <div class="comment-text w-100">
                                         <h6 class="font-medium">Johnathan Doeting</h6>
                                         <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry. </span>
@@ -941,7 +939,7 @@
                                 <div class="tab-pane active" id="home" role="tabpanel">
                                     <div class="p-20">
                                         <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment..</p>
-                                        <img src="{{asset('admin/assets/images/background/img4.jpg')}}" class="img-fluid">
+                                        <img src="../../assets/images/background/img4.jpg" class="img-fluid">
                                     </div>
                                 </div>
                                 <div class="tab-pane  p-20" id="profile" role="tabpanel">
@@ -987,23 +985,46 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <link href="{{asset('admin/assets/libs/jquery/dist/jquery.min.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/popper.js/dist/umd/popper.min.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/bootstrap/dist/js/bootstrap.min.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/extra-libs/sparkline/sparkline.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/dist/js/waves.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/dist/js/sidebarmenu.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/dist/js/custom.min.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/flot/excanvas.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/flot/jquery.flot.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/flot/jquery.flot.pie.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/flot/jquery.flot.time.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/flot/jquery.flot.stack.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/flot/jquery.flot.crosshair.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js')}}" rel="stylesheet">
-    <link href="{{asset('admin/dist/js/pages/chart/chart-page-init.js')}}" rel="stylesheet">
-    
+    <script src="{{asset('admin/assets/libs/jquery/dist/jquery.min.js')}}"></script>
+    {{-- <script src="../../assets/libs/jquery/dist/jquery.min.js"></script> --}}
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{{asset('admin/assets/libs/popper.js/dist/umd/popper.min.js')}}"></script>
+    <script src="{{asset('admin/assets/libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}"></script>
+    <script src="{{asset('admin/assets/extra-libs/sparkline/sparkline.js')}}"></script>
+    {{-- <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script> --}}
+    <!--Wave Effects -->
+    <script src="{{asset('admin/dist/js/waves.js')}}"></script>
+    {{-- <script src="../../dist/js/waves.js"></script> --}}
+    <!--Menu sidebar -->
+    <script src="{{asset('admin/dist/js/sidebarmenu.js')}}"></script>
+    {{-- <script src="../../dist/js/sidebarmenu.js"></script> --}}
+    <!--Custom JavaScript -->
+    <script src="{{asset('admin/dist/js/custom.min.js')}}"></script>
+    {{-- <script src="../../dist/js/custom.min.js"></script> --}}
+    <!--This page JavaScript -->
+    <!-- <script src="../../dist/js/pages/dashboards/dashboard1.js"></script> -->
+    <!-- Charts js Files -->
+    <script src="{{asset('admin/assets/libs/flot/excanvas.js')}}"></script>
+    <script src="{{asset('admin/assets/libs/flot/jquery.flot.js')}}"></script>
+    <script src="{{asset('admin/assets/libs/flot/jquery.flot.pie.js')}}"></script>
+    <script src="{{asset('admin/assets/libs/flot/jquery.flot.time.js')}}"></script>
+    <script src="{{asset('admin/assets/libs/flot/jquery.flot.stack.js')}}"></script>
+    <script src="{{asset('admin/assets/libs/flot/jquery.flot.crosshair.js')}}"></script>
+    <script src="{{asset('admin/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js')}}"></script>
+    <script src="{{asset('admin/dist/js/pages/chart/chart-page-init.js')}}"></script>
+    {{-- <script src="../../assets/libs/flot/excanvas.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="../../assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="../../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="../../dist/js/pages/chart/chart-page-init.js"></script> --}}
+
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <footer  class="container-fluid"  style="background-image: url({{asset('img/footer.jpg')}});">
 	<div class="row p-5 c-greenLight">
         <div class="col-sm-12 col-lg-4 text-left slogan">
-            <a href="{{ url('/') }}"><img src="{{asset('img/EspapyaLogo.png')}}" class="w-50 pb-4"></a>
+            <a href="{{ url('/') }}"><img src="{{asset('img/EspapayaLogo.png')}}" class="w-50 pb-4"></a>
         	<p class="c-orange mb-0">Learn Spanish verbs.</p>
         	<p class="mb-0">More efficiently.</p>
         </div>
