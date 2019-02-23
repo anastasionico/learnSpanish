@@ -5,7 +5,7 @@
     <!-- ============================================================== -->
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
-{{--     <div class="page-breadcrumb">
+    <div class="page-breadcrumb">
        <div class="row">
           <div class="col-12 d-flex no-block align-items-center">
              <h4 class="page-title">Dashboard</h4>
@@ -19,7 +19,7 @@
              </div>
           </div>
        </div>
-    </div> --}}
+    </div>
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
@@ -41,26 +41,20 @@
              </div>
           </div>
           <!-- Column -->
-          <div class="col-md-6 col-lg-2 col-xlg-3">
-             <div class="card card-hover">
-                <div class="box bg-warning text-center">
-                  <h1 class="font-light text-white">
-                    {{-- <i class="mdi mdi-chart-areaspline"></i> --}}
-                    0
-                  </h1>
-                 <h6 class="text-white">Tense</h6>
-                </div>
-             </div>
-          </div>
-          <!-- Column -->
           <div class="col-md-6 col-lg-4 col-xlg-3">
              <div class="card card-hover">
                 <div class="box bg-warning text-center">
-                  <h1 class="font-light text-white">
-                    {{-- <i class="mdi mdi-collage"></i> --}}
-                    0
-                  </h1>
-                  <h6 class="text-white">Verbs</h6>
+                   <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                   <h6 class="text-white">Charts</h6>
+                </div>
+             </div>
+          </div>
+          <!-- Column -->
+          <div class="col-md-6 col-lg-2 col-xlg-3">
+             <div class="card card-hover">
+                <div class="box bg-warning text-center">
+                   <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
+                   <h6 class="text-white">Widgets</h6>
                 </div>
              </div>
           </div>
@@ -68,11 +62,8 @@
           <div class="col-md-6 col-lg-2 col-xlg-3">
              <div class="card  card-hover">
                 <div class="box bg-warning text-center">
-                  <h1 class="font-light text-white">
-                    {{-- <i class="mdi mdi-border-outside"></i> --}}
-                    2
-                  </h1>
-                  <h6 class="text-white">Users</h6>
+                   <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
+                   <h6 class="text-white">Tables</h6>
                 </div>
              </div>
           </div>
@@ -80,16 +71,14 @@
           <div class="col-md-6 col-lg-2 col-xlg-3">
              <div class="card  card-hover">
                 <div class="box bg-warning text-center">
-                  <h1 class="font-light text-white">
-                    {{-- <i class="mdi mdi-arrow-all"></i> --}}
-                    0
-                  </h1>
-                  <h6 class="text-white">Messages</h6>
+                   <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
+                   <h6 class="text-white">Full Width</h6>
                 </div>
              </div>
           </div>
           <!-- Column -->
-          {{-- <div class="col-md-6 col-lg-4 col-xlg-3">
+          <!-- Column -->
+          <div class="col-md-6 col-lg-4 col-xlg-3">
              <div class="card card-hover">
                 <div class="box bg-warning text-center">
                    <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
@@ -132,7 +121,7 @@
                    <h6 class="text-white">Errors</h6>
                 </div>
              </div>
-          </div> --}}
+          </div>
           <!-- Column -->
        </div>
        <!-- ============================================================== -->
@@ -634,7 +623,7 @@
                       </div>
                    </div>
                    <a class="card-header link border-top" data-toggle="collapse" data-parent="#accordian-4" href="#Toggle-2" aria-expanded="false" aria-controls="Toggle-2">
-                   <i class="seticon fa fa-arrow-right" aria-hidden="true"></i>
+                   <i class="seticon fa fa-times" aria-hidden="true"></i>
                    <span>Toggle, Closed by default</span>
                    </a>
                    <div id="Toggle-2" class="multi-collapse collapse" style="">
@@ -643,7 +632,7 @@
                       </div>
                    </div>
                    <a class="card-header collapsed link border-top" data-toggle="collapse" data-parent="#accordian-4" href="#Toggle-3" aria-expanded="false" aria-controls="Toggle-3">
-                   <i class="seticon fa fa-arrow-right" aria-hidden="true"></i>
+                   <i class="seticon fa fa-times" aria-hidden="true"></i>
                    <span>Toggle, Closed by default</span>
                    </a>
                    <div id="Toggle-3" class="collapse multi-collapse">
@@ -666,6 +655,7 @@
                    <div class="tab-pane active" id="home" role="tabpanel">
                       <div class="p-20">
                          <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment..</p>
+                         <img src="../../assets/images/background/img4.jpg" class="img-fluid">
                       </div>
                    </div>
                    <div class="tab-pane  p-20" id="profile" role="tabpanel">
@@ -677,6 +667,7 @@
                    <div class="tab-pane p-20" id="messages" role="tabpanel">
                       <div class="p-20">
                          <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment..</p>
+                         <img src="../../assets/images/background/img4.jpg" class="img-fluid">
                       </div>
                    </div>
                 </div>
