@@ -1,7 +1,20 @@
 @extends('layouts.master')
 
 @section('hero')
-    <div class="row hero" style="background-image: url({{asset('img/home/hero.jpg')}});">
+    <div class="row text-center hero position-relative"  style="background-image: url({{asset('img/home/hero.jpg')}});">
+        <div class="col-sm-12 text-center">
+            <div class="position-absolute text-center pb-4"  style="bottom: 0; left: 0; right: 0">
+                <p class="c-white">
+                    Learn Spanish Verbs. <b>More Efficiently.</b>
+                </p  class="c-white bg-orange">
+                <a href='/start-quiz' class="button bg-orange">
+                    Start Today
+                </a>    
+            </div>    
+        </div>
+    </div>
+    {{-- <div class="row hero" style="background-image: url({{asset('img/home/hero.jpg')}});">
+
     </div>
     <div class="row pb-5 text-center hero-sub">
         <div class="col-sm-12 col-lg-2"></div>
@@ -15,7 +28,7 @@
         </div>
         <div class="col-sm-12 col-lg-2"></div>
 
-    </div>
+    </div> --}}
 @endsection
 
 @section('contentOne')

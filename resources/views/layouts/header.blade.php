@@ -1,5 +1,5 @@
 
-<header>
+<header class="align-middle">
  	<nav class="navbar navbar-expand-md navbar-light navbar-laravel p-3">
         <div class="container-fluid">
             <a class="navbar-brand w-25" href="{{ url('/') }}">

@@ -11815,8 +11815,12 @@ a:hover {
 }
 
 .hero {
-  background-size: cover;
-  height: 39rem;
+  background-size: 100% 100%;
+  height: 90vh;
+}
+
+.hero p {
+  font-size: 2.1rem;
 }
 
 .hero-sub {
@@ -11825,6 +11829,10 @@ a:hover {
 
 .hero-sub p {
   font-size: 2.1rem;
+}
+
+header {
+  height: 10vh;
 }
 
 footer {
