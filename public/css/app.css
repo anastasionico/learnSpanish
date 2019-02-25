@@ -11864,6 +11864,10 @@ footer .button:hover {
   border-top: 1px solid #92bf2a;
 }
 
+.tenses .disabled {
+  color: #555;
+}
+
 .button {
   padding: 0.5rem 3rem;
   margin: 0 0.5rem;
@@ -11913,6 +11917,10 @@ footer .button:hover {
   transition: all 0.3s ease-in-out;
 }
 
+.slider.disabled {
+  background-color: #f7f5f5;
+}
+
 .slider:before {
   position: absolute;
   content: "";
@@ -11923,6 +11931,10 @@ footer .button:hover {
   background-color: white;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+input:disabled + .slider {
+  background-color: #f7f5f5;
 }
 
 input:checked + .slider {
