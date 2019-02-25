@@ -11675,6 +11675,10 @@ a.text-dark:focus {
   border: 2px solid #608019;
 }
 
+.border-white {
+  border: 2px solid #fff;
+}
+
 .border-danger {
   border: 2px solid #d73d31;
 }
@@ -11870,7 +11874,6 @@ footer .button:hover {
 
 .button {
   padding: 0.5rem 3rem;
-  margin: 0 0.5rem;
   border-radius: 30px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -11890,6 +11893,26 @@ footer .button:hover {
 .button.bg-orange:hover {
   background: #fff;
   color: #ea6837;
+}
+
+.button-danger:hover {
+  background: #fff;
+  color: #d73d31;
+}
+
+.button-orange:hover {
+  background: #fff;
+  color: #ea6837;
+}
+
+.button-success:hover {
+  background: #fff;
+  color: #28B959;
+}
+
+.button-greenLight:hover {
+  background: #fff;
+  color: #92bf2a;
 }
 
 .switch {
@@ -11954,6 +11977,22 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.quiz {
+  padding: 10rem 0;
+}
+
+.quiz h1 {
+  font-size: 5rem;
+}
+
+.quiz h4 {
+  font-size: 1.3rem;
+}
+
+.quiz h5 {
+  font-size: 1rem;
 }
 
 .warning a {

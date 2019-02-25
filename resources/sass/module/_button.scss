@@ -1,6 +1,5 @@
 .button {
 	padding: 0.5rem 3rem;
-	margin: 0 0.5rem;
 	@include borderRadius(30px)
 	transition: all 0.3s ease-in-out;
 	cursor: pointer;
@@ -16,6 +15,30 @@
 			color:$orange;
 		}			
 	}
+  &-danger {
+    &:hover{
+      background: $white;
+      color:$danger;
+    }      
+  }
+  &-orange {
+    &:hover{
+      background: $white;
+      color:$orange;
+    }      
+  }
+  &-success {
+    &:hover{
+      background: $white;
+      color:$success;
+    }      
+  }
+  &-greenLight {
+    &:hover{
+      background: $white;
+      color:$greenLight;
+    }      
+  }
 }
 
 // Troggles

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('contentOne')
+{{-- @section('contentOne')
     <div class="row text-left bg-grayLight c-greenLight" style="padding: 10rem 0">
         <h1>1</h1>
         <div class="col-sm-12 col-lg-2"></div>
@@ -370,171 +370,188 @@
         </div>
         <div class="col-sm-12 col-lg-2"></div>
     </div>
-@endsection
+@endsection --}}
 
 @section('contentFive')
-    
-    <div class="row text-center c-greenLight" style="background-color: #92bf2a; padding: 10rem 0;">
-        <h1 style="color: #ea6837">5a</h1>
+    <div class="row text-left bg-grayLight c-greenLight quiz">
         <div class="col-sm-12 col-lg-2"></div>
-        <div class="col-sm-12 col-lg-8 bg-white rounded"  style="box-shadow: 0px 20px 20px #4d6516;">
-            <div class="row p-5 ">
-                <div class="col-4 rounded  text-left">
-                    <b>Present</b>
-                    <h1 style="">Mentir</h1>
-                </div>
-                <div class="col-8 rounded  text-right">
-                    <form action="/quiz" class="clearfix">
-                        @csrf
-                        <div class="form-group m-0 mb-3">
-                            <input type="text" 
-                                class="form-control border-greenLight c-greenLight" 
-                                style="
-                                    padding: 1.5rem 1rem;
-                                    border:2px solid #92bf2a;
-                                    border-radius: 30px;
-
-                                " 
-                                id="name" 
-                                placeholder="Yo" >
+            <div class="col-sm-12 col-lg-8 bg-white rounded">
+                <div class="row">
+                    <div class="col-12 p-5 rounded ">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>Present</h4>
+                            </div>
+                            <div class="col-6 text-right">
+                                <h4><i>To lie</i></h4>
+                            </div>
                         </div>
-                        <button type="submit" class="button border-greenLight c-greenLight bg-empty  float-right">
-                            <b>Check Answer</b>
-                        </button>
-                    </form>
+                        <h1>Mentir</h1>
+                        <h5>Yo</h5>
+                        <form action="/quiz" class="clearfix">
+                            @csrf
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="form-group m-0 mb-3">
+                                        <input type="text" 
+                                            class="form-control border-greenLight c-greenLight" 
+                                            style="
+                                                padding: 1.25rem 3rem;
+                                                border:2px solid #92bf2a;
+                                                border-radius: 30px;
+
+                                            " 
+                                            id="name" 
+                                            placeholder="Your Answer ..." >
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="button border-greenLight c-greenLight bg-empty  float-right">
+                                        <b>Check</b>
+                                    </button>    
+                                </div>    
+                            </div>
+                        </form>
+                    </div>        
                 </div>
             </div>
+            <div class="col-sm-12 col-lg-2"></div>
         </div>
+
+    </div>
+    <div class="row text-left bg-danger c-white px-5 py-3">
+        <div class="col-sm-12 col-lg-1">    
+        </div>
+        <div class="col-sm-12 col-lg-5">
+            <h1>Wrong</h1>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <div class="row">
+                <div class="col-sm-12 col-lg-1">    
+                </div>
+                <div class="col-sm-12 col-lg-5">
+                    <h4>Yo miento</h4>
+                </div>
+                <div class="col-sm-12 col-lg-6 text-right">
+                    <a href="#" class="button border-white c-white bg-empty mx-1 button-danger">Report</a>
+                    <a href="#" class="button border-white c-white bg-empty mx-1 button-danger">Continue</a>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div class="row text-left bg-orange c-white px-5 py-3">
+        <div class="col-sm-12 col-lg-1">    
+        </div>
+        <div class="col-sm-12 col-lg-5">
+            <h1>Wrong</h1>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <div class="row">
+                <div class="col-sm-12 col-lg-1">    
+                </div>
+                <div class="col-sm-12 col-lg-5">
+                    <h4>Yo miento</h4>
+                </div>
+                <div class="col-sm-12 col-lg-6 text-right">
+                    <a href="#" class="button border-white c-white bg-empty mx-1 button-orange">Report</a>
+                    <a href="#" class="button border-white c-white bg-empty mx-1 button-orange">Continue</a>
+                </div>    
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('contentSix')
+    <div class="row text-left bg-grayLight c-greenLight quiz">
         <div class="col-sm-12 col-lg-2"></div>
-    </div>
-
-    
-    <div class="row text-left bg-greenLight c-greenLight" style="padding: 10rem 0">
-        <h1 style="color: #ea6837">5b</h1>
-        <div class="col-sm-12 col-lg-4"></div>
-        <div class="col-sm-12 col-lg-4 bg-white rounded">
-            <div class="row">
-                <div class="col-12 p-5 rounded">
-                    <b>Present</b>
-                    <h1>Mentir</h1>
-                    <p class="mt-5">Yo</p>
-                    <form action="/quiz" class="clearfix">
-                        @csrf
-                        <div class="form-group m-0 mb-3">
-                            <input type="text" class="form-control p-0 c-greenLight" id="name" placeholder="">
+            <div class="col-sm-12 col-lg-8 bg-white rounded">
+                <div class="row">
+                    <div class="col-12 p-5 rounded ">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>Present</h4>
+                            </div>
+                            <div class="col-6 text-right">
+                                <h4><i>To lie</i></h4>
+                            </div>
                         </div>
-                        <button type="submit" class="button border-greenLight c-greenLight bg-empty float-right">
-                            <b>Check Answer</b>
-                        </button>
-                    </form>
-                </div>        
+                        <h1>Mentir</h1>
+                        <h5>Yo</h5>
+                        <form action="/quiz" class="clearfix">
+                            @csrf
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="form-group m-0 mb-3">
+                                        <input type="text" 
+                                            class="form-control border-greenLight c-greenLight" 
+                                            style="
+                                                padding: 1.25rem 3rem;
+                                                border:2px solid #92bf2a;
+                                                border-radius: 30px;
+
+                                            " 
+                                            id="name" 
+                                            placeholder="Your Answer ..." >
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="button border-greenLight c-greenLight bg-empty  float-right">
+                                        <b>Check</b>
+                                    </button>    
+                                </div>    
+                            </div>
+                        </form>
+                    </div>        
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-2"></div>
+        </div>
+
+    </div>
+    <div class="row text-left bg-success c-white px-5 py-3">
+        <div class="col-sm-12 col-lg-1">    
+        </div>
+        <div class="col-sm-12 col-lg-5">
+            <h1>Correct</h1>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <div class="row">
+                <div class="col-sm-12 col-lg-1">    
+                </div>
+                <div class="col-sm-12 col-lg-5">
+                </div>
+                <div class="col-sm-12 col-lg-6 text-right">
+                    <a href="#" class="button border-white c-white bg-empty mx-1 button-success">Report</a>
+                    <a href="#" class="button border-white c-white bg-empty mx-1 button-success">Continue</a>
+                </div>    
             </div>
         </div>
-        <div class="col-sm-12 col-lg-4"></div>
     </div>
-
-    
-    <div class="row text-center bg-greenLight c-greenLight" style="padding: 10rem 0">
-        <h1 style="color: #ea6837">5c</h1>
-        <div class="col-sm-12 col-lg-4"></div>
-        <div class="col-sm-12 col-lg-4 bg-white rounded">
+    <div class="row text-left bg-greenLight c-white px-5 py-3">
+        <div class="col-sm-12 col-lg-1">    
+        </div>
+        <div class="col-sm-12 col-lg-5">
+            <h1>Correct</h1>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+        </div>
+        <div class="col-sm-12 col-lg-12">
             <div class="row">
-                <div class="col-12 p-5 rounded ">
-                    <b>Present</b>
-                    <h1 style="font-size: 5rem">Mentir</h1>
-                    <p class="mt-5">Yo</p>
-                    <form action="/quiz" class="clearfix">
-                        @csrf
-                        <div class="form-group m-0 mb-3">
-                            <input type="text" 
-                                class="form-control border-greenLight c-greenLight" 
-                                style="
-                                    padding: 1.5rem 3rem;
-                                    border:2px solid #92bf2a;
-                                    border-radius: 30px;
-
-                                " 
-                                id="name" 
-                                placeholder="Your Answer ..." >
-                        </div>
-                        <button type="submit" class="button border-greenLight c-greenLight bg-empty">
-                            <b>Check Answer</b>
-                        </button>
-                    </form>
-                </div>        
+                <div class="col-sm-12 col-lg-1">    
+                </div>
+                <div class="col-sm-12 col-lg-5">
+                </div>
+                <div class="col-sm-12 col-lg-6 text-right">
+                    <a href="#" class="button border-white c-white bg-empty mx-1 button-greenLight">Report</a>
+                    <a href="#" class="button border-white c-white bg-empty mx-1 button-greenLight">Continue</a>
+                </div>    
             </div>
         </div>
-        <div class="col-sm-12 col-lg-4"></div>
-    </div>
-
-    
-    <div class="row text-center bg-greenLight c-greenLight" style="padding: 10rem 0">
-        <h1 style="color: #ea6837">5d</h1>
-        <div class="col-sm-12 col-lg-4"></div>
-        <div class="col-sm-12 col-lg-4 bg-greenLight c-greenDark rounded"
-            style="border: 2px solid #608019;" 
-        >
-            <div class="row">
-                <div class="col-12 p-5 rounded ">
-                    <b>Present</b>
-                    <h1 style="font-size: 5rem">Mentir</h1>
-                    <p class="mt-5">Yo</p>
-                    <form action="/quiz" class="clearfix">
-                        @csrf
-                        <div class="form-group m-0 mb-3">
-                            <input type="text" 
-                                class="form-control border-greenLight c-greenDark border-greenDark" 
-                                style="
-                                    padding: 1.5rem 3rem;
-                                    border:2px solid #608019;
-                                    border-radius: 30px;
-
-                                " 
-                                id="name" 
-                                placeholder="Your Answer ..." >
-                        </div>
-                        <button type="submit" class="button border-greenLight c-greenDark border-greenDark bg-empty">
-                            <b>Check Answer</b>
-                        </button>
-                    </form>
-                </div>        
-            </div>
-        </div>
-        <div class="col-sm-12 col-lg-4"></div>
-    </div>
-
-    <div class="row text-center bg-greenLight c-greenLight" style="padding: 10rem 0">
-        <h1 style="color: #ea6837">5e</h1>
-        <div class="col-sm-12 col-lg-4"></div>
-        <div class="col-sm-12 col-lg-4 bg-greenLight c-greenDark rounded"
-            style="border: 1px solid #608019;box-shadow: 0px 20px 20px #4d6516;" 
-        >
-            <div class="row">
-                <div class="col-12 p-5 rounded ">
-                    <b>Present</b>
-                    <h1 style="font-size: 5rem">Mentir</h1>
-                    <p class="mt-5">Yo</p>
-                    <form action="/quiz" class="clearfix">
-                        @csrf
-                        <div class="form-group m-0 mb-3">
-                            <input type="text" 
-                                class="form-control border-greenLight c-greenDark border-greenDark" 
-                                style="
-                                    padding: 1.5rem 3rem;
-                                    border:2px solid #608019;
-                                    border-radius: 30px;
-
-                                " 
-                                id="name" 
-                                placeholder="Your Answer ..." >
-                        </div>
-                        <button type="submit" class="button border-greenLight c-greenDark border-greenDark bg-empty">
-                            <b>Check Answer</b>
-                        </button>
-                    </form>
-                </div>        
-            </div>
-        </div>
-        <div class="col-sm-12 col-lg-4"></div>
     </div>
 @endsection
