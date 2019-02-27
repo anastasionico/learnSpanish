@@ -46,6 +46,10 @@ $success :#28B959;
 .border-greenDark{
 	border:2px solid $greenDark;
 }
+.border-grayLight{
+	border:2px solid $grayLight;
+}
+
 .border-white{
 	border:2px solid $white;
 }
@@ -93,3 +97,12 @@ $success :#28B959;
 .opacity-75 {
 	opacity: 0.75;
 }
+
+$breakpoints: (
+  phonePortrait: 0px,
+  phoneLandscape: 480px,
+  tabletPortrait: 768px,
+  tabletLandscape: 1024px,
+  desktop: 1366px,
+  bigscreen: 1920px,
+ );

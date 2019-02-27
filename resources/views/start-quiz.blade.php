@@ -150,8 +150,8 @@
             </div>
             <div class="row py-2">
                 <div class="col-12 text-center"> 
-                    <a href='/quiz' class="button bg-orange c-orange">
-                        <small>Register to unlock the other tenses</small> 
+                    <a href='/pricing' class="button bg-orange c-orange">
+                        <small>Unlock</small> 
                     </a>
                     
                 </div>        
@@ -225,7 +225,7 @@
         </div>
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 p-5 text-center bg-grayLight">
-            <a href='/quiz' class="button bg-orange c-orange">
+            <a href='/pricing' class="button bg-orange c-orange">
                 Register
             </a>
         </div>

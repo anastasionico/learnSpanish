@@ -35,7 +35,7 @@
             </a>    
             </div>
             <div class="bg-white p-4 rounded">
-                <p>We’ve brought together over ????</p>
+                <b>We’ve brought together over ????</b>
                 <p>Different Spanish verb forms all in one place. If you simply want to practice Spanish verbs, then espapaya.com is for you.</p>
                 
             </div>

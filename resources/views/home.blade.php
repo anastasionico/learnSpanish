@@ -63,7 +63,7 @@
             <p>Make your learning more efficient by creating an account; account holders can select any combination of tenses to learn, and our bots will track your learning from one session to the next.
             </p>
             <p>
-                <b>Click <a href="#">here</a> to create an account</b>we won’t use your details for our marketing unless you opt in and you can completely delete your personal details at any time.
+                <b>Click <a href="pricing">here</a> to create an account</b>we won’t use your details for our marketing unless you opt in and you can completely delete your personal details at any time.
             </p>
         </div>
     </div>
@@ -87,7 +87,7 @@
         </div>
         <div class="col-sm-12 col-lg-8">
             <h2 class="c-alert">Ad-free learning</h2>
-            <p>Create a paid account for ad-free learning and access to our entire database of verb forms. <b>Click <a href="#">here</a> to create a paid account</b>
+            <p>Create a paid account for ad-free learning and access to our entire database of verb forms. <b>Click <a href="pricing">here</a> to create a paid account</b>
             </p>
         </div>
     </div>
