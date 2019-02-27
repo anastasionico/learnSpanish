@@ -30,7 +30,7 @@
     			@yield('contentTwo')
     			@yield('contentThree')
     			@yield('contentFour')
-    			@yield('contentFive')
+    			@yield('contentFive  ')
                 @yield('contentSix')
             </div>
 		</main>

@@ -26,6 +26,9 @@ Route::get('/start-quiz', function () {
 Route::get('/quiz', function () {
     return view('quiz');
 });
+Route::get('/pricing', function () {
+    return view('pricing');
+});
 
 Route::get('/admin/login', function () {
     return view('admin/login');
