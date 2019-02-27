@@ -11719,6 +11719,18 @@ a.text-dark:focus {
   color: #f7f5f5;
 }
 
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -11836,7 +11848,7 @@ a:hover {
 }
 
 header {
-  height: 10vh;
+  height: 5rem;
 }
 
 footer {
@@ -11979,8 +11991,12 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .quiz {
-  padding: 10rem 0;
+  padding: 3rem 0;
 }
 
 .quiz h1 {
