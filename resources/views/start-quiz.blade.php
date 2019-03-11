@@ -132,7 +132,7 @@
                 </div>
                 <div class="col-4">
                     <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox"  disabled>
                       <span class="slider round"></span>
                     </label>
                 </div>        
@@ -146,14 +146,6 @@
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
-                </div>        
-            </div>
-            <div class="row py-2">
-                <div class="col-12 text-center"> 
-                    <a href='/pricing' class="button bg-orange c-orange">
-                        <small>Unlock</small> 
-                    </a>
-                    
                 </div>        
             </div>
             <div class="row py-1">
@@ -184,7 +176,7 @@
                 </div>
                 <div class="col-4">
                     <label class="switch">
-                      <input type="checkbox" disabled>
+                      <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
                 </div>        
@@ -195,7 +187,7 @@
                 </div>
                 <div class="col-4">
                     <label class="switch">
-                      <input type="checkbox" disabled>
+                      <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
                 </div>        
@@ -225,7 +217,10 @@
         </div>
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 p-5 text-center bg-grayLight">
-            <a href='/pricing' class="button bg-orange c-orange">
+            <a href='/quiz' class="button border-orange c-orange bg-empty">
+                Start
+            </a>
+            <a href='/pricing' class="button bg-orange c-orange mx-5">
                 Register
             </a>
         </div>

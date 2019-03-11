@@ -67,7 +67,7 @@
   background-color: $grayDark;
   transition: all 0.3s ease-in-out;
   &.disabled {
-    background-color: $grayLight;
+    background-color: $gray;
   }
 }
 
@@ -82,8 +82,13 @@
   transition: all 0.3s ease-in-out;
 }
 
+input[type="text"].disabled{
+  border:2px solid $gray;
+  padding: 1.25rem 3rem;  
+  border-radius: 30px;
+}
 input:disabled + .slider {
-  background-color: $grayLight;
+  background-color: $gray;
 }
 
 input:checked + .slider {

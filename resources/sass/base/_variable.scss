@@ -4,7 +4,7 @@ $orange:#ea6837;
 
 
 $grayLight:#f7f5f5;
-// $gray:#272b20;
+$gray:#b7bbb0;
 $grayDark:#555;
 $white:#fff;
 $black:#111;
@@ -23,17 +23,34 @@ $success :#28B959;
 .bg-orange{
 		background-color:$orange;
 }
+
 .bg-white{
 		background-color:$white;
 }
 .bg-grayLight{
 		background-color:$grayLight;
 }
+.bg-gray{
+		background-color:$gray;
+}
 .bg-warning{
 		background-color:$warning;
 }
 .bg-danger{
 		background-color:$danger;
+}
+
+.bg-greenLight-opaque{
+		background-color:rgba($greenLight, 0.25);
+}
+.bg-orange-opaque{
+		background-color:rgba($orange, 0.25);
+}
+.bg-success-opaque{
+		background-color:rgba($success, 0.25);
+}
+.bg-danger-opaque{
+		background-color:rgba($danger, 0.25);
 }
 .bg-empty{
 		background-color:transparent;
@@ -46,12 +63,21 @@ $success :#28B959;
 .border-greenDark{
 	border:2px solid $greenDark;
 }
+.border-orange{
+	border:2px solid $orange;
+}
 .border-grayLight{
 	border:2px solid $grayLight;
+}
+.border-gray{
+	border:2px solid $gray;
 }
 
 .border-white{
 	border:2px solid $white;
+}
+.border-success{
+	border:2px solid $success;
 }
 .border-danger{
 	border:2px solid $danger;
@@ -71,6 +97,9 @@ $success :#28B959;
 .c-orange{
 	color:$orange;
 }
+.c-success{
+	color:$success;
+}
 .c-alert{
 	color:$alert;
 }
@@ -85,6 +114,9 @@ $success :#28B959;
 }
 .c-grayLight{
 	color:$grayLight;
+}
+.c-gray{
+	color:$gray;
 }
 
 // Opacity

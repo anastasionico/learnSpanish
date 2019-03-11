@@ -6,15 +6,16 @@
         <div class="col-sm-12 col-lg-8 bg-white rounded">
             <div class="row">
                 <div class="col-12 p-5 rounded">
+                    <h4>Present</h4>
                     <div class="row">
-                        <div class="col-6">
-                            <h4>Present</h4>
+                        <div class="col-sm-12 col-lg-8">
+                            <h1>Mentir</h1>
                         </div>
-                        <div class="col-6 text-right">
-                            <h4><i>To lie</i></h4>
+                        <div class="col-sm-12 col-lg-4 text-right pt-5">
+                            <h3><i>To lie</i></h3>
                         </div>
                     </div>
-                    <h1>Mentir</h1>
+                    
                     <h5>Yo</h5>
                     <form action="/quiz" class="clearfix">
                         @csrf
@@ -41,24 +42,26 @@
                         </div>
                     </form>
                     <div class="py-3">
-                        <em class="bg-greenLight c-white rounded p-2 pointer">á</em>
-                        <em class="bg-greenLight c-white rounded p-2 pointer">é</em>
-                        <em class="bg-greenLight c-white rounded p-2 pointer">í</em>
-                        <em class="bg-greenLight c-white rounded p-2 pointer">ó</em>
-                        <em class="bg-greenLight c-white rounded p-2 pointer">ú</em>
-                        <em class="bg-greenLight c-white rounded p-2 pointer">ñ</em>
-                        <em class="bg-greenLight c-white rounded p-2 pointer">ü</em>    
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">á</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">é</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">í</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">ó</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">ú</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">ü</em>    
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">ñ</em>
                     </div>
                 </div>        
             </div>
         </div>
         <div class="col-sm-12 col-lg-2"></div>
     </div>
+@endsection
 
-    <div class="row text-left bg-danger c-white px-3 py-2 opacity-25">
+@section('contentTwo')
+    <div class="row text-left bg-danger-opaque c-danger px-3 py-2">
         <div class="col-sm-12 col-lg-1">    
         </div>
-        <div class="col-sm-12 col-lg-5">
+        <div class="col-sm-12 col-lg-5 ">
             <h3>Wrong</h3>
         </div>
         <div class="col-sm-12 col-lg-6">
@@ -71,18 +74,18 @@
                     <h6>Yo miento</h6>
                 </div>
                 <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-danger">
+                    <a href="#" class="button border-danger c-danger bg-empty mx-1 button-danger">
                         <i class="fas fa-flag"></i>
                     </a>
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-danger">Continue</a>
+                    <a href="#" class="button border-danger c-danger bg-empty mx-1 button-danger">Continue</a>
                 </div>    
             </div>
         </div>
     </div>
-    <div class="row text-left bg-danger c-white px-3 py-2">
+    <div class="row text-left bg-orange-opaque c-orange px-3 py-2">
         <div class="col-sm-12 col-lg-1">    
         </div>
-        <div class="col-sm-12 col-lg-5">
+        <div class="col-sm-12 col-lg-5 ">
             <h3>Wrong</h3>
         </div>
         <div class="col-sm-12 col-lg-6">
@@ -95,63 +98,15 @@
                     <h6>Yo miento</h6>
                 </div>
                 <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-danger">
-                            <i class="fas fa-flag"></i>
+                    <a href="#" class="button border-orange c-orange bg-empty mx-1 button-orange">
+                        <i class="fas fa-flag"></i>
                     </a>
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-danger">Continue</a>
+                    <a href="#" class="button border-orange c-orange bg-empty mx-1 button-orange">Continue</a>
                 </div>    
             </div>
         </div>
     </div>
-    <div class="row text-left bg-orange c-white px-3 py-2 opacity-25">
-        <div class="col-sm-12 col-lg-1">    
-        </div>
-        <div class="col-sm-12 col-lg-5">
-            <h3>Wrong</h3>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <div class="row">
-                <div class="col-sm-12 col-lg-1">    
-                </div>
-                <div class="col-sm-12 col-lg-5">
-                    <h6>Yo miento</h6>
-                </div>
-                <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-orange">
-                            <i class="fas fa-flag"></i>
-                    </a>
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-orange">Continue</a>
-                </div>    
-            </div>
-        </div>
-    </div>
-    <div class="row text-left bg-orange c-white px-3 py-2">
-        <div class="col-sm-12 col-lg-1">    
-        </div>
-        <div class="col-sm-12 col-lg-5">
-            <h3>Wrong</h3>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <div class="row">
-                <div class="col-sm-12 col-lg-1">    
-                </div>
-                <div class="col-sm-12 col-lg-5">
-                    <h6>Yo miento</h6>
-                </div>
-                <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-orange">
-                            <i class="fas fa-flag"></i>
-                    </a>
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-orange">Continue</a>
-                </div>    
-            </div>
-        </div>
-    </div>
-    <div class="row text-left bg-success c-white px-3 py-2 opacity-25">
+    <div class="row text-left bg-success-opaque c-success px-3 py-2">
         <div class="col-sm-12 col-lg-1">    
         </div>
         <div class="col-sm-12 col-lg-5">
@@ -166,15 +121,15 @@
                 <div class="col-sm-12 col-lg-5">
                 </div>
                 <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-success">
+                    <a href="#" class="button border-success c-success bg-empty mx-1 button-success">
                             <i class="fas fa-flag"></i>
                     </a>
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-success">Continue</a>
+                    <a href="#" class="button border-success c-success bg-empty mx-1 button-success">Continue</a>
                 </div>    
             </div>
         </div>
     </div>
-    <div class="row text-left bg-success c-white px-3 py-2">
+    <div class="row text-left bg-greenLight-opaque c-greenLight px-3 py-2">
         <div class="col-sm-12 col-lg-1">    
         </div>
         <div class="col-sm-12 col-lg-5">
@@ -189,64 +144,18 @@
                 <div class="col-sm-12 col-lg-5">
                 </div>
                 <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-success">
+                    <a href="#" class="button border-greenLight c-greenLight bg-empty mx-1 button-greenLight">
                             <i class="fas fa-flag"></i>
                     </a>
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-success">Continue</a>
-                </div>    
-            </div>
-        </div>
-    </div>
-    <div class="row text-left bg-greenLight c-white px-3 py-2 opacity-25">
-        <div class="col-sm-12 col-lg-1">    
-        </div>
-        <div class="col-sm-12 col-lg-5">
-            <h3>Correct</h3>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <div class="row">
-                <div class="col-sm-12 col-lg-1">    
-                </div>
-                <div class="col-sm-12 col-lg-5">
-                </div>
-                <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-greenLight">
-                            <i class="fas fa-flag"></i>
-                    </a>
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-greenLight">Continue</a>
-                </div>    
-            </div>
-        </div>
-    </div>
-    <div class="row text-left bg-greenLight c-white px-3 py-2">
-        <div class="col-sm-12 col-lg-1">    
-        </div>
-        <div class="col-sm-12 col-lg-5">
-            <h3>Correct</h3>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <div class="row">
-                <div class="col-sm-12 col-lg-1">    
-                </div>
-                <div class="col-sm-12 col-lg-5">
-                </div>
-                <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-greenLight">
-                            <i class="fas fa-flag"></i>
-                    </a>
-                    <a href="#" class="button border-white c-white bg-empty mx-1 button-greenLight">Continue</a>
+                    <a href="#" class="button border-greenLight c-greenLight bg-empty mx-1 button-greenLight">Continue</a>
                 </div>    
             </div>
         </div>
     </div>
 @endsection
 
-@section('contentTwo')
-    <div class="row text-left bg-grayLight c-grayLight quiz">
+@section('contentThree')
+    <div class="row text-left bg-grayLight c-gray quiz">
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 col-lg-8 bg-white rounded">
             <div class="row">
@@ -267,32 +176,26 @@
                             <div class="col-sm-12 col-lg-8">
                                 <div class="form-group m-0 mb-3">
                                     <input type="text" 
-                                        class="form-control border-grayLight c-grayLight disabled" 
-                                        style="
-                                            padding: 1.25rem 3rem;
-                                            border:2px solid #f7f5f5;
-                                            border-radius: 30px;
-
-                                        " 
+                                        class="form-control border-gray c-gray disabled" 
                                         id="name" 
                                         placeholder="Your Answer ..." >
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-4">
-                                <button type="submit" class="button border-grayLight c-grayLight bg-empty  float-right">
+                                <button type="submit" class="button border-gray c-gray bg-empty  float-right">
                                     <b>Check</b>
                                 </button>    
                             </div>    
                         </div>
                     </form>
                     <div class="py-3">
-                        <em class="bg-grayLight c-white rounded p-2 pointer">á</em>
-                        <em class="bg-grayLight c-white rounded p-2 pointer">é</em>
-                        <em class="bg-grayLight c-white rounded p-2 pointer">í</em>
-                        <em class="bg-grayLight c-white rounded p-2 pointer">ó</em>
-                        <em class="bg-grayLight c-white rounded p-2 pointer">ú</em>
-                        <em class="bg-grayLight c-white rounded p-2 pointer">ñ</em>
-                        <em class="bg-grayLight c-white rounded p-2 pointer">ü</em>    
+                        <em class="bg-gray c-white rounded p-2 pointer">á</em>
+                        <em class="bg-gray c-white rounded p-2 pointer">é</em>
+                        <em class="bg-gray c-white rounded p-2 pointer">í</em>
+                        <em class="bg-gray c-white rounded p-2 pointer">ó</em>
+                        <em class="bg-gray c-white rounded p-2 pointer">ú</em>
+                        <em class="bg-gray c-white rounded p-2 pointer">ñ</em>
+                        <em class="bg-gray c-white rounded p-2 pointer">ü</em>    
                     </div>
                 </div>        
             </div>
