@@ -58,99 +58,146 @@
 @endsection
 
 @section('contentTwo')
-    <div class="row text-left bg-danger-opaque c-danger px-3 py-2">
-        <div class="col-sm-12 col-lg-1">    
-        </div>
-        <div class="col-sm-12 col-lg-5 ">
-            <h3>Wrong</h3>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <div class="row">
-                <div class="col-sm-12 col-lg-1">    
-                </div>
-                <div class="col-sm-12 col-lg-5">
-                    <h6>Yo miento</h6>
-                </div>
-                <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-danger c-danger bg-empty mx-1 button-danger">
-                        <i class="fas fa-flag"></i>
-                    </a>
-                    <a href="#" class="button border-danger c-danger bg-empty mx-1 button-danger">Continue</a>
-                </div>    
+    <div>
+        <div class="row bg-danger-opaque c-danger">
+            <div class="col-sm-12 col-lg-2 text-center py-3">
+                <span class="bg-white rounded-circle w-25 p-2">
+                    <i class="fas fa-times-circle"></i>
+                </span> 
+            </div>
+            <div class="col-sm-12 col-lg-8 pt-2">
+                <h3>Wrong</h3>
+            </div>
+            <div class="col-sm-12 col-lg-2">
             </div>
         </div>
+        <div class="row bg-danger-opaque c-danger">
+            <div class="col-sm-12 col-lg-2">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+                <h6>Yo miento</h6>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <a href="#" class="button border-danger c-danger bg-empty mx-1 button-danger">Continue</a>
+            </div>
+        </div>
+        <div class="row bg-danger-opaque c-danger py-3">
+            <div class="col-sm-12 col-lg-2">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+                <a href="#" class="button border-danger c-danger bg-empty mx-1 button-danger">
+                    <i class="fas fa-flag"> </i> Report
+                </a>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+            </div>
+        </div>    
     </div>
-    <div class="row text-left bg-orange-opaque c-orange px-3 py-2">
-        <div class="col-sm-12 col-lg-1">    
-        </div>
-        <div class="col-sm-12 col-lg-5 ">
-            <h3>Wrong</h3>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <div class="row">
-                <div class="col-sm-12 col-lg-1">    
-                </div>
-                <div class="col-sm-12 col-lg-5">
-                    <h6>Yo miento</h6>
-                </div>
-                <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-orange c-orange bg-empty mx-1 button-orange">
-                        <i class="fas fa-flag"></i>
-                    </a>
-                    <a href="#" class="button border-orange c-orange bg-empty mx-1 button-orange">Continue</a>
-                </div>    
+    
+    <div>
+        <div class="row bg-orange-opaque c-orange">
+            <div class="col-sm-12 col-lg-2 text-center py-3">
+                <span class="bg-white rounded-circle w-25 p-2">
+                    <i class="fas fa-times-circle"></i>
+                </span> 
+            </div>
+            <div class="col-sm-12 col-lg-8 pt-2">
+                <h3>Wrong</h3>
+            </div>
+            <div class="col-sm-12 col-lg-2">
             </div>
         </div>
+        <div class="row bg-orange-opaque c-orange">
+            <div class="col-sm-12 col-lg-2">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+                <h6>Yo miento</h6>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <a href="#" class="button border-orange c-orange bg-empty mx-1 button-orange">Continue</a>
+            </div>
+        </div>
+        <div class="row bg-orange-opaque c-orange py-3">
+            <div class="col-sm-12 col-lg-2">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+                <a href="#" class="button border-orange c-orange bg-empty mx-1 button-orange">
+                    <i class="fas fa-flag"> </i> Report
+                </a>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+            </div>
+        </div>    
     </div>
-    <div class="row text-left bg-success-opaque c-success px-3 py-2">
-        <div class="col-sm-12 col-lg-1">    
-        </div>
-        <div class="col-sm-12 col-lg-5">
-            <h3>Correct</h3>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <div class="row">
-                <div class="col-sm-12 col-lg-1">    
-                </div>
-                <div class="col-sm-12 col-lg-5">
-                </div>
-                <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-success c-success bg-empty mx-1 button-success">
-                            <i class="fas fa-flag"></i>
-                    </a>
-                    <a href="#" class="button border-success c-success bg-empty mx-1 button-success">Continue</a>
-                </div>    
+
+    <div>
+        <div class="row bg-success-opaque c-success">
+            <div class="col-sm-12 col-lg-2 text-center py-3">
+                <span class="bg-white rounded-circle w-25 p-2">
+                    <i class="fas fa-check-circle"></i>
+                </span> 
+            </div>
+            <div class="col-sm-12 col-lg-8 pt-2">
+                <h3>Correct</h3>
+            </div>
+            <div class="col-sm-12 col-lg-2">
             </div>
         </div>
+        <div class="row bg-success-opaque c-success">
+            <div class="col-sm-12 col-lg-2">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <a href="#" class="button border-success c-success bg-empty mx-1 button-success">Continue</a>
+            </div>
+        </div>
+        <div class="row bg-success-opaque c-success py-3">
+            <div class="col-sm-12 col-lg-2">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+                <a href="#" class="button border-success c-success bg-empty mx-1 button-success">
+                    <i class="fas fa-flag"> </i> Report
+                </a>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+            </div>
+        </div>    
     </div>
-    <div class="row text-left bg-greenLight-opaque c-greenLight px-3 py-2">
-        <div class="col-sm-12 col-lg-1">    
-        </div>
-        <div class="col-sm-12 col-lg-5">
-            <h3>Correct</h3>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <div class="row">
-                <div class="col-sm-12 col-lg-1">    
-                </div>
-                <div class="col-sm-12 col-lg-5">
-                </div>
-                <div class="col-sm-12 col-lg-6 text-right">
-                    <a href="#" class="button border-greenLight c-greenLight bg-empty mx-1 button-greenLight">
-                            <i class="fas fa-flag"></i>
-                    </a>
-                    <a href="#" class="button border-greenLight c-greenLight bg-empty mx-1 button-greenLight">Continue</a>
-                </div>    
+
+    <div>
+        <div class="row bg-greenLight-opaque c-greenLight">
+            <div class="col-sm-12 col-lg-2 text-center py-3">
+                <span class="bg-white rounded-circle w-25 p-2">
+                    <i class="fas fa-check-circle"></i>
+                </span> 
+            </div>
+            <div class="col-sm-12 col-lg-8 pt-2">
+                <h3>Correct</h3>
+            </div>
+            <div class="col-sm-12 col-lg-2">
             </div>
         </div>
+        <div class="row bg-greenLight-opaque c-greenLight">
+            <div class="col-sm-12 col-lg-2">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <a href="#" class="button border-greenLight c-greenLight bg-empty mx-1 button-greenLight">Continue</a>
+            </div>
+        </div>
+        <div class="row bg-greenLight-opaque c-greenLight py-3">
+            <div class="col-sm-12 col-lg-2">
+            </div>
+            <div class="col-sm-12 col-lg-8">
+                <a href="#" class="button border-greenLight c-greenLight bg-empty mx-1 button-greenLight">
+                    <i class="fas fa-flag"> </i> Report
+                </a>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+            </div>
+        </div>    
     </div>
 @endsection
 
