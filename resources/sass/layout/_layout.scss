@@ -58,22 +58,22 @@
 .hero {
 	background-size:100% 100%;
 	@include media(phonePortrait){
-		height: 55vh;
+		height: 500px;
 	}
 	@include media(phoneLandscape){
-		height: 75vh;
+		// height: 155vh;
 	}
 	@include media(tabletPortrait){
-		height: 55vh;
+		// height: 115vh;
 	}
 	@include media(tabletLandscape){
-		height: 80vh;
+		// height: 80vh;
 	}
 	@include media(desktop){
-		height: 85vh;
+		// height: 85vh;
 	}
 	@include media(bigscreen){
-		height: 85vh;
+		// height: 85vh;
 	}
 
 

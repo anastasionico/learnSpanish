@@ -11892,37 +11892,7 @@ a:hover {
 
 @media (min-width: 0px) {
   .hero {
-    height: 55vh;
-  }
-}
-
-@media (min-width: 480px) {
-  .hero {
-    height: 75vh;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero {
-    height: 55vh;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero {
-    height: 80vh;
-  }
-}
-
-@media (min-width: 1366px) {
-  .hero {
-    height: 85vh;
-  }
-}
-
-@media (min-width: 1920px) {
-  .hero {
-    height: 85vh;
+    height: 500px;
   }
 }
 

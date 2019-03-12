@@ -3,7 +3,16 @@
 @section('hero')
     <div class="row text-center hero position-relative"  style="background-image: url({{asset('img/home/hero.jpg')}});">
         <div class="col-sm-12 text-center">
-            <div class="position-absolute text-center pb-4"  style="bottom: 0; left: 0; right: 0">
+            <span class="fa-stack fa-4x pt-5"> 
+                <i class="fas fa-comments fa-stack-2x c-white">
+                    <h6 class="fas fa-stack-1x c-orange position-absolute" style="font-family:'Montserrat', sans-serif;font-size: 45px; top: 62px; left: -36px;">
+                        ¡HOLA!
+                    </h6>
+                </i>
+                
+            </span>
+            <div class="position-absolute text-center pb-4 "  style="bottom: 0; left: 0; right: 0;">
+
                 <p class="c-white">
                     Learn Spanish Verbs. <b>More Efficiently.</b>
                 </p  class="c-white bg-orange">

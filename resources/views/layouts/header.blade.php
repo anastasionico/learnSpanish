@@ -1,9 +1,9 @@
 
 <header class="align-middle">
- 	<nav class="navbar navbar-expand-md navbar-light navbar-laravel p-3">
+ 	<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container-fluid">
             <a class="navbar-brand w-25" href="{{ url('/') }}">
-                <img src="{{asset('img/EspapayaLogo.png')}}" class="w-50">
+                <img src="{{asset('img/EspapayaLogo.png')}}" class="w-100">
                 {{-- {{ config('app.name', 'Espapaya') }} --}}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
