@@ -4,6 +4,10 @@
 	transition: all 0.3s ease-in-out;
 	cursor: pointer;
 	font-weight: bold;
+  &-small {
+    font-size: 66%;
+    padding: 0.3rem 2rem;
+  }
   &:hover {
     outline: none;
   }

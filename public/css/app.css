@@ -11984,6 +11984,11 @@ footer .button:hover {
   font-weight: bold;
 }
 
+.button-small {
+  font-size: 66%;
+  padding: 0.3rem 2rem;
+}
+
 .button:hover {
   outline: none;
 }
