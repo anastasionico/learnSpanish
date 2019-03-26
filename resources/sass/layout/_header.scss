@@ -1,0 +1,35 @@
+header {
+	height: 4.5rem;
+}
+
+#logo {
+	width: 200px;
+}
+.navbar-nav {
+	.nav-item{
+		.nav-link {
+			border:2px solid $greenLight;	
+			padding: 0.2rem 3rem;
+			margin: 0 0.5rem;
+			font-size: 0.9rem;
+			font-family: 'Montserrat-Black', sans-serif;
+			color: $greenLight;
+			@include borderRadius(30px);
+			transition: all 0.3s ease-in-out;
+			font-weight: bold;
+			&:hover{
+				background: $greenLight;
+				color:$white;
+			}			
+			&.filled{
+				background: $greenLight;
+				color: $white;
+				&:hover{
+					background: $white;
+					color:$greenLight;
+				}			
+			}
+		}
+	}	
+
+}

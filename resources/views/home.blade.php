@@ -44,7 +44,7 @@
     <div class="row  p-5 text-center bg-white c-greenLight description">
         <div class="col-sm-12 col-lg-1"></div>
         <div class="col-sm-12 col-lg-10">
-            We’ve brought together over ???? different Spanish verb forms all in one place. If you simply want to practice Spanish verbs, then <b>espapaya.com</b> is for you.
+            We’ve brought together thousands of different Spanish verb forms all in one place. If you simply want to practice Spanish verbs, then <b>espapaya.com</b> is for you.
         </div>
         <div class="col-sm-12 col-lg-1"></div>
     </div>

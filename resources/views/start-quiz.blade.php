@@ -215,15 +215,22 @@
                 </div>        
             </div>
         </div>
-        <div class="col-sm-12 col-lg-2"></div>
-        <div class="col-sm-12 p-5 text-center bg-grayLight">
-            <a href='/quiz' class="button border-orange c-orange bg-empty">
+        <div class="col-sm-12 col-lg-2">
+        </div>
+    </div>
+    <div class="row pb-5 text-center bg-grayLight c-greenDark">
+        <div class="col-sm-12 col-lg-4"></div>
+        <div class="col-sm-12 col-lg-4">
+            <p class="mb-5"><small>Create an account to unlock tenses</small></p>
+            {{-- <a href='/quiz' class="button border-orange c-orange bg-empty mx-3 hover-orange"> --}}
+            <a href='/quiz' class="button button-orange-stripe border-orange c-orange bg-empty mx-3 hover-orange">
                 Start
             </a>
-            <a href='/pricing' class="button bg-orange c-orange mx-5">
-                Register
+            <a href='/pricing' class="button bg-orange c-orange mx-3">
+                Sign Up
             </a>
         </div>
+        <div class="col-sm-12 col-lg-4"></div>
     </div>
 @endsection
 

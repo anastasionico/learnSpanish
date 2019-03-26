@@ -28,12 +28,12 @@
                     </textarea>
                 </div>
                 <button type="submit" class="button border-greenLight c-greenLight bg-empty">
-                    <b>GET IN TOUCH</b>
+                    <b>Get In Touch</b>
                 </button>
             </form>
         </div>
-        <div class="col-sm-12 col-lg-4 c-greenLight text-left"> 
-            <img src="{{asset('img/social/twitterLogo.svg')}}" class="mb-3 social">
+        <div class="col-sm-12 col-lg-4 mb-3 c-greenLight text-left"> 
+            <a href="#" class="social"><i class="fab fa-twitter-square fa-2x"></i></a>
             <p><a href="terms">Terms & Conditions</a></p>
             <p><a href="privacy">Privacy & Cookie Policy</a></p>
             </div>

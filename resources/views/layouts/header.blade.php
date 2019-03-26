@@ -3,7 +3,7 @@
  	<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container-fluid">
             <a class="navbar-brand w-25" href="{{ url('/') }}">
-                <img src="{{asset('img/EspapayaLogo.png')}}" class="w-100">
+                <img src="{{asset('img/EspapayaLogo.png')}}" id="logo">
                 {{-- {{ config('app.name', 'Espapaya') }} --}}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -22,12 +22,12 @@
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">
-                                {{ __('LOGIN') }}
+                                {{ __('Login') }}
                             </a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link filled" href="{{ route('register') }}">{{ __('SIGN UP') }}</a>
+                                <a class="nav-link filled" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
                             </li>
                         @endif
                     @else

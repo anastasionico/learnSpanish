@@ -43,6 +43,12 @@
       color:$greenLight;
     }      
   }
+  &-orange-stripe {
+    &:hover{
+      background: $orange;
+      color:$white;
+    }       
+  }
 }
 
 // Troggles
