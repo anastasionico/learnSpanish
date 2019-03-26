@@ -12006,6 +12006,11 @@ header {
   color: #fff;
 }
 
+.button-greenLight-stripe:hover {
+  background: #92bf2a;
+  color: #fff;
+}
+
 .switch {
   position: relative;
   display: inline-block;

@@ -4,6 +4,7 @@
     <div class="row text-left bg-grayLight c-greenLight quiz">
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 col-lg-8 bg-white rounded">
+            <a href="/"><i class="fas fa-times"></i></a>
             <div class="row">
                 <div class="col-12 p-5 rounded">
                     <h4>Present</h4>
@@ -35,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-4">
-                                <button type="submit" class="button border-greenLight c-greenLight bg-empty  float-right">
+                                <button type="submit" class="button button-greenLight-stripe border-greenLight c-greenLight bg-empty  float-right">
                                     <b>Check</b>
                                 </button>    
                             </div>    
@@ -59,41 +60,9 @@
 
 @section('contentTwo')
     <div>
-        <div class="row bg-danger-opaque c-danger">
-            <div class="col-sm-12 col-lg-2 text-center py-3">
-                <span class="fa-stack fa-2x">
-                    <i class="fas fa-comment fa-stack-2x c-white"></i>
-                    <i class="fas fa-times-circle fa-stack-1x"></i>
-                </span>
-            </div>
-            <div class="col-sm-12 col-lg-8 pt-2">
-                <h3>Incorrect</h3>
-            </div>
-            <div class="col-sm-12 col-lg-2">
-            </div>
-        </div>
-        <div class="row bg-danger-opaque c-danger">
-            <div class="col-sm-12 col-lg-2">
-            </div>
-            <div class="col-sm-12 col-lg-8 mb-3">
-                <h6>Yo miento</h6>
-                <a href="#" class="button button-small border-danger c-danger bg-empty  button-danger">
-                    Report
-                </a>
-            </div>
-            <div class="col-sm-12 col-lg-2 mb-3">
-                <a href="#" class="button border-danger c-danger bg-empty button-danger">Continue</a>
-            </div>
-        </div>
-    </div>
-    
-    <div>
         <div class="row bg-orange-opaque c-orange">
             <div class="col-sm-12 col-lg-2 text-center py-3">
-                <span class="fa-stack fa-2x">
-                    <i class="fas fa-comment fa-stack-2x c-white"></i>
-                    <i class="fas fa-times-circle fa-stack-1x"></i>
-                </span>
+                <i class="fas fa-times-circle fa-2x"></i>
             </div>
             <div class="col-sm-12 col-lg-8 pt-2">
                 <h3>Incorrect</h3>
@@ -105,9 +74,9 @@
             <div class="col-sm-12 col-lg-2">
             </div>
             <div class="col-sm-12 col-lg-8 mb-3">
-                <h6>Yo miento</h6>
+                <h6><small>Correct answer:</small> Yo miento</h6>
                 <a href="#" class="button button-small border-orange c-orange bg-empty button-orange">
-                    Report
+                    <i class="fas fa-flag"></i> Report
                 </a>
             </div>
             <div class="col-sm-12 col-lg-2 mb-3">
@@ -118,40 +87,9 @@
     </div>
 
     <div>
-        <div class="row bg-success-opaque c-success">
-            <div class="col-sm-12 col-lg-2 text-center py-3">
-                <span class="fa-stack fa-2x">
-                    <i class="fas fa-comment fa-stack-2x c-white"></i>
-                    <i class="fas fa-check-circle fa-stack-1x"></i>
-                </span>
-            </div>
-            <div class="col-sm-12 col-lg-8 pt-2">
-                <h3>Correct</h3>
-            </div>
-            <div class="col-sm-12 col-lg-2">
-            </div>
-        </div>
-        <div class="row bg-success-opaque c-success">
-            <div class="col-sm-12 col-lg-2">
-            </div>
-            <div class="col-sm-12 col-lg-8 mb-3">
-                <a href="#" class="button button-small border-success c-success bg-empty button-success">
-                    Report
-                </a>
-            </div>
-            <div class="col-sm-12 col-lg-2 mb-3">
-                <a href="#" class="button border-success c-success bg-empty button-success">Continue</a>
-            </div>
-        </div>
-    </div>
-
-    <div>
         <div class="row bg-greenLight-opaque c-greenLight">
             <div class="col-sm-12 col-lg-2 text-center py-3">
-                <span class="fa-stack fa-2x">
-                    <i class="fas fa-comment fa-stack-2x c-white"></i>
-                    <i class="fas fa-check-circle fa-stack-1x"></i>
-                </span>
+                    <i class="fas fa-check-circle fa-2x"></i>
             </div>
             <div class="col-sm-12 col-lg-8 pt-2">
                 <h3>Correct</h3>
@@ -164,7 +102,7 @@
             </div>
             <div class="col-sm-12 col-lg-8 mb-3">
                 <a href="#" class="button button-small border-greenLight c-greenLight bg-empty button-greenLight">
-                    Report
+                    <i class="fas fa-flag"></i> Report
                 </a>
             </div>
             <div class="col-sm-12 col-lg-2 mb-3">

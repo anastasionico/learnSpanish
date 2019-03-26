@@ -49,6 +49,12 @@
       color:$white;
     }       
   }
+  &-greenLight-stripe {
+    &:hover{
+      background: $greenLight;
+      color:$white;
+    }       
+  }
 }
 
 // Troggles
