@@ -11880,35 +11880,6 @@ a:hover {
   font-size: 2.1rem;
 }
 
-footer {
-  background-size: cover;
-}
-
-footer p {
-  font-size: 0.8rem;
-}
-
-footer .slogan p {
-  font-size: 1.2rem;
-}
-
-footer .social {
-  width: 20px;
-}
-
-footer .social:hover {
-  color: #ff6b00;
-}
-
-footer .button {
-  font-size: 0.8rem;
-}
-
-footer .button:hover {
-  background: #92bf2a;
-  color: #111;
-}
-
 .copyright {
   border-top: 1px solid #92bf2a;
 }
@@ -11951,6 +11922,42 @@ header {
 .navbar-nav .nav-item .nav-link.filled:hover {
   background: #fff;
   color: #92bf2a;
+}
+
+footer {
+  background-size: cover;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+footer .slogan p {
+  font-size: 1.2rem;
+}
+
+footer .social {
+  padding: 2px 5px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #92bf2a;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .social:hover {
+  border-color: #ff6b00;
+  color: #ff6b00;
+}
+
+footer .button {
+  font-size: 0.8rem;
+}
+
+footer .button:hover {
+  background: #92bf2a;
+  color: #111;
 }
 
 .button {

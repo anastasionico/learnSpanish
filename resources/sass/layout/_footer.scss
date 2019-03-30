@@ -1,0 +1,31 @@
+footer{
+	background-size:cover;
+	p{
+		font-size: 0.8rem;		
+	}
+	.slogan {
+		p{
+			font-size: 1.2rem;			
+			
+		}
+	}
+	.social {
+		padding: 2px 5px;
+		width: 27px;
+		height: 27px;
+		border:1px solid $greenLight;
+		@include borderRadius(50%)
+		transition: all 0.3s ease-in-out;
+		&:hover{
+			border-color: $orange;
+			color:$orange;
+		}			
+	}
+	.button {
+		font-size: 0.8rem;			
+		&:hover{
+			background: $greenLight;
+			color:$black;
+		}			
+	}
+}

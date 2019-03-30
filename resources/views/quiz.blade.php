@@ -4,9 +4,9 @@
     <div class="row text-left bg-grayLight c-greenLight quiz">
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 col-lg-8 bg-white rounded">
-            <a href="/"><i class="fas fa-times"></i></a>
+            <a href="/" class="quiz-exit"><i class="fas fa-times fa-2x m-2"></i></a>
             <div class="row">
-                <div class="col-12 p-5 rounded">
+                <div class="col-12 p-3 rounded">
                     <h4>Present</h4>
                     <div class="row">
                         <div class="col-sm-12 col-lg-8">
@@ -61,8 +61,7 @@
 @section('contentTwo')
     <div>
         <div class="row bg-orange-opaque c-orange">
-            <div class="col-sm-12 col-lg-2 text-center py-3">
-                <i class="fas fa-times-circle fa-2x"></i>
+            <div class="col-sm-12 col-lg-2 pt-3">
             </div>
             <div class="col-sm-12 col-lg-8 pt-2">
                 <h3>Incorrect</h3>
@@ -70,16 +69,18 @@
             <div class="col-sm-12 col-lg-2">
             </div>
         </div>
-        <div class="row bg-orange-opaque c-orange">
-            <div class="col-sm-12 col-lg-2">
+        <div class="row answer-outcome-bottom bg-orange-opaque c-orange">
+            <div class="col-sm-12 col-lg-2 text-center">
+                <i class="fas fa-times-circle fa-4x"></i>
             </div>
-            <div class="col-sm-12 col-lg-8 mb-3">
-                <h6><small>Correct answer:</small> Yo miento</h6>
+            <div class="col-sm-12 col-lg-8">
+                <small>Correct answer:</small>
+                <p class="mb-0">Yo miento</p>
                 <a href="#" class="button button-small border-orange c-orange bg-empty button-orange">
                     <i class="fas fa-flag"></i> Report
                 </a>
             </div>
-            <div class="col-sm-12 col-lg-2 mb-3">
+            <div class="col-sm-12 col-lg-2 mt-3">
                 <a href="#" class="button border-orange c-orange bg-empty button-orange">Continue</a>
                 
             </div>
@@ -88,8 +89,7 @@
 
     <div>
         <div class="row bg-greenLight-opaque c-greenLight">
-            <div class="col-sm-12 col-lg-2 text-center py-3">
-                    <i class="fas fa-check-circle fa-2x"></i>
+            <div class="col-sm-12 col-lg-2 pt-3">
             </div>
             <div class="col-sm-12 col-lg-8 pt-2">
                 <h3>Correct</h3>
@@ -97,36 +97,39 @@
             <div class="col-sm-12 col-lg-2">
             </div>
         </div>
-        <div class="row bg-greenLight-opaque c-greenLight">
-            <div class="col-sm-12 col-lg-2">
+        <div class="row answer-outcome-bottom bg-greenLight-opaque c-greenLight">
+            <div class="col-sm-12 col-lg-2 text-center">
+                <i class="fas fa-check-circle fa-4x"></i>
             </div>
             <div class="col-sm-12 col-lg-8 mb-3">
                 <a href="#" class="button button-small border-greenLight c-greenLight bg-empty button-greenLight">
                     <i class="fas fa-flag"></i> Report
                 </a>
             </div>
-            <div class="col-sm-12 col-lg-2 mb-3">
+            <div class="col-sm-12 col-lg-2 mt-3">
                 <a href="#" class="button border-greenLight c-greenLight bg-empty button-greenLight">Continue</a>
             </div>
         </div>
     </div>
 @endsection
 
-@section('contentThree')
+{{-- @section('contentThree')
     <div class="row text-left bg-grayLight c-gray quiz">
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 col-lg-8 bg-white rounded">
+            <a href="/" class="quiz-exit"><i class="fas fa-times fa-2x m-2"></i></a>
             <div class="row">
-                <div class="col-12 p-5 rounded">
+                <div class="col-12 p-3 rounded">
+                    <h4>Present</h4>
                     <div class="row">
-                        <div class="col-6">
-                            <h4>Present</h4>
+                        <div class="col-sm-12 col-lg-8">
+                            <h1>Mentir</h1>
                         </div>
-                        <div class="col-6 text-right">
-                            <h4><i>To lie</i></h4>
+                        <div class="col-sm-12 col-lg-4 text-right pt-5">
+                            <h3><i>To lie</i></h3>
                         </div>
                     </div>
-                    <h1>Mentir</h1>
+                    
                     <h5>Yo</h5>
                     <form action="/quiz" class="clearfix">
                         @csrf
@@ -160,4 +163,4 @@
         </div>
         <div class="col-sm-12 col-lg-2"></div>
     </div>
-@endsection
+@endsection --}}

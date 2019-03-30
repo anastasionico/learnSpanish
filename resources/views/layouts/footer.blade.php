@@ -33,7 +33,11 @@
             </form>
         </div>
         <div class="col-sm-12 col-lg-4 mb-3 c-greenLight text-left"> 
-            <a href="#" class="social"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <span class="social mb-3 d-inline-block">
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </span>
             <p><a href="terms">Terms & Conditions</a></p>
             <p><a href="privacy">Privacy & Cookie Policy</a></p>
             </div>

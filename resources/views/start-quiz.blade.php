@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('contentOne')
-    <div class="row p-5 text-left bg-grayLight c-greenDark tenses">
+{{--     <div class="row p-5 text-left bg-grayLight c-greenDark tenses">
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 col-lg-8 bg-white rounded py-4">
             <div class="row py-1">
@@ -110,9 +110,9 @@
                 Start
             </a>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="row p-5 text-left bg-grayLight c-greenDark tenses">
+    <div class="row pt-5 text-left bg-grayLight c-greenDark tenses">
         <div class="col-sm-12 col-lg-2"></div>
         <div class="col-sm-12 col-lg-8 bg-white rounded py-4">
             <div class="row py-1">
@@ -218,11 +218,11 @@
         <div class="col-sm-12 col-lg-2">
         </div>
     </div>
+
     <div class="row pb-5 text-center bg-grayLight c-greenDark">
         <div class="col-sm-12 col-lg-4"></div>
         <div class="col-sm-12 col-lg-4">
             <p class="mb-5"><small>Create an account to unlock tenses</small></p>
-            {{-- <a href='/quiz' class="button border-orange c-orange bg-empty mx-3 hover-orange"> --}}
             <a href='/quiz' class="button button-orange-stripe border-orange c-orange bg-empty mx-3 hover-orange">
                 Start
             </a>
