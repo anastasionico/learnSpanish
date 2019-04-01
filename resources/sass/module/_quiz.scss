@@ -15,13 +15,26 @@
 }
 .answer-outcome {
 	&-top{
-		// height: 120px;	
+		& h3 {
+			margin-bottom:0 !important;
+		}
 	}
 	&-bottom{
-		// p{
+		&-icon{
+			margin-top: -1rem;
+		}
+		&-info{
+			height: 72px;
+			&-report{
+				
+			}
+		}
 
-		// }
-		// height: 100px;	
+		b {
+			display: block;
+		}
+		
+
 	}
 }
 

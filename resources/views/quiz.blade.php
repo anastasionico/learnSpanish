@@ -60,54 +60,56 @@
 
 @section('contentTwo')
     <div>
-        <div class="row bg-orange-opaque c-orange">
+        <div class="row bg-orange-opaque c-orange answer-outcome-top">
             <div class="col-sm-12 col-lg-2 pt-3">
             </div>
-            <div class="col-sm-12 col-lg-8 pt-2">
+            <div class="col-sm-12 col-lg-8">
                 <h3>Incorrect</h3>
             </div>
             <div class="col-sm-12 col-lg-2">
             </div>
         </div>
-        <div class="row answer-outcome-bottom bg-orange-opaque c-orange">
+        <div class="row bg-orange-opaque c-orange answer-outcome-bottom pb-3">
             <div class="col-sm-12 col-lg-2 text-center">
-                <i class="fas fa-times-circle fa-4x"></i>
+                <i class="fas fa-times fa-4x answer-outcome-bottom-icon"></i>
             </div>
-            <div class="col-sm-12 col-lg-8">
+            <div class="col-sm-12 col-lg-8 answer-outcome-bottom-info ">
                 <small>Correct answer:</small>
-                <p class="mb-0">Yo miento</p>
-                <a href="#" class="button button-small border-orange c-orange bg-empty button-orange">
+                <b class="mb-0 answer-outcome-bottom-english">Yo miento</b>
+                <a href="#" class="button button-small border-orange c-orange bg-empty button-orange answer-outcome-bottom-report position-absolute">
                     <i class="fas fa-flag"></i> Report
                 </a>
             </div>
-            <div class="col-sm-12 col-lg-2 mt-3">
+            <div class="col-sm-12 col-lg-2">
                 <a href="#" class="button border-orange c-orange bg-empty button-orange">Continue</a>
                 
             </div>
         </div>
     </div>
-
     <div>
-        <div class="row bg-greenLight-opaque c-greenLight">
+        <div class="row bg-greenLight-opaque c-greenLight answer-outcome-top">
             <div class="col-sm-12 col-lg-2 pt-3">
             </div>
-            <div class="col-sm-12 col-lg-8 pt-2">
+            <div class="col-sm-12 col-lg-8">
                 <h3>Correct</h3>
             </div>
             <div class="col-sm-12 col-lg-2">
             </div>
         </div>
-        <div class="row answer-outcome-bottom bg-greenLight-opaque c-greenLight">
+        <div class="row bg-greenLight-opaque c-greenLight answer-outcome-bottom pb-3">
             <div class="col-sm-12 col-lg-2 text-center">
-                <i class="fas fa-check-circle fa-4x"></i>
+                <i class="fas fa-check fa-4x answer-outcome-bottom-icon"></i>
             </div>
-            <div class="col-sm-12 col-lg-8 mb-3">
-                <a href="#" class="button button-small border-greenLight c-greenLight bg-empty button-greenLight">
+            <div class="col-sm-12 col-lg-8 answer-outcome-bottom-info ">
+                <small>&nbsp;</small>
+                <b class="mb-0 answer-outcome-bottom-english">&nbsp;</b>
+                <a href="#" class="button button-small border-greenLight c-greenLight bg-empty button-greenLight answer-outcome-bottom-report position-absolute">
                     <i class="fas fa-flag"></i> Report
                 </a>
             </div>
-            <div class="col-sm-12 col-lg-2 mt-3">
+            <div class="col-sm-12 col-lg-2">
                 <a href="#" class="button border-greenLight c-greenLight bg-empty button-greenLight">Continue</a>
+                
             </div>
         </div>
     </div>

@@ -12108,6 +12108,22 @@ input:checked + .slider:before {
   font-size: 1rem;
 }
 
+.answer-outcome-top h3 {
+  margin-bottom: 0 !important;
+}
+
+.answer-outcome-bottom-icon {
+  margin-top: -1rem;
+}
+
+.answer-outcome-bottom-info {
+  height: 72px;
+}
+
+.answer-outcome-bottom b {
+  display: block;
+}
+
 .warning a {
   color: #f5c640;
 }
