@@ -12113,7 +12113,7 @@ input:checked + .slider:before {
 }
 
 .answer-outcome-bottom-icon {
-  margin-top: -1rem;
+  margin-top: -0.5rem;
 }
 
 .answer-outcome-bottom-info {

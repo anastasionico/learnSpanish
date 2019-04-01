@@ -2,9 +2,10 @@
 
 @section('contentOne')
     <div class="row text-left bg-grayLight c-greenLight quiz">
-        <div class="col-sm-12 col-lg-2"></div>
-        <div class="col-sm-12 col-lg-8 bg-white rounded">
+        <div class="col-sm-12 col-lg-2 text-right">
             <a href="/" class="quiz-exit"><i class="fas fa-times fa-2x m-2"></i></a>
+        </div>
+        <div class="col-sm-12 col-lg-8 bg-white rounded">
             <div class="row">
                 <div class="col-12 p-3 rounded">
                     <h4>Present</h4>
