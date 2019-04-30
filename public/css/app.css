@@ -11896,7 +11896,13 @@ header {
   width: 200px;
 }
 
-.navbar-nav .nav-item .nav-link {
+.navbar-collapse {
+  z-index: 100;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+}
+
+.navbar-collapse .navbar-nav .nav-item .nav-link {
   border: 2px solid #92bf2a;
   padding: 0.2rem 3rem;
   margin: 0 0.5rem;
@@ -11909,17 +11915,29 @@ header {
   font-weight: bold;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
+@media (min-width: 0px) {
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    margin: 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    margin: 0 0.5rem;
+  }
+}
+
+.navbar-collapse .navbar-nav .nav-item .nav-link:hover {
   background: #92bf2a;
   color: #fff;
 }
 
-.navbar-nav .nav-item .nav-link.filled {
+.navbar-collapse .navbar-nav .nav-item .nav-link.filled {
   background: #92bf2a;
   color: #fff;
 }
 
-.navbar-nav .nav-item .nav-link.filled:hover {
+.navbar-collapse .navbar-nav .nav-item .nav-link.filled:hover {
   background: #fff;
   color: #92bf2a;
 }
