@@ -223,10 +223,10 @@
         <div class="col-sm-12 col-lg-4"></div>
         <div class="col-sm-12 col-lg-4">
             <p class="mb-5"><small>Create an account to unlock tenses</small></p>
-            <a href='/quiz' class="button button-orange-stripe border-orange c-orange bg-empty mx-3 hover-orange">
+            <a href='/quiz' class="button button-orange-stripe border-orange c-orange bg-empty mx-1 hover-orange">
                 Start
             </a>
-            <a href='/pricing' class="button bg-orange c-orange mx-3">
+            <a href='/pricing' class="button bg-orange c-orange mx-1">
                 Sign Up
             </a>
         </div>

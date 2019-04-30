@@ -24,12 +24,16 @@
 			margin-top: -0.5rem;
 		}
 		&-info{
-			height: 72px;
-			&-report{
-
+			@include media(phonePortrait) {height: 95px;};
+		  	@include media(tabletLandscape) {height: 72px;};
+		}
+		&-continue{
+			.button {
+			  	@include media(tabletLandscape) {
+			  		padding: 0.5rem 2rem;
+			  	};		
 			}
 		}
-
 		b {
 			display: block;
 		}

@@ -81,9 +81,8 @@
                     <i class="fas fa-flag"></i> Report
                 </a>
             </div>
-            <div class="col-sm-12 col-lg-2">
+            <div class="col-sm-12 col-lg-2 answer-outcome-bottom-continue">
                 <a href="#" class="button border-orange c-orange bg-empty button-orange">Continue</a>
-                
             </div>
         </div>
     </div>
@@ -108,12 +107,12 @@
                     <i class="fas fa-flag"></i> Report
                 </a>
             </div>
-            <div class="col-sm-12 col-lg-2">
+            <div class="col-sm-12 col-lg-2 answer-outcome-bottom-continue">
                 <a href="#" class="button border-greenLight c-greenLight bg-empty button-greenLight">Continue</a>
-                
             </div>
         </div>
     </div>
+
 @endsection
 
 {{-- @section('contentThree')

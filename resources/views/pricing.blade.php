@@ -17,8 +17,8 @@
             <p>Choose from one of the following two account options:</p>
         </div>
     </div>
-    <div class="row bg-grayLight p-5">
-        <div class="col-sm-12 col-lg-4 p-4 bg-white rounded">
+    <div class="row bg-grayLight p-5 section-pricing">
+        <div class="col-sm-12 col-lg-4 p-4 bg-white rounded section-pricing-div">
             <h6 class="c-greenLight">Option 1: Free Plan</h6>
             <h2 class="c-greenLight">No Fees</h2>
             
@@ -36,18 +36,18 @@
             </a>    
         </div>
         <div class="col-sm-12 col-lg-1"></div>
-        <div class="col-sm-12 col-lg-7">
-            <div class="bg-white p-4 rounded mb-5">
-                <h6 class="c-greenLight">Option 2: Paid Account</h6>
-                <h2 class="c-greenLight">$4.99/Year</h2>
-                <p>Benefit from our spaced repetition Bots</p>
-                <p>Unlock all tenses <b>and</b> all verb forms within our database</p>
-                <p>Ad-free learning</p>
-                <p>We will not automatically renew your subscription</p>
-                <a href='/start-quiz' class="button bg-orange">
-                    Sign Up
-                </a>    
-            </div>
+        
+        <div class="col-sm-12 col-lg-7 bg-white p-4 rounded section-pricing-div">
+            <h6 class="c-greenLight">Option 2: Paid Account</h6>
+            <h2 class="c-greenLight">$4.99/Year</h2>
+            <p>Benefit from our spaced repetition Bots</p>
+            <p>Unlock all tenses <b>and</b> all verb forms within our database</p>
+            <p>Ad-free learning</p>
+            <p>We will not automatically renew your subscription</p>
+            <a href='/start-quiz' class="button bg-orange">
+                Sign Up
+            </a>    
+        
             {{-- <div class="bg-white p-4 rounded">
                 <strong class="c-greenLight">We’ve brought together over ????</strong>
                 <p>Different Spanish verb forms all in one place. If you simply want to practice Spanish verbs, then espapaya.com is for you.</p>

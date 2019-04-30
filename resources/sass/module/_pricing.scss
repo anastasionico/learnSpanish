@@ -1,0 +1,10 @@
+.section-pricing{
+	&-div{
+		@include media(phonePortrait) {
+			margin-bottom:2rem;
+		};
+	  	@include media(tabletLandscape) {
+  			margin-bottom:0rem;
+	  	};
+	}
+}
