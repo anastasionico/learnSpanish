@@ -3,7 +3,7 @@
 @section('contentOne')
     <div class="row  p-5 text-left bg-grayLight">
         <div class="col-sm-12 col-lg-2"></div>
-        <div class="col-sm-12 col-lg-8 p-5 rounded bg-white">
+        <div class="col-sm-12 col-lg-8 p-5 rounded bg-white regulation-section">
             <h1 class="c-greenLight">Terms and Conditions for Espapaya.com</h1>
             <h2 class="c-greenLight">Introduction</h2>
             <p>These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Webiste Name accessible at Website.com.</p>

@@ -10,7 +10,15 @@ footer{
 		}
 	}
 	.social {
-		padding: 2px 5px;
+		@include media(phonePortrait) {
+			margin-top: 1rem;
+		};
+	  	@include media(phoneLandscape) {};
+	  	@include media(tabletPortrait) {};
+	  	@include media(tabletLandscape) {
+	  		margin-top: 0rem;
+	  	};
+	  	padding: 2px 5px;
 		width: 27px;
 		height: 27px;
 		border:1px solid $greenLight;

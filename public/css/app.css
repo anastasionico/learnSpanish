@@ -11964,6 +11964,18 @@ footer .social {
   transition: all 0.3s ease-in-out;
 }
 
+@media (min-width: 0px) {
+  footer .social {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .social {
+    margin-top: 0rem;
+  }
+}
+
 footer .social:hover {
   border-color: #ff6b00;
   color: #ff6b00;
@@ -11976,6 +11988,38 @@ footer .button {
 footer .button:hover {
   background: #92bf2a;
   color: #111;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 100%;
+}
+
+ul {
+  padding-left: 1rem;
 }
 
 .button {

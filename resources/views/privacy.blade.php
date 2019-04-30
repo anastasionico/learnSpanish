@@ -3,7 +3,7 @@
 	@section('contentOne')
 	    <div class="row  p-5 text-left bg-grayLight">
 	        <div class="col-sm-12 col-lg-2"></div>
-	        <div class="col-sm-12 col-lg-8 p-5 rounded bg-white">
+	        <div class="col-sm-12 col-lg-8 p-5 rounded bg-white regulation-section">
 	            <div>
 	        		<p>Contents</p>
 	        		<ul>
