@@ -1,6 +1,5 @@
 @extends('layouts.master')
 
-
 @section('contentOne')
     <div class="row justify-content-center loginForm mb-5">
         <div class="col-md-8">

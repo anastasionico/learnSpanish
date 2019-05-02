@@ -1,8 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
+@section('contentOne')
+    <div class="row justify-content-center loginForm mb-5">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
@@ -63,7 +62,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="button bg-greenLight c-white border-white">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -73,5 +72,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
