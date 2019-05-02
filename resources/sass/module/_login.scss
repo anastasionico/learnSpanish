@@ -1,0 +1,12 @@
+.loginForm{
+	.card{
+		@include borderRadius(30px);
+		color:$greenLight;
+		.card-header{
+			background-color: $greenLight;
+			color:$white;
+		}	
+	}
+
+	
+}

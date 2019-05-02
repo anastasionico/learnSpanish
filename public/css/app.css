@@ -12212,6 +12212,16 @@ input:checked + .slider:before {
   }
 }
 
+.loginForm .card {
+  border-radius: 30px;
+  color: #92bf2a;
+}
+
+.loginForm .card .card-header {
+  background-color: #92bf2a;
+  color: #fff;
+}
+
 .warning a {
   color: #f5c640;
 }
