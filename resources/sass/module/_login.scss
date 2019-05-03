@@ -8,5 +8,11 @@
 		}	
 	}
 
-	
+	button[type=submit]{ 
+	    border:2px solid $greenLight;
+	    &:hover{
+	      	background: $white;
+	      	color:$greenLight;
+		}          
+	}
 }

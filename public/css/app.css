@@ -12222,6 +12222,15 @@ input:checked + .slider:before {
   color: #fff;
 }
 
+.loginForm button[type=submit] {
+  border: 2px solid #92bf2a;
+}
+
+.loginForm button[type=submit]:hover {
+  background: #fff;
+  color: #92bf2a;
+}
+
 .warning a {
   color: #f5c640;
 }

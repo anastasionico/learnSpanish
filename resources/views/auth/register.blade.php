@@ -60,9 +60,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="newsletter" class="col-md-4 col-form-label text-md-right">{{ __('Register to the newsletter') }}</label>
+
+                            <div class="col-md-6">
+                                <label class="switch">
+                                  <input type="checkbox">
+                                  <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="button bg-greenLight c-white border-white">
+                                <button type="submit" class="button bg-greenLight c-white">
                                     {{ __('Register') }}
                                 </button>
                             </div>
