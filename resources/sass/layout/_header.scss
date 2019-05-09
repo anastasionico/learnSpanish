@@ -1,10 +1,36 @@
 header {
-	height: 4.5rem;
+	@include media(phonePortrait) {
+		height: 2.5rem;
+	};
+	@include media(tabletPortrait) {
+		height: 4.5rem;
+	};
 }
 
 #logo {
-	width: 200px;
+	@include media(phonePortrait) {
+		width: 100px;
+	};
+	@include media(tabletPortrait) {
+		width: 200px;
+	};
 }
+
+.navbar{
+	@include media(phonePortrait) {
+		padding: 0 1rem;
+	};
+	@include media(tabletPortrait) {
+		padding: 0.5rem 1rem;
+	};
+
+	.navbar-toggler{
+		padding:0;
+		font-size: 0.75rem;
+	}
+}
+
+
 
 .navbar-collapse {
 	z-index:100;

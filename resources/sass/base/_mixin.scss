@@ -14,10 +14,4 @@
 	    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
     	    + "Please make sure it is defined in `$breakpoints` map.";
   	}
-  	// @include media(phonePortrait) {};
-  	// @include media(phoneLandscape) {};
-  	// @include media(tabletPortrait) {};
-  	// @include media(tabletLandscape) {};
-  	// @include media(desktop) {};
-  	// @include media(bigscreen) {};
 }
