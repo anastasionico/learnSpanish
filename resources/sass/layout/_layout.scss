@@ -22,7 +22,7 @@
 	}
 }
 
-.hero, .description, .section-cta {
+.hero, .section-cta {
 	font-size: 1.9rem;
 	.button{
 		font-size: 1.2rem;	
@@ -122,4 +122,25 @@
 	.disabled {
 		color: $grayDark;
 	}
+}
+
+.description{
+	@include media(phonePortrait) {
+		padding:1rem;
+		text-align: left;
+		font-size: 1rem;
+		.button{
+			font-size: 1rem;	
+		}		
+	}
+
+	@include media(tabletPortrait) {
+		padding:5rem;
+		text-align: center;
+		font-size: 1.9rem;
+		.button{
+			font-size: 1.2rem;	
+		}		
+	};
+	
 }
