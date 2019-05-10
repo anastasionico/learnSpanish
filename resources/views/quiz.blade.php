@@ -3,7 +3,7 @@
 @section('contentOne')
     <div class="row text-left bg-grayLight c-greenLight quiz">
         <div class="col-sm-12 col-lg-2 text-right">
-            <a href="/" class="quiz-exit"><i class="fas fa-times fa-2x m-2"></i></a>
+            <a href="/" class="quiz-exit"><i class="fas fa-times fa-2x"></i></a>
         </div>
         <div class="col-sm-12 col-lg-8 bg-white rounded">
             <div class="row">
@@ -13,7 +13,7 @@
                         <div class="col-sm-12 col-lg-8">
                             <h1>Mentir</h1>
                         </div>
-                        <div class="col-sm-12 col-lg-4 text-right pt-5">
+                        <div class="col-sm-12 col-lg-4 text-right verb-eng">
                             <h3><i>To lie</i></h3>
                         </div>
                     </div>

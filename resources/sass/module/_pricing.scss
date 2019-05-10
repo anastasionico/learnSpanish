@@ -2,9 +2,15 @@
 	&-div{
 		@include media(phonePortrait) {
 			margin-bottom:2rem;
+			p {
+				font-size: 1rem;
+			}
 		};
 	  	@include media(tabletLandscape) {
   			margin-bottom:0rem;
+  			p {
+				font-size: 1.3rem;
+			}
 	  	};
 	}
 }

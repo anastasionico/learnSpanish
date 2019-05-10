@@ -1,18 +1,37 @@
 .quiz {
-	padding: 3rem 0;
-	h1 {
-		font-size: 5rem;
+	@include media(phonePortrait) {
+		padding:1rem;
+		h1 {
+			font-size: 3rem;
+		}
+		h4 {
+			font-size: 1.3rem;	
+		}
+		h5 {
+			font-size: 1rem;	
+		}
+		.verb-eng{
+
+		}
 	}
-	h4 {
-		font-size: 1.3rem;	
-	}
-	h5 {
-		font-size: 1rem;	
-	}
-	&-exit {
-		
+
+	@include media(tabletPortrait) {
+		padding: 3rem 0;
+		h1 {
+			font-size: 5rem;
+		}
+		h4 {
+			font-size: 1.3rem;	
+		}
+		h5 {
+			font-size: 1rem;	
+		}
+		.verb-eng{
+			padding-top: 3rem;	
+		}
 	}
 }
+
 .answer-outcome {
 	&-top{
 		& h3 {

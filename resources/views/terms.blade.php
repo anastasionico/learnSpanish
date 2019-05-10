@@ -3,7 +3,7 @@
 @section('contentOne')
     <div class="row  p-5 text-left bg-grayLight">
         <div class="col-sm-12 col-lg-2"></div>
-        <div class="col-sm-12 col-lg-8 p-5 rounded bg-white regulation-section">
+        <div class="col-sm-12 col-lg-8 rounded bg-white regulation-section">
             <h1 class="c-greenLight">Terms and Conditions for Espapaya.com</h1>
             <h2 class="c-greenLight">Introduction</h2>
             <p>These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Webiste Name accessible at Website.com.</p>
@@ -12,6 +12,7 @@
             <h2 class="c-greenLight">Intellectual Property Rights</h2>
             <p>Other than the content you own, under these Terms, Company Name and/or its licensors own all the intellectual property rights and materials contained in this Website.
 
+   
             You are granted limited license only for purposes of viewing the material contained on this Website.
             </p>
             <h2 class="c-greenLight">Restrictions</h2>

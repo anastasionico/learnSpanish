@@ -12156,40 +12156,45 @@ footer .footer-upper .button:hover {
   color: #111;
 }
 
-h1 {
-  font-size: 1.7rem;
+.regulation-section {
+  padding: 1rem;
 }
 
-h2 {
-  font-size: 1.6rem;
-}
-
-h2 {
+.regulation-section h1 {
   font-size: 1.5rem;
 }
 
-h2 {
+.regulation-section h2 {
   font-size: 1.4rem;
 }
 
-h2 {
+.regulation-section h2 {
   font-size: 1.3rem;
 }
 
-h2 {
+.regulation-section h2 {
   font-size: 1.2rem;
 }
 
-p {
-  font-size: 100%;
+.regulation-section h2 {
+  font-size: 1.1rem;
 }
 
-ul {
+.regulation-section h2 {
+  font-size: 1rem;
+}
+
+.regulation-section p,
+.regulation-section ul li {
+  font-size: 0.75rem;
+}
+
+.regulation-section ul {
   padding-left: 1rem;
 }
 
 .button {
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 2rem;
   border-radius: 30px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -12320,20 +12325,44 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.quiz {
-  padding: 3rem 0;
+@media (min-width: 0px) {
+  .quiz {
+    padding: 1rem;
+  }
+
+  .quiz h1 {
+    font-size: 3rem;
+  }
+
+  .quiz h4 {
+    font-size: 1.3rem;
+  }
+
+  .quiz h5 {
+    font-size: 1rem;
+  }
 }
 
-.quiz h1 {
-  font-size: 5rem;
-}
+@media (min-width: 768px) {
+  .quiz {
+    padding: 3rem 0;
+  }
 
-.quiz h4 {
-  font-size: 1.3rem;
-}
+  .quiz h1 {
+    font-size: 5rem;
+  }
 
-.quiz h5 {
-  font-size: 1rem;
+  .quiz h4 {
+    font-size: 1.3rem;
+  }
+
+  .quiz h5 {
+    font-size: 1rem;
+  }
+
+  .quiz .verb-eng {
+    padding-top: 3rem;
+  }
 }
 
 .answer-outcome-top h3 {
@@ -12370,11 +12399,19 @@ input:checked + .slider:before {
   .section-pricing-div {
     margin-bottom: 2rem;
   }
+
+  .section-pricing-div p {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .section-pricing-div {
     margin-bottom: 0rem;
+  }
+
+  .section-pricing-div p {
+    font-size: 1.3rem;
   }
 }
 

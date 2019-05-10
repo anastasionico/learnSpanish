@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="row bg-grayLight p-5 section-pricing">
-        <div class="col-sm-12 col-lg-4 p-4 bg-white rounded section-pricing-div">
+        <div class="col-sm-12 col-lg-4 p-2 bg-white rounded section-pricing-div">
             <h6 class="c-greenLight">Option 1: Free Plan</h6>
             <h2 class="c-greenLight">No Fees</h2>
             
@@ -37,7 +37,7 @@
         </div>
         <div class="col-sm-12 col-lg-1"></div>
         
-        <div class="col-sm-12 col-lg-7 bg-white p-4 rounded section-pricing-div">
+        <div class="col-sm-12 col-lg-7 bg-white p-2 rounded section-pricing-div">
             <h6 class="c-greenLight">Option 2: Paid Account</h6>
             <h2 class="c-greenLight">$4.99/Year</h2>
             <p>Benefit from our spaced repetition Bots</p>
