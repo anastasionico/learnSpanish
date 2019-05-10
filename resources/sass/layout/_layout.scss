@@ -22,7 +22,7 @@
 	}
 }
 
-.hero, .section-cta {
+.hero,  {
 	font-size: 1.9rem;
 	.button{
 		font-size: 1.2rem;	
@@ -130,6 +130,7 @@
 		text-align: left;
 		font-size: 1rem;
 		.button{
+			margin-top: 1rem;
 			font-size: 1rem;	
 		}		
 	}
@@ -141,6 +142,15 @@
 		.button{
 			font-size: 1.2rem;	
 		}		
-	};
-	
+	}
+}
+
+.usp {
+	@include media(phonePortrait) {
+		padding:1rem;
+	}
+
+	@include media(tabletPortrait) {
+		padding:5rem;
+	}
 }

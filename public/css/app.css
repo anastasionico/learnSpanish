@@ -11846,13 +11846,11 @@ a:hover {
   color: #b7bbb0;
 }
 
-.hero,
-.section-cta {
+.hero {
   font-size: 1.9rem;
 }
 
-.hero .button,
-.section-cta .button {
+.hero .button {
   font-size: 1.2rem;
 }
 
@@ -11970,6 +11968,7 @@ a:hover {
   }
 
   .description .button {
+    margin-top: 1rem;
     font-size: 1rem;
   }
 }
@@ -11983,6 +11982,18 @@ a:hover {
 
   .description .button {
     font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 0px) {
+  .usp {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .usp {
+    padding: 5rem;
   }
 }
 
@@ -12081,11 +12092,35 @@ footer p {
   font-size: 0.8rem;
 }
 
-footer .slogan p {
-  font-size: 1.2rem;
+@media (min-width: 0px) {
+  footer .footer-upper {
+    padding: 1rem;
+  }
 }
 
-footer .social {
+@media (min-width: 768px) {
+  footer .footer-upper {
+    padding: 5rem;
+  }
+}
+
+@media (min-width: 0px) {
+  footer .footer-upper .slogan {
+    margin-bottom: 3rem;
+  }
+
+  footer .footer-upper .slogan p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .footer-upper .slogan {
+    margin-bottom: 0;
+  }
+}
+
+footer .footer-upper .social {
   padding: 2px 5px;
   width: 27px;
   height: 27px;
@@ -12096,27 +12131,27 @@ footer .social {
 }
 
 @media (min-width: 0px) {
-  footer .social {
-    margin-top: 1rem;
+  footer .footer-upper .social {
+    margin-top: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
-  footer .social {
+  footer .footer-upper .social {
     margin-top: 0rem;
   }
 }
 
-footer .social:hover {
+footer .footer-upper .social:hover {
   border-color: #ff6b00;
   color: #ff6b00;
 }
 
-footer .button {
+footer .footer-upper .button {
   font-size: 0.8rem;
 }
 
-footer .button:hover {
+footer .footer-upper .button:hover {
   background: #92bf2a;
   color: #111;
 }

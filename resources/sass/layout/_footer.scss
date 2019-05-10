@@ -3,37 +3,53 @@ footer{
 	p{
 		font-size: 0.8rem;		
 	}
-	.slogan {
-		p{
-			font-size: 1.2rem;			
+
+	.footer-upper {
+		@include media(phonePortrait) {
+			padding:1rem;
+		}
+		@include media(tabletPortrait) {
+			padding:5rem;
+		}
+
+
+		.slogan {
+			@include media(phonePortrait) {
+				margin-bottom: 3rem;
+				p{
+					font-size: 1.2rem;			
+				}	
+			}
+			@include media(tabletPortrait) {
+				margin-bottom: 0;
+			}
 			
 		}
-	}
-	.social {
-		@include media(phonePortrait) {
-			margin-top: 1rem;
-		};
-	  	@include media(phoneLandscape) {};
-	  	@include media(tabletPortrait) {};
-	  	@include media(tabletLandscape) {
-	  		margin-top: 0rem;
-	  	};
-	  	padding: 2px 5px;
-		width: 27px;
-		height: 27px;
-		border:1px solid $greenLight;
-		@include borderRadius(50%)
-		transition: all 0.3s ease-in-out;
-		&:hover{
-			border-color: $orange;
-			color:$orange;
-		}			
-	}
-	.button {
-		font-size: 0.8rem;			
-		&:hover{
-			background: $greenLight;
-			color:$black;
-		}			
+		
+		.social {
+			@include media(phonePortrait) {
+				margin-top: 3rem;
+			};
+		  	@include media(tabletLandscape) {
+		  		margin-top: 0rem;
+		  	};
+		  	padding: 2px 5px;
+			width: 27px;
+			height: 27px;
+			border:1px solid $greenLight;
+			@include borderRadius(50%)
+			transition: all 0.3s ease-in-out;
+			&:hover{
+				border-color: $orange;
+				color:$orange;
+			}			
+		}
+		.button {
+			font-size: 0.8rem;			
+			&:hover{
+				background: $greenLight;
+				color:$black;
+			}			
+		}
 	}
 }
