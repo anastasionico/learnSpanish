@@ -12396,6 +12396,28 @@ input:checked + .slider:before {
 }
 
 @media (min-width: 0px) {
+  .section-pricing-description {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .section-pricing-description p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-pricing-description {
+    padding: 5rem;
+    text-align: center;
+  }
+
+  .section-pricing-description p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 0px) {
   .section-pricing-div {
     margin-bottom: 2rem;
   }

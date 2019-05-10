@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('contentOne')
-    <div class="row bg-grayLight c-greenLight p-5">
-        <div class="col-sm-12 text-center">
+    <div class="row bg-grayLight c-greenLight section-pricing-description">
+        <div class="col-sm-12">
             <h1>Pricing</h1>
             <p>
                 By creating an account, you will benefit from our Bots that used advanced spaced repetition
@@ -17,7 +17,7 @@
             <p>Choose from one of the following two account options:</p>
         </div>
     </div>
-    <div class="row bg-grayLight p-5 section-pricing">
+    <div class="row bg-grayLight p-4 section-pricing">
         <div class="col-sm-12 col-lg-4 p-2 bg-white rounded section-pricing-div">
             <h6 class="c-greenLight">Option 1: Free Plan</h6>
             <h2 class="c-greenLight">No Fees</h2>

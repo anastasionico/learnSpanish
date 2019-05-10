@@ -1,16 +1,33 @@
-.section-pricing{
+.section-pricing-description {
+	@include media(phonePortrait) {
+		padding:1rem;
+		text-align: left;
+		p {
+			font-size: 1rem;
+		}
+	}
+  	@include media(tabletLandscape) {
+  		padding:5rem;
+  		text-align: center;
+		p {
+			font-size: 1.3rem;
+		}
+  	}
+}
+
+.section-pricing {
 	&-div{
 		@include media(phonePortrait) {
 			margin-bottom:2rem;
 			p {
 				font-size: 1rem;
 			}
-		};
+		}
 	  	@include media(tabletLandscape) {
   			margin-bottom:0rem;
   			p {
 				font-size: 1.3rem;
 			}
-	  	};
+	  	}
 	}
 }
