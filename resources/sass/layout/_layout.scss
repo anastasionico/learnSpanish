@@ -148,9 +148,18 @@
 .usp {
 	@include media(phonePortrait) {
 		padding:1rem;
+		p {
+			font-size: 1rem;
+		}
+		img, h2{
+			padding:1rem 0; 
+		}
 	}
 
 	@include media(tabletPortrait) {
 		padding:5rem;
+		p{
+			font-size: 1rem;
+		}
 	}
 }

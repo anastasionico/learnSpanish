@@ -11989,11 +11989,24 @@ a:hover {
   .usp {
     padding: 1rem;
   }
+
+  .usp p {
+    font-size: 1rem;
+  }
+
+  .usp img,
+  .usp h2 {
+    padding: 1rem 0;
+  }
 }
 
 @media (min-width: 768px) {
   .usp {
     padding: 5rem;
+  }
+
+  .usp p {
+    font-size: 1rem;
   }
 }
 
