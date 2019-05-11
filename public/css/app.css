@@ -12008,6 +12008,11 @@ a:hover {
   .usp p {
     font-size: 1rem;
   }
+
+  .usp img,
+  .usp h2 {
+    padding: 0;
+  }
 }
 
 @media (min-width: 0px) {
