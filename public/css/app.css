@@ -12374,8 +12374,18 @@ input:checked + .slider:before {
   margin-bottom: 0 !important;
 }
 
-.answer-outcome-bottom-icon {
-  margin-top: -0.5rem;
+@media (min-width: 0px) {
+  .answer-outcome-bottom-icon {
+    text-align: right;
+    margin-top: -3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .answer-outcome-bottom-icon {
+    text-align: center;
+    margin-top: -0.5rem;
+  }
 }
 
 @media (min-width: 0px) {

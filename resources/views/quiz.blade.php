@@ -71,8 +71,8 @@
             </div>
         </div>
         <div class="row bg-orange-opaque c-orange answer-outcome-bottom pb-3">
-            <div class="col-sm-12 col-lg-2 text-center">
-                <i class="fas fa-times fa-4x answer-outcome-bottom-icon"></i>
+            <div class="col-sm-12 col-lg-2 answer-outcome-bottom-icon">
+                <i class="fas fa-times fa-4x "></i>
             </div>
             <div class="col-sm-12 col-lg-8 answer-outcome-bottom-info ">
                 <small>Correct answer:</small>
@@ -97,8 +97,8 @@
             </div>
         </div>
         <div class="row bg-greenLight-opaque c-greenLight answer-outcome-bottom pb-3">
-            <div class="col-sm-12 col-lg-2 text-center">
-                <i class="fas fa-check fa-4x answer-outcome-bottom-icon"></i>
+            <div class="col-sm-12 col-lg-2 answer-outcome-bottom-icon">
+                <i class="fas fa-check fa-4x"></i>
             </div>
             <div class="col-sm-12 col-lg-8 answer-outcome-bottom-info ">
                 <small>&nbsp;</small>

@@ -39,8 +39,16 @@
 		}
 	}
 	&-bottom{
-		&-icon{
-			margin-top: -0.5rem;
+		&-icon {
+			@include media(phonePortrait) {
+				text-align: right;
+				margin-top: -3rem;
+				
+			}
+		  	@include media(tabletLandscape) {
+		  		text-align: center;
+		  		margin-top: -0.5rem;
+			}
 		}
 		&-info{
 			@include media(phonePortrait) {height: 95px;};
