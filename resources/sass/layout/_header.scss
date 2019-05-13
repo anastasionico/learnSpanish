@@ -14,15 +14,27 @@ header {
 
 .navbar-collapse {
 	z-index:100;
-	background:$white;
-	border-radius:0 0 20px 20px; 
-
+	
+	.navbar-half{
+		@include media(phonePortrait){
+			background:$white;
+			border-radius:0 0 20px 20px; 
+			width: 60%;
+			margin:0 auto;			
+		}
+		@include media(tabletPortrait){
+			width: auto;
+			margin:unset;			
+			margin-left:auto !important;
+		}
+	}
 	.navbar-nav {
 		.nav-item{
 			.nav-link {
 				border:2px solid $greenLight;	
 				padding: 0.2rem 3rem;
 				margin: 0 0.5rem;
+				text-align: center;
 				font-size: 0.9rem;
 				font-family: 'Montserrat-Black', sans-serif;
 				color: $greenLight;
