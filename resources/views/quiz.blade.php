@@ -74,7 +74,7 @@
             <div class="col-sm-12 col-lg-2 answer-outcome-bottom-icon">
                 <i class="fas fa-times fa-4x "></i>
             </div>
-            <div class="col-sm-12 col-lg-8 answer-outcome-bottom-info ">
+            <div class="col-sm-12 col-lg-8 answer-outcome-bottom-info">
                 <small>Correct answer:</small>
                 <b class="mb-0 answer-outcome-bottom-english">Yo miento</b>
                 <a href="#" class="button button-small border-orange c-orange bg-empty button-orange answer-outcome-bottom-report position-absolute">
