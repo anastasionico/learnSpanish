@@ -30,12 +30,19 @@ Route::get('/pricing', function () {
     return view('pricing');
 });
 
-Route::get('/admin/login', function () {
-    return view('admin/login');
-});
-Route::get('/admin/index', function () {
-    return view('admin/index');
-});
+
 Auth::routes();
 
+
+Route::prefix('admin')->group(function () {
+	Route::get('login', function () {
+	    return view('admin/login');
+	});
+	Route::get('index', function () {
+	    return view('admin/index');
+	});
+
+	Route::get('/users', 'UsersController@index');
+    
+});
 // Route::get('/home', 'HomeController@index')->name('home');
