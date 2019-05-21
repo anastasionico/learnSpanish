@@ -42,7 +42,10 @@ Route::prefix('admin')->group(function () {
 	    return view('admin/index');
 	});
 
-	Route::get('/users', 'UsersController@index');
+	
+	Route::resource('users','UsersController');
+	// Route::get('/users', 'UsersController@index');
+	// Route::get('/users/{user}/edit', 'UsersController@edit');
     
 });
 // Route::get('/home', 'HomeController@index')->name('home');

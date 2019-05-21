@@ -47,7 +47,7 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $id)
     {
         //
     }
@@ -60,7 +60,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);        
+        return view('admin/users/edit', compact('user'));
     }
 
     /**
@@ -72,7 +73,26 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+
+
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->password = request('password');
+        if ( ! $request->has('is_admin')) {
+            $user->is_admin = 0;      // Do something when checkbox isn't checked.
+        } else {
+            $user->is_admin = request('is_admin');    
+        }
+        if ( ! $request->has('is_marketable')) {
+            $user->is_marketable = 0;      // Do something when checkbox isn't checked.
+        } else {
+            $user->is_marketable = request('is_marketable');    
+        }        
+        
+        $user->save();
+
+        return redirect()->action('UsersController@index');
     }
 
     /**
@@ -81,7 +101,7 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $id)
     {
         //
     }

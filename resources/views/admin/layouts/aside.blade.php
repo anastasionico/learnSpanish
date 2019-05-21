@@ -27,7 +27,7 @@
                </ul>
             </li>
             <li class="sidebar-item"> 
-               <a class="sidebar-link waves-effect waves-dark sidebar-link" href="users" aria-expanded="false">
+               <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/users" aria-expanded="false">
                <i class="mdi mdi-account"></i><span class="hide-menu">Users</span>
                </a>
             </li>                     
