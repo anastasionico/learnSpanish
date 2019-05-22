@@ -7,7 +7,8 @@
         <div class="col-12">
             <div class="card table-responsive">
                 <div class="card-body">
-                    <h5 class="card-title m-b-0">Users</h5>
+                    <h5 class="card-title m-b-0">Verbs</h5>
+                    <a href="admin/verbs/create">Create</a>
                 </div>
                 <div class="">
                 <table class="table">
