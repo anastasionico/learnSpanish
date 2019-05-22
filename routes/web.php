@@ -44,8 +44,7 @@ Route::prefix('admin')->group(function () {
 
 	
 	Route::resource('users','UsersController');
-	// Route::get('/users', 'UsersController@index');
-	// Route::get('/users/{user}/edit', 'UsersController@edit');
-    
+	Route::resource('verbs','VerbsController');
+	
 });
-// Route::get('/home', 'HomeController@index')->name('home');
+

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Verb;
 
-class UsersController extends Controller
+class VerbsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,9 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $verbs = Verb::all();
 
-        return view('admin/users/index', compact('users'));
-
+        return view('admin/verbs/index', compact("verbs"));
     }
 
     /**
@@ -38,7 +37,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('verbs controller store');
     }
 
     /**
@@ -47,9 +46,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $id)
+    public function show($id)
     {
-        //
+        dd('verbs controller show');
     }
 
     /**
@@ -60,9 +59,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);        
-
-        return view('admin/users/edit', compact('user'));
+        dd('verbs controller edit');
     }
 
     /**
@@ -74,25 +71,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);        
-
-        $user->name = request('name');
-        $user->email = request('email');
-        $user->password = request('password');
-        if ( ! $request->has('is_admin')) {
-            $user->is_admin = 0;      // Do something when checkbox isn't checked.
-        } else {
-            $user->is_admin = request('is_admin');    
-        }
-        if ( ! $request->has('is_marketable')) {
-            $user->is_marketable = 0;      // Do something when checkbox isn't checked.
-        } else {
-            $user->is_marketable = request('is_marketable');    
-        }        
-        
-        $user->save();
-
-        return redirect()->action('UsersController@index');
+        dd('verbs controller update');
     }
 
     /**
@@ -103,8 +82,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        User::findOrFail($id)->delete();
-
-        return redirect('/admin/users');
+        dd('verbs controller destroy');
     }
 }

@@ -15,15 +15,16 @@
                </a>
                <ul aria-expanded="false" class="collapse  first-level">
                   <li class="sidebar-item">
-                     <a href="icon-material.html" class="sidebar-link">
-                     <i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Tenses</span>
-                     </a>
-                  </li>
-                  <li class="sidebar-item">
-                     <a href="icon-fontawesome.html" class="sidebar-link">
+                     <a href="/admin/verbs" class="sidebar-link">
                      <i class="mdi mdi-book-open-page-variant"></i><span class="hide-menu">Verbs</span>
                      </a>
                   </li>
+                  {{-- <li class="sidebar-item">
+                     <a href="icon-material.html" class="sidebar-link">
+                     <i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Tenses</span>
+                     </a>
+                  </li> --}}
+                  
                </ul>
             </li>
             <li class="sidebar-item"> 
