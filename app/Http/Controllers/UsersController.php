@@ -89,7 +89,16 @@ class UsersController extends Controller
         } else {
             $user->is_marketable = request('is_marketable');    
         }        
-        
+        if ($request->has('country')) {
+            $user->country = request('country');    
+        }        
+        if ($request->has('first_language')) {
+            $user->first_language = request('first_language');    
+        }        
+        if ($request->has('sex')) {
+            $user->sex = request('sex');    
+        }        
+        $user->dob = request('dob');
         $user->save();
 
         return redirect()->action('UsersController@index');

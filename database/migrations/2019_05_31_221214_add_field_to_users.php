@@ -15,9 +15,9 @@ class AddFieldToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->date('dob')->nullable();
-            $table->string('sex');
-            $table->string('country');
-            $table->string('first_language');
+            $table->string('sex')->nullable();
+            $table->string('country')->nullable();
+            $table->string('first_language')->nullable();
         });
     }
 

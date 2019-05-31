@@ -19,6 +19,8 @@
                       <th scope="col">Admin</th>
                       <th scope="col">Marketing</th>
                       <th scope="col">Registered</th>
+                      <th scope="col">Sex</th>
+                      <th scope="col">Country</th>
                       <th scope="col">Actions</th>
                     </tr>
                   </thead>
@@ -43,6 +45,8 @@
                           @endif
                         </td>
                         <td>{{$user->created_at}}</td>
+                        <td>{{$user->sex}}</td>
+                        <td>{{$user->country}}</td>
                         <td>
                           <a href="users/{{$user->id}}/edit" class="btn btn-info btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
                             <i class="fas fa-pencil-alt"></i>
