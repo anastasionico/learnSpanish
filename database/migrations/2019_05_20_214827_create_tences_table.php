@@ -33,6 +33,3 @@ class CreateTencesTable extends Migration
         Schema::dropIfExists('tences');
     }
 }
-
-
-php artisan make:migration rename_tences_to_tenses
