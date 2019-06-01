@@ -38,14 +38,21 @@ class VerbsController extends Controller
      */
     public function store(Request $request)
     {
-        Verb::create(
-            $request->validate([
-                'verb_spa' => ['required','string','unique:verbs,verb_spa'],
-                'verb_eng' => ['required','string'],
-                'importance' => ['required','numeric'],
-                'is_active' => [],
-            ])
-        );
+        $is_active = (request()->has('is_active'))? 1 : 0;
+    
+        $request->validate([
+            'verb_spa' => ['required','string','unique:verbs,verb_spa'],
+            'verb_eng' => ['required','string'],
+            'importance' => ['required','numeric'],
+        ]);
+    
+
+        Verb::create([
+            'verb_spa' => request('verb_spa'),
+            'verb_eng' => request('verb_eng'),
+            'importance' => request('importance'),
+            'is_active' => $is_active,
+        ]);
 
         return redirect('admin/verbs');
     }
