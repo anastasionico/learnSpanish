@@ -7,38 +7,55 @@
         <div class="col-12">
             <div class="card table-responsive">
                 <div class="card-body">
-                    <h5 class="card-title m-b-0">Verbs</h5>
-                    <a href="admin/verbs/create">Create</a>
+                    <h1 class="card-title m-b-0">Verbs</h1>
+                    <a href="/admin/verbs/create" class="btn btn-primary btn-sm">Create</a>
                 </div>
                 <div class="">
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
                       <th scope="col">English</th>
                       <th scope="col">Spanish</th>
                       <th scope="col">Importance</th>
                       <th scope="col">Active</th>
-                      <th scope="col">Created</th>
                       <th scope="col">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach($verbs as $verb) 
                       <tr>
-                        <th scope="row">{{$verb->id}}</th>
                         <td>{{$verb->verb_eng}}</td>
                         <td>{{$verb->verb_spa}}</td>
-                        <td>{{$verb->importance}}</td>
+                        <td>
+                          @switch($verb->importance)
+                            @case('1')
+                                <i class="fas fa-thermometer-quarter fa-2x"></i>
+                                @break
+
+                            @case('2')
+                                <i class="fas fa-thermometer-half fa-2x"></i>
+                                @break
+
+                            @case('3')
+                                <i class="fas fa-thermometer-full fa-2x"></i>
+                                @break
+                            
+                          @endswitch
+                          
+                        </td>
                         <td>
                           @if($verb->is_active == 1)
-                            <i class="fas fa-check-square"></i>
+                            <i class="fas fa-lightbulb"></i>
                           @else
-                            <i class="far fa-square"></i>
+                            <i class="far fa-lightbulb"></i>
                           @endif
                         </td>
-                        <td>{{$verb->created_at}}</td>
                         <td>
+                          <a href="verbs/{{$verb->id}}" class="btn btn-primary btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
+                            <i class="fas fa-angle-right"></i>
+                          </a>    
+
+
                           <a href="verbs/{{$verb->id}}/edit" class="btn btn-info btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
                             <i class="fas fa-pencil-alt"></i>
                           </a>    

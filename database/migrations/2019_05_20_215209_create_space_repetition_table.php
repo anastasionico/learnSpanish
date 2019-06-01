@@ -15,8 +15,8 @@ class CreateSpaceRepetitionTable extends Migration
     {
         Schema::create('space_repetition', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('conjugation_id');
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('conjugation_id');
             $table->integer('frequency');
             $table->timestamps();
         });

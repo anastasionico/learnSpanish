@@ -16,7 +16,7 @@ class CreateConjugationsTable extends Migration
         Schema::create('conjugations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 255);
-            $table->integer('tence_id');
+            $table->unsignedInteger('tence_id');
             $table->boolean('is_active');
             $table->boolean('is_free');
             $table->boolean('is_irregular');

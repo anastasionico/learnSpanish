@@ -14,7 +14,7 @@ class VerbsController extends Controller
      */
     public function index()
     {
-        $verbs = Verb::all();
+        $verbs = Verb::orderBy('importance', 'DESC')->get();
 
         return view('admin/verbs/index', compact("verbs"));
     }
@@ -38,7 +38,16 @@ class VerbsController extends Controller
      */
     public function store(Request $request)
     {
-        dd('verbs controller store');
+        Verb::create(
+            $request->validate([
+                'verb_spa' => ['required','string','unique:verbs,verb_spa'],
+                'verb_eng' => ['required','string'],
+                'importance' => ['required','numeric'],
+                'is_active' => ['required'],
+            ])
+        );
+
+        return redirect('admin/verbs');
     }
 
     /**
@@ -49,7 +58,10 @@ class VerbsController extends Controller
      */
     public function show($id)
     {
-        dd('verbs controller show');
+        $verb = Verb::find($id);
+
+        return view('admin/verbs/show', compact('verb'));        
+        
     }
 
     /**
@@ -60,7 +72,10 @@ class VerbsController extends Controller
      */
     public function edit($id)
     {
-        dd('verbs controller edit');
+        $verb = Verb::find($id);
+
+        
+        return view('admin/verbs/edit', compact('verb'));
     }
 
     /**
@@ -72,7 +87,21 @@ class VerbsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd('verbs controller update');
+        $verb = Verb::findOrFail($id);        
+
+        $verb->verb_spa = request('verb_spa');
+        $verb->verb_eng = request('verb_eng');
+        $verb->importance = request('importance');
+        
+        if ( ! $request->has('is_active')) {
+            $verb->is_active = 0;      // Do something when checkbox isn't checked.
+        } else {
+            $verb->is_active = 1;    
+        }
+        
+        $verb->save();
+
+        return redirect()->action('VerbsController@index');
     }
 
     /**
@@ -83,6 +112,9 @@ class VerbsController extends Controller
      */
     public function destroy($id)
     {
-        dd('verbs controller destroy');
+        $verb = Verb::find($id);
+        $verb->delete();
+      
+        return redirect('admin/verbs');
     }
 }

@@ -45,6 +45,10 @@ Route::prefix('admin')->group(function () {
 	
 	Route::resource('users','UsersController');
 	Route::resource('verbs','VerbsController');
+	Route::resource('tenses','TensesController');
+	Route::get("verbs/{verb}/tenses/create", "TensesController@create");
+	// Route::delete("verbs/{verb}/tenses/{tense}", "TensesController@destroy");
+	Route::get("verbs/{verb}/tenses/{tense}/edit", "TensesController@edit");
 	
 });
 

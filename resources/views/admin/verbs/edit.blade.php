@@ -6,8 +6,9 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <form method="POST" action="/admin/verbs/" class="form-horizontal">
+            <form method="POST" action="/admin/verbs/{{$verb->id}}" class="form-horizontal">
               @csrf
+              @method('PATCH ')
               
               <div class="card-body">
                 <h4 class="card-title">Create new verb</h4>
@@ -26,29 +27,35 @@
                 <div class="form-group row">
                     <label for="verb_spa" class="col-sm-3 text-right control-label col-form-label">Spanish Definition <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control {{$errors->has('verb_spa')? 'is-invalid' : ''}}" id="verb_spa" name='verb_spa' placeholder="Ser" required>
+                        <input type="text" class="form-control {{$errors->has('verb_spa')? 'is-invalid' : ''}}" id="verb_spa" name='verb_spa' placeholder="Ser" required value="{{ $verb->verb_spa}}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="verb_eng" class="col-sm-3 text-right control-label col-form-label">English Definition <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control {{$errors->has('verb_eng')? 'is-invalid' : ''}}" id="verb_eng" name='verb_eng' placeholder="Be" required>
+                        <input type="text" class="form-control {{$errors->has('verb_eng')? 'is-invalid' : ''}}" id="verb_eng" name='verb_eng' placeholder="Be" required value="{{ $verb->verb_eng}}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="importance" class="col-sm-3 text-right control-label col-form-label">Importance grade <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <select id="importance" name="importance" required>
-                          <option value="1">Not Important</option>
-                          <option value="2" selected>Basic</option>
-                          <option value="3">Very Important</option>
-                        </select>
+                      <select id="importance" name="importance" required>
+                        <option value="1" {{ ($verb->importance === 1)? 'selected': '' }} >Not Important</option>
+                        <option value="2" {{ ($verb->importance === 2)? 'selected': '' }}>Basic</option>
+                        <option value="3" {{ ($verb->importance === 3)? 'selected': '' }}>Very Important</option>
+                      </select>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="is_active" class="col-sm-3 text-right control-label col-form-label">Active <sub>(Required)</sub></label>
                     <div class="col-sm-1">
-                        <input type="checkbox" class="form-control {{$errors->has('is_active')? 'is-invalid' : ''}}" id="is_active"  name='is_active' value="1" checked>
+                        <input type="checkbox" 
+                          class="form-control {{$errors->has('is_active')? 'is-invalid' : ''}}" 
+                          id="is_active"  
+                          name='is_active' 
+                          value="1" 
+
+                          {{ ($verb->is_active == 1)? 'checked': '' }} >
                     </div>
                 </div>
               </div>

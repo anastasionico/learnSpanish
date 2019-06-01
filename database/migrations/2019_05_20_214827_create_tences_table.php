@@ -15,7 +15,7 @@ class CreateTencesTable extends Migration
     {
         Schema::create('tences', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('verb_id');
+            $table->unsignedInteger('verb_id');
             $table->tinyInteger('sequence_number');
             $table->boolean('is_free');
             $table->string('name', 100);
@@ -33,3 +33,6 @@ class CreateTencesTable extends Migration
         Schema::dropIfExists('tences');
     }
 }
+
+
+php artisan make:migration rename_tences_to_tenses
