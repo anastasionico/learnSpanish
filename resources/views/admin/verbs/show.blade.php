@@ -69,7 +69,9 @@
                 <div id="Toggle-{{$toggleIncrement}}" class="collapse show multi-collapse">
 
                   <div class="card-body widget-content">
-                    This box is opened by default, paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.
+                    This box is opened by default, 
+                    <br>
+                    Here will appear the table containing all the conjugations
                   </div>
                 </div>
                 
