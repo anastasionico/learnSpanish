@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="is_active" class="col-sm-3 text-right control-label col-form-label">Active <sub>(Required)</sub></label>
+                    <label for="is_active" class="col-sm-3 text-right control-label col-form-label">Active</label>
                     <div class="col-sm-1">
                         <input type="checkbox" class="form-control {{$errors->has('is_active')? 'is-invalid' : ''}}" id="is_active"  name='is_active' value="1" checked>
                     </div>

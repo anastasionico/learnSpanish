@@ -43,7 +43,7 @@ class VerbsController extends Controller
                 'verb_spa' => ['required','string','unique:verbs,verb_spa'],
                 'verb_eng' => ['required','string'],
                 'importance' => ['required','numeric'],
-                'is_active' => ['required'],
+                'is_active' => [],
             ])
         );
 

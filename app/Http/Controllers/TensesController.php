@@ -15,7 +15,7 @@ class TensesController extends Controller
 
 	public function store(Request $request)
 	{
-		$verb = Verb::find($request->verb_id);
+        $verb = Verb::find($request->verb_id);
 
 		$verb->addTense($request);
 	
