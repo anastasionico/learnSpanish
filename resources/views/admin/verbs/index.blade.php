@@ -51,16 +51,16 @@
                           @endif
                         </td>
                         <td>
-                          <a href="verbs/{{$verb->id}}" class="btn btn-primary btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
+                          <a href="/admin/verbs/{{$verb->id}}" class="btn btn-primary btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
                             <i class="fas fa-angle-right"></i>
                           </a>    
 
 
-                          <a href="verbs/{{$verb->id}}/edit" class="btn btn-info btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
+                          <a href="/admin/verbs/{{$verb->id}}/edit" class="btn btn-info btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
                             <i class="fas fa-pencil-alt"></i>
                           </a>    
 
-                          <form method="POST" action="verbs/{{$verb->id}}" class="d-inline">
+                          <form method="POST" action="/admin/verbs/{{$verb->id}}" class="d-inline">
                             @method('DELETE')
                             @csrf
                             <button type="submit" class="btn btn-danger btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">

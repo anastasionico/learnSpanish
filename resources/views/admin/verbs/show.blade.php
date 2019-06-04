@@ -33,7 +33,7 @@
   
             <br><br><br>
             <div class="row">
-              <a href="/admin/verbs/1/tenses/create" class="btn btn-primary btn-sm">Add New Tense to {{ $verb->verb_spa }}</a>  
+              <a href="/admin/verbs/{{ $verb->id}}/tenses/create" class="btn btn-primary btn-sm">Add New Tense to {{ $verb->verb_spa }}</a>  
             </div>
             
 

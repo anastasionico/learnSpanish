@@ -6,6 +6,7 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
+            {{$tense->id}}
             <form method="POST" action="/admin/tenses/{{$tense->id}}" class="form-horizontal">
               @csrf
               @method('PATCH')

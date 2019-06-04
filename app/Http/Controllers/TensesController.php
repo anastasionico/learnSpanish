@@ -45,8 +45,8 @@ class TensesController extends Controller
     public function edit(Verb $verb, Tense $tense)
     {
         
-        $tense = Tense::find($tense)->first();;
-        $verb = Verb::find($verb)->first();
+        $tense = Tense::find($tense->id);
+        $verb = Verb::find($verb->id);
         
         return view("admin/tenses/edit", compact('tense', 'verb'));
     }
