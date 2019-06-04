@@ -33,8 +33,7 @@ Route::get('/pricing', function () {
 
 Auth::routes();
 
-
-Route::prefix('admin')->group(function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::get('login', function () {
 	    return view('admin/login');
 	});
