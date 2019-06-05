@@ -7,31 +7,42 @@
         <div class="col-12">
           <div id="accordian-4">
             <h1>{{ $verb->verb_spa}}</h1>
-            <h4>
+            
+            <h3>
               to {{ $verb->verb_eng}} 
-            </h4>
+            </h3>
+            
+            <h5>
+              @switch($verb->importance)
+                @case('1')
+                    <i class="fas fa-thermometer-quarter fa-2x"></i>  
+                    Rarely used
+                    @break
 
-            @switch($verb->importance)
-              @case('1')
-                  <i class="fas fa-thermometer-quarter fa-2x"></i>
-                  @break
+                @case('2')
+                    <i class="fas fa-thermometer-half fa-2x"></i>
+                    Basic Verb
+                    @break
 
-              @case('2')
-                  <i class="fas fa-thermometer-half fa-2x"></i>
-                  @break
-
-              @case('3')
-                  <i class="fas fa-thermometer-full fa-2x"></i>
-                  @break
-              
-            @endswitch
-            @if($verb->is_active == 1)
-                <i class="fas fa-lightbulb fa-2x"></i>
-            @else
-                <i class="far fa-lightbulb fa-2x"></i>
-            @endif
-  
+                @case('3')
+                    <i class="fas fa-thermometer-full fa-2x"></i>
+                    Very Important
+                    @break
+              @endswitch
+            </h5>
+            
+            <h5>
+              @if($verb->is_active == 1)
+                  <i class="fas fa-lightbulb fa-2x"></i>
+                  Active
+              @else
+                  <i class="far fa-lightbulb fa-2x"></i>
+                  Not Active
+              @endif
+            </h5>
+            
             <br><br><br>
+            
             <div class="row">
               <a href="/admin/verbs/{{ $verb->id}}/tenses/create" class="btn btn-primary btn-sm">Add New Tense to {{ $verb->verb_spa }}</a>  
             </div>
@@ -77,7 +88,7 @@
                           <th scope="col">Pronoun</th>
                           <th scope="col">Name</th>
                           <th scope="col">Active</th>
-                          <th scope="col">Free</th>
+                          <th scope="col">Format</th>
                           <th scope="col">Irregular</th>
                           <th scope="col"></th>
                         </tr>
@@ -87,9 +98,32 @@
                           <tr>
                             <td>{{$conjugation->pronoun}}</td>
                             <td>{{$conjugation->name}}</td>
-                            <td>{{$conjugation->is_active}}</td>
-                            <td>{{$conjugation->is_free}}</td>
-                            <td>{{$conjugation->is_irregular}}</td>
+                            <td>
+                              @if($conjugation->is_active == 1)
+                                <i class="fas fa-lightbulb"></i>
+                                Active
+                              @else
+                                <i class="far fa-lightbulb"></i>
+                                Not Active
+                              @endif
+                            </td>
+                            <td>
+                              @if($conjugation->is_free == 1)
+                                Free
+                              @else
+                                <i class="fas fa-money-bill"></i>
+                                To Pay 
+                              @endif
+                            </td>
+                            <td>
+                              @if($conjugation->is_irregular == 1)
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Irregular
+                              @else
+                                Regular
+                              @endif
+                            </td>
+                            
                             <td>
                               <form method="POST" action="/admin/conjugation/{{$conjugation->id}}" class="d-inline">
                                 @method('DELETE')
