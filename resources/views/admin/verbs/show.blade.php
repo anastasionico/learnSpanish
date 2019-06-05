@@ -56,22 +56,58 @@
                     <i class="fas fa-pencil-alt"></i>
                   </a>    
                   <form method="POST" action="/admin/tenses/{{$tense->id}}" class="d-inline">
-                      @method('DELETE')
-                      <input type="hidden" name="verb" value="{{$verb->id}}">
-                      <input type="hidden" name="tense" value="{{$tense->id}}">
-                      @csrf
-                      <button type="submit" class="float-right btn btn-danger btn-sm d-inline" style="margin:-2rem 2rem 0 0; cursor:pointer;">
-                        <i class="fas fa-trash"></i>
-                      </button>    
-                    </form>  
+                    @method('DELETE')
+                    <input type="hidden" name="verb" value="{{$verb->id}}">
+                    <input type="hidden" name="tense" value="{{$tense->id}}">
+                    @csrf
+                    <button type="submit" class="float-right btn btn-danger btn-sm d-inline" style="margin:-2rem 2rem 0 0; cursor:pointer;">
+                      <i class="fas fa-trash"></i>
+                    </button>    
+                  </form>  
                 </div>
                 
                 <div id="Toggle-{{$toggleIncrement}}" class="collapse show multi-collapse">
-
-                  <div class="card-body widget-content">
-                    This box is opened by default, 
-                    <br>
-                    Here will appear the table containing all the conjugations
+                  <div class="card-body widget-content table-responsive">
+                    <a href="/admin/verbs/{{ $verb->id}}/tenses/{{ $tense->id }}/conjugation/create" class="btn btn-primary btn-sm">
+                      Add New Conjugation to {{ $verb->verb_spa }} on {{ $tense->name }}
+                    </a>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Pronoun</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Active</th>
+                          <th scope="col">Free</th>
+                          <th scope="col">Irregular</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach($tense->conjugations as $conjugation)
+                          <tr>
+                            <td>{{$conjugation->pronoun}}</td>
+                            <td>{{$conjugation->name}}</td>
+                            <td>{{$conjugation->is_active}}</td>
+                            <td>{{$conjugation->is_free}}</td>
+                            <td>{{$conjugation->is_irregular}}</td>
+                            <td>
+                              <form method="POST" action="/admin/conjugation/{{$conjugation->id}}" class="d-inline">
+                                @method('DELETE')
+                                @csrf
+                                <input type="hidden" name="verb" value="{{$verb->id}}">
+                                
+                                <button type="submit" class="float-right btn btn-danger btn-sm d-inline" style="cursor:pointer;">
+                                  <i class="fas fa-trash"></i>
+                                </button>    
+                              </form>  
+                              <a href="/admin/conjugation/{{$conjugation->id}}/edit" class="float-right btn btn-info btn-sm d-inline" style="margin:0 0.5rem 0 0; cursor:pointer;">
+                                <i class="fas fa-pencil-alt"></i>
+                              </a>    
+                            </td>
+                          </tr>  
+                        @endforeach    
+                      </tbody>
+                    </table>
                   </div>
                 </div>
                 
