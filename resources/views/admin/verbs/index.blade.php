@@ -14,8 +14,8 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">English</th>
                       <th scope="col">Spanish</th>
+                      <th scope="col">English</th>
                       <th scope="col">Importance</th>
                       <th scope="col">Active</th>
                       <th scope="col">Actions</th>
@@ -24,8 +24,8 @@
                   <tbody>
                     @foreach($verbs as $verb) 
                       <tr>
-                        <td>{{$verb->verb_eng}}</td>
                         <td>{{$verb->verb_spa}}</td>
+                        <td>{{$verb->verb_eng}}</td>
                         <td>
                           @switch($verb->importance)
                             @case('1')

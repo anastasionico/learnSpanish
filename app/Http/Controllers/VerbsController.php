@@ -14,7 +14,7 @@ class VerbsController extends Controller
      */
     public function index()
     {
-        $verbs = Verb::orderBy('importance', 'DESC')->get();
+        $verbs = Verb::orderBy('verb_spa', 'ASC')->get();
 
         return view('admin/verbs/index', compact("verbs"));
     }
