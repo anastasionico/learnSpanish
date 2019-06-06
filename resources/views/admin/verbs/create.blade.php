@@ -6,7 +6,8 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <form method="POST" action="/admin/verbs/" class="form-horizontal">
+            <form method="POST" action="/admin/verbs" class="form-horizontal">
+              
               @csrf
               
               <div class="card-body">
