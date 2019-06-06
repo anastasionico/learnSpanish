@@ -71,7 +71,7 @@
                     <input type="hidden" name="verb" value="{{$verb->id}}">
                     <input type="hidden" name="tense" value="{{$tense->id}}">
                     @csrf
-                    <button type="submit" class="float-right btn btn-danger btn-sm d-inline" style="margin:-2rem 2rem 0 0; cursor:pointer;">
+                    <button type="submit" class="float-right btn btn-danger btn-sm d-inline deleteItem" style="margin:-2rem 2rem 0 0; cursor:pointer;">
                       <i class="fas fa-trash"></i>
                     </button>    
                   </form>  
@@ -130,7 +130,7 @@
                                 @csrf
                                 <input type="hidden" name="verb" value="{{$verb->id}}">
                                 
-                                <button type="submit" class="float-right btn btn-danger btn-sm d-inline" style="cursor:pointer;">
+                                <button type="submit" class="float-right btn btn-danger btn-sm d-inline deleteItem" style="cursor:pointer;">
                                   <i class="fas fa-trash"></i>
                                 </button>    
                               </form>  

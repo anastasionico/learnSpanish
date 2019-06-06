@@ -40,7 +40,7 @@
                     <label for="importance" class="col-sm-3 text-right control-label col-form-label">Importance grade <sub>(Required)</sub></label>
                     <div class="col-sm-9">
                         <select id="importance" name="importance" required>
-                          <option value="1">Not Important</option>
+                          <option value="1">Rarely Used</option>
                           <option value="2" selected>Basic</option>
                           <option value="3">Very Important</option>
                         </select>

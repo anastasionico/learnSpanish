@@ -63,7 +63,7 @@
                           <form method="POST" action="/admin/verbs/{{$verb->id}}" class="d-inline">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" class="btn btn-danger btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
+                            <button type="submit" class="btn btn-danger btn-sm d-inline deleteItem" style="margin:0.2rem;cursor:pointer;">
                               <i class="fas fa-trash"></i>
                             </button>    
                           </form>
