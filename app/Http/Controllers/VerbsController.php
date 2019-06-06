@@ -38,6 +38,7 @@ class VerbsController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->all());
         $is_active = (request()->has('is_active'))? 1 : 0;
     
         $request->validate([
