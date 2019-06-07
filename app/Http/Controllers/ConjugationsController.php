@@ -65,10 +65,8 @@ class ConjugationsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Conjugation $conjugation)
     {
-        $conjugation = Conjugation::find($id);
-
         return view('admin/conjugations/edit', compact('conjugation'));
     }
     /**
@@ -78,10 +76,8 @@ class ConjugationsController extends Controller
      * @param  \App\r  $r
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Conjugation $conjugation)
     {
-        $conjugation = Conjugation::findOrFail($id);        
-
         $conjugation->pronoun = request('pronoun');
         $conjugation->name = request('name');
         $conjugation->is_active = (request()->has('is_active'))? 1 : 0;
@@ -103,9 +99,8 @@ class ConjugationsController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        $conjugation = Conjugation::find($id);
-        $conjugation->delete();
-
+        $conjugation = Conjugation::find($id)->delete();
+        
         $verb = Verb::find($request->verb);
 
         return view("admin/verbs/show", compact('verb'));

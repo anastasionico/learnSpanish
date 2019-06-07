@@ -63,12 +63,9 @@ class VerbsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Verb $verb)
     {
-        $verb = Verb::find($id);
-
         return view('admin/verbs/show', compact('verb'));        
-        
     }
 
     /**
@@ -77,11 +74,8 @@ class VerbsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Verb $verb)
     {
-        $verb = Verb::find($id);
-
-        
         return view('admin/verbs/edit', compact('verb'));
     }
 
@@ -119,9 +113,8 @@ class VerbsController extends Controller
      */
     public function destroy($id)
     {
-        $verb = Verb::find($id);
-        $verb->delete();
-      
+        $verb = Verb::find($id)->delete();
+        
         return redirect('admin/verbs');
     }
 }
