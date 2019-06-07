@@ -43,13 +43,19 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 
 	
 	Route::resource('users','UsersController');
+	Route::get("users/{user}/conjugationchart", "UsersController@conjugationChart");
+	
 	Route::resource('verbs','VerbsController');
-	Route::resource('tenses','TensesController');
-	Route::resource('conjugation','ConjugationsController');
 	Route::get("verbs/{verb}/tenses/create", "TensesController@create");
-	// Route::delete("verbs/{verb}/tenses/{tense}", "TensesController@destroy");
 	Route::get("verbs/{verb}/tenses/{tense}/edit", "TensesController@edit");
 	Route::get("verbs/{verb}/tenses/{tense}/conjugation/create", "ConjugationsController@create");
+
+	Route::resource('tenses','TensesController');
+	Route::resource('conjugation','ConjugationsController');
+
+
+	
+	
 	
 	
 });

@@ -12,4 +12,6 @@ class Conjugation extends Model
     {
     	$this->belongsTo(Tense::class);
     }
+
+    
 }

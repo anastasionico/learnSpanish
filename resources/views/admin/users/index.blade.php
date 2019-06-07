@@ -48,8 +48,12 @@
                         <td>{{$user->sex}}</td>
                         <td>{{$user->country}}</td>
                         <td>
-                          <a href="users/{{$user->id}}/edit" class="btn btn-info btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
+
+                          <a href="users/{{$user->id}}/edit" class="btn btn-info btn-sm d-inline" style="margin:0.4rem;cursor:pointer;">
                             <i class="fas fa-pencil-alt"></i>
+                          </a>    
+                          <a href="users/{{$user->id}}/conjugationchart" class="btn btn-primary btn-sm d-inline" style="margin:0.2rem;cursor:pointer;">
+                            <i class="fas fa-chart-line"></i>
                           </a>    
 
                           <form method="POST" action="users/{{$user->id}}" class="d-inline">
