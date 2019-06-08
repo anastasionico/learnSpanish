@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\SpaceRepetition;
+use App\Conjugation;
 
 class UsersController extends Controller
 {
@@ -107,17 +108,23 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        User::findOrFail($id)->delete();
+        $user->delete();
 
         return redirect('/admin/users');
     }
 
     public function conjugationChart(User $user)
     {
-        $conjugations = SpaceRepetition::where('user_id', '=', $user->id)->get();
-        // dd($conjugations);
+        $conjugations = SpaceRepetition::where('user_id', '=', $user->id)->orderBy('frequency', "DESC")->get();
+        
+        
+        foreach ($conjugations as $conjugation) {
+            $conjugation['conjugation'] = $conjugation->sentence;
+        }
+        
+        
         return view('admin/users/conjugationchart', compact('conjugations','user'));
     }
 }

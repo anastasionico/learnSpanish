@@ -97,9 +97,9 @@ class ConjugationsController extends Controller
      * @param  \App\r  $r
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, $id)
+    public function destroy(Request $request, Conjugation $conjugation)
     {
-        $conjugation = Conjugation::find($id)->delete();
+        $conjugation->delete();
         
         $verb = Verb::find($request->verb);
 
