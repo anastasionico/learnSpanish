@@ -50,8 +50,9 @@
                           @endswitch
                         </td>
                           
-                        <td>{{ $conjugation->created_at }}</td>
-                        <td>{{ $conjugation->updated_at }}</td>
+                        <td>{{ $conjugation->created_at->diffForHumans() }}</td>
+                        <td>{{ $conjugation->updated_at->diffForHumans() }}</td>
+                        
                         
                       </tr>  
                     @endforeach
