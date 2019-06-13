@@ -29,7 +29,7 @@
                 <div class="form-group row">
                     <label for="name" class="col-sm-3 text-right control-label col-form-label">Name <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' placeholder="Present" required>
+                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' placeholder="Insert the name of the tense (eg:Present)" required>
                     </div>
                 </div>
 

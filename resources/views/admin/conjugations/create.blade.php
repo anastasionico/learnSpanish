@@ -30,14 +30,14 @@
                 <div class="form-group row">
                   <label for="pronoun" class="col-sm-3 text-right control-label col-form-label">Pronoun <sub>(Required)</sub></label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control {{$errors->has('pronoun')? 'is-invalid' : ''}}" id="pronoun" name='pronoun' placeholder="Yo" required>
+                    <input type="text" class="form-control {{$errors->has('pronoun')? 'is-invalid' : ''}}" id="pronoun" name='pronoun' placeholder="Insert the pronoun in spanish (eg:Yo)" required>
                   </div>
                 </div>
 
                 <div class="form-group row">
                   <label for="name" class="col-sm-3 text-right control-label col-form-label">name <sub>(Required)</sub></label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' placeholder="Soy" required>
+                    <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' placeholder="Insert the verb in Spanish (eg:Soy)" required>
                   </div>
                 </div>
 

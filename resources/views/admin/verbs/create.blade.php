@@ -27,13 +27,13 @@
                 <div class="form-group row">
                     <label for="verb_spa" class="col-sm-3 text-right control-label col-form-label">Spanish Definition <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control {{$errors->has('verb_spa')? 'is-invalid' : ''}}" id="verb_spa" name='verb_spa' placeholder="Ser" required>
+                        <input type="text" class="form-control {{$errors->has('verb_spa')? 'is-invalid' : ''}}" id="verb_spa" name='verb_spa' placeholder="Insert the verb in Spanish  (eg:Ser)" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="verb_eng" class="col-sm-3 text-right control-label col-form-label">English Definition <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control {{$errors->has('verb_eng')? 'is-invalid' : ''}}" id="verb_eng" name='verb_eng' placeholder="Be" required>
+                        <input type="text" class="form-control {{$errors->has('verb_eng')? 'is-invalid' : ''}}" id="verb_eng" name='verb_eng' placeholder="insert the verb in English (eg:Be)" required>
                     </div>
                 </div>
                 <div class="form-group row">
