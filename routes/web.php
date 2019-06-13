@@ -33,7 +33,7 @@ Route::get('/pricing', function () {
 
 Auth::routes();
 
-Route::get("quiz2", "QuizController@quiz");
+Route::get("quiz-test", "QuizController@quiz");
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::get('login', function () {
