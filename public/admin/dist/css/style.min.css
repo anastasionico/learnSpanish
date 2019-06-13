@@ -11549,7 +11549,8 @@ ul.list-style-none li a:hover {
 }
 
 .sidebar-nav ul .sidebar-item .first-level {
-    padding: 0 0 10px 0
+    padding: 0 0 10px 10px;
+    background-color: #5B7C62!important;
 }
 
 .sidebar-nav ul .sidebar-item .first-level .sidebar-item.active .sidebar-link {

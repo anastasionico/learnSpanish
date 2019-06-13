@@ -21,6 +21,7 @@
                       <th scope="col">Registered</th>
                       <th scope="col">Sex</th>
                       <th scope="col">Country</th>
+                      <th scope="col">Paid</th>
                       <th scope="col">Actions</th>
                     </tr>
                   </thead>
@@ -47,6 +48,14 @@
                         <td>{{$user->created_at}}</td>
                         <td>{{$user->sex}}</td>
                         <td>{{$user->country}}</td>
+                        <td>
+                          
+                          @if(isset($user->trial_ends_at) && $user->trial_ends_at > date('Y-m-d h:i:s') )
+                            <i class="fas fa-check-square"></i>
+                          @else
+                            <i class="far fa-square"></i>
+                          @endif
+                        </td>
                         <td>
 
                           <a href="users/{{$user->id}}/edit" class="btn btn-info btn-sm d-inline" style="margin:0.4rem;cursor:pointer;">
