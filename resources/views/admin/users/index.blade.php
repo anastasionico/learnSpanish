@@ -18,7 +18,6 @@
                       <th scope="col">Email</th>
                       <th scope="col">Admin</th>
                       <th scope="col">Marketing</th>
-                      <th scope="col">Registered</th>
                       <th scope="col">Sex</th>
                       <th scope="col">Country</th>
                       <th scope="col">Paid</th>
@@ -45,7 +44,6 @@
                             <i class="far fa-square"></i>
                           @endif
                         </td>
-                        <td>{{$user->created_at}}</td>
                         <td>{{$user->sex}}</td>
                         <td>{{$user->country}}</td>
                         <td>
