@@ -12409,6 +12409,19 @@ input:checked + .slider:before {
   display: block;
 }
 
+.quiz-ad {
+  margin: 0 auto;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff6b00), to(#92bf2a));
+  background-image: linear-gradient(#ff6b00, #92bf2a);
+  width: 80%;
+  height: 250px;
+}
+
+.quiz-ad h3 {
+  padding: 3rem 0;
+}
+
 @media (min-width: 0px) {
   .section-pricing-description {
     padding: 1rem;

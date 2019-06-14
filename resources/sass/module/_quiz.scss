@@ -69,3 +69,13 @@
 	}
 }
 
+.quiz-ad {
+	margin:0 auto;
+	text-align:center;
+	background-image: linear-gradient($orange,$greenLight);
+	width: 80%; 
+	height: 250px;
+	h3{
+		padding: 3rem 0;
+	}
+}

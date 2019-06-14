@@ -23,9 +23,9 @@ Route::get('/privacy', function () {
 Route::get('/start-quiz', function () {
     return view('start-quiz');
 });
-Route::get('/quiz', function () {
-    return view('quiz');
-});
+// Route::get('/quiz', function () {
+//     return view('quiz');
+// });
 Route::get('/pricing', function () {
     return view('pricing');
 });
@@ -33,7 +33,7 @@ Route::get('/pricing', function () {
 
 Auth::routes();
 
-Route::get("quiz-test", "QuizController@quiz");
+Route::get("quiz", "QuizController@quiz");
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::get('login', function () {
