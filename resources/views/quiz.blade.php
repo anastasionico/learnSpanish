@@ -16,7 +16,7 @@
         </div>
         <div class="col-sm-12 col-lg-8 bg-white rounded">
             {{-- {{ dd($conjugations) }} --}}
-            @foreach($conjugations as $conjugation)
+            @foreach($conjugationsOrdered as $conjugation)
                 <div class="row">
                     <div class="col-12 p-3 rounded">
                         <h4>{{ $conjugation->tense }}</h4>
