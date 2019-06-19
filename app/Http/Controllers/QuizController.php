@@ -55,6 +55,12 @@ class QuizController extends Controller
     	} 
     }
 
+    /*
+    * In this method I retrieve all the conjugations that can be seen by a standard free-user 
+    * then I retrieve all the conjugation that the user has already played and are present into the space_repetition table
+    * eventually I create an array that includes all the conjugations not yet seen by the user and
+    * all the conjugations that the user has seen according to its own space_repetition algorithm
+    */
     public function playForFree($tensesRequestedByUser)
     {
     	$text = 'Free Mode';	
@@ -73,46 +79,8 @@ class QuizController extends Controller
 			->inRandomOrder()
             ->get();
 
+        $conjugationsOrdered = $this->getConjugationInOrder($conjugations, $tensesRequestedByUser);
         
-        // select all the conjugations the are into the space_repetition and follow the criteria choosen by the user
-        $spaceRepetitionSentences = DB::table('space_repetition')
-            ->join('conjugations', 'conjugations.id', '=', 'space_repetition.conjugation_id')
-            ->join('tenses', 'tenses.id', '=', 'conjugations.tense_id')
-            ->join('verbs', 'verbs.id', '=', 'tenses.verb_id')
-            ->select('space_repetition.*','conjugations.*', 'tenses.name as tense', 'verbs.verb_eng as verb_eng', 'verbs.verb_spa as verb_spa')
-            ->where([
-                ['verbs.is_active', '=', '1'],
-                ['tenses.is_free', '=', '1'],
-                ['conjugations.is_active', '=', '1'],
-                ['conjugations.is_free', '=', '1'],
-            ])
-            ->whereIn('tenses.name', $tensesRequestedByUser)
-            ->orderBy('space_repetition.frequency', 'desc')
-            ->orderBy('space_repetition.updated_at', 'desc')
-            ->get();
-        
-        // creating an array to be evaluate inside in_array in order to get all the sentences not studied yet by the user
-        $sentenceStudiedByUser = [];
-        foreach ($spaceRepetitionSentences as $spaceRepetitionSentence) {
-            $sentenceStudiedByUser[] = $spaceRepetitionSentence->conjugation_id;
-        }
-        
-        
-        // I need to evaluate all the conjugation that follow the criteria of the user and compare them with the conjugations already studied and present inside $sentenceStudiedByUser
-        // if the sentence in not studied yet need to be shown first in the array
-        $conjugationsOrdered = [];
-        foreach($conjugations as $conjugation) {
-            if(!in_array($conjugation->id, $sentenceStudiedByUser)) {
-                $conjugationsOrdered[] = $conjugation;
-            }
-
-        }
-        
-        
-        // then I need to insert all the conjugation that are already inside the spacerepetition ordered by frequency and updated_at
-        foreach ($spaceRepetitionSentences as $spaceRepetitionSentence) {
-            $conjugationsOrdered[] = $spaceRepetitionSentence;
-        }
         
 
     	return view('quiz', compact('text', 'conjugationsOrdered'));
@@ -134,7 +102,54 @@ class QuizController extends Controller
 			->inRandomOrder()
             ->get();
 
-    	return view('quiz', compact('text', 'conjugations'));
+        $conjugationsOrdered = $this->getConjugationInOrder($conjugations, $tensesRequestedByUser);
+
+    	return view('quiz', compact('text', 'conjugationsOrdered'));
+    }
+
+    private function getConjugationInOrder($conjugations, $tensesRequestedByUser) {
+        $userId = (isset(Auth::user()->id))? Auth::user()->id : 1 ;
+        // select all the conjugations the are into the space_repetition and follow the criteria choosen by the user
+        $spaceRepetitionSentences = DB::table('space_repetition')
+            ->join('conjugations', 'conjugations.id', '=', 'space_repetition.conjugation_id')
+            ->join('tenses', 'tenses.id', '=', 'conjugations.tense_id')
+            ->join('verbs', 'verbs.id', '=', 'tenses.verb_id')
+            ->join('users', 'users.id', '=', 'space_repetition.user_id')
+            ->select('space_repetition.*','conjugations.*', 'tenses.name as tense', 'verbs.verb_eng as verb_eng', 'verbs.verb_spa as verb_spa')
+            ->where([
+                ['verbs.is_active', '=', '1'],
+                ['tenses.is_free', '=', '1'],
+                ['conjugations.is_active', '=', '1'],
+                ['conjugations.is_free', '=', '1'],
+                ['users.id', '=', $userId],
+            ])
+            ->whereIn('tenses.name', $tensesRequestedByUser)
+            ->orderBy('space_repetition.frequency', 'desc')
+            ->orderBy('space_repetition.updated_at', 'desc')
+            ->get();
+        
+        // creating an array to be evaluate inside in_array in order to get all the sentences not studied yet by the user
+        $sentenceStudiedByUser = [];
+        foreach ($spaceRepetitionSentences as $spaceRepetitionSentence) {
+            $sentenceStudiedByUser[] = $spaceRepetitionSentence->conjugation_id;
+        }
+        
+        // I need to evaluate all the conjugation that follow the criteria of the user and compare them with the conjugations already studied and present inside $sentenceStudiedByUser
+        // if the sentence in not studied yet need to be shown first in the array
+        $conjugationsOrdered = [];
+        foreach($conjugations as $conjugation) {
+            if(!in_array($conjugation->id, $sentenceStudiedByUser)) {
+                $conjugationsOrdered[] = $conjugation;
+            }
+
+        }
+        
+        
+        // then I need to insert all the conjugation that are already inside the spacerepetition ordered by frequency and updated_at
+        foreach ($spaceRepetitionSentences as $spaceRepetitionSentence) {
+            $conjugationsOrdered[] = $spaceRepetitionSentence;
+        }        
+        return $conjugationsOrdered;
     }
 }
 
