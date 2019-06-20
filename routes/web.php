@@ -35,6 +35,7 @@ Auth::routes();
 
 Route::get("start-quiz", "QuizController@start");
 Route::post("quiz", "QuizController@quiz");
+Route::post("valuateAnswer", "QuizController@valuateAnswer");
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {

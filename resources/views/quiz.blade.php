@@ -15,7 +15,7 @@
             @endif
         </div>
         <div class="col-sm-12 col-lg-8 bg-white rounded">
-            {{-- {{ dd($conjugations) }} --}}
+            
             @foreach($conjugationsOrdered as $conjugation)
                 <div class="row">
                     <div class="col-12 p-3 rounded">
@@ -30,8 +30,16 @@
                         </div>
                         
                         <h5>{{ $conjugation->pronoun }}</h5>
-                        <form action="/quiz" class="clearfix">
+                        <form action="/valuateAnswer" method="POST" class="clearfix">
                             @csrf
+
+                            @foreach($tensesRequestedByUser as $tenseRequestedByUser)
+                                <input type="hidden" name="{{$tenseRequestedByUser}}" value="{{$tenseRequestedByUser}}">
+
+                            @endforeach
+
+                            <input type="hidden" name="conjugationId" value="{{ $conjugation->id }}">
+                            
                             <div class="row">
                                 <div class="col-sm-12 col-lg-8">
                                     <div class="form-group m-0 mb-3">
@@ -44,7 +52,9 @@
 
                                             " 
                                             id="name" 
-                                            placeholder="Your Answer ..." >
+                                            {{-- placeholder="Your Answer ..."  --}}
+                                            placeholder="{{ $conjugation->name }}" 
+                                            name='answer'>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-lg-4">
@@ -66,6 +76,7 @@
                     </div>        
                 </div>
             @endforeach
+
         </div>
         <div class="col-sm-12 col-lg-2">
             <br>

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use DB;
 use App\Tense;
 use App\SpaceRepetition;
+use App\Conjugation;
 
 class QuizController extends Controller
 {
@@ -19,7 +20,6 @@ class QuizController extends Controller
         $tenses = DB::table('tenses')->distinct('name')->pluck('name');
     
         return view('start-quiz', compact('tenses'));
-
     }
 
     /**
@@ -29,24 +29,9 @@ class QuizController extends Controller
     */
     public function quiz(Request $request)
     {   
-        $tenses = DB::table('tenses')->distinct('name')->pluck('name');        
+        $tensesAvailableInPlatform = $this->getTensesAvailableInPlatform();
+        $tensesRequestedByUser = $this->getTensesRequestedByUser($request, $tensesAvailableInPlatform);
 
-        foreach ($tenses as $tense) {
-            $tenseAvailableInPlatform[] = $tense;
-        }
-        
-
-        
-
-        $tensesRequested = $request->all();
-        
-        $tensesRequestedByUser = [];
-        foreach ($tensesRequested as $tenseRequested) {
-            if(in_array($tenseRequested, $tenseAvailableInPlatform)) {
-                $tensesRequestedByUser[] = $tenseRequested;
-            }
-        }
-        
         // If the user does not choose any tense return a flash error to the start-quiz page
         if(empty($tensesRequestedByUser)){
             return back()->with('error','You need to select at least one tense');
@@ -62,6 +47,30 @@ class QuizController extends Controller
     	if(isset($user->trial_ends_at) && $user->trial_ends_at > date('Y-m-d h:i:s')){
     		return $this->playPaying($tensesRequestedByUser);	
     	} 
+    }
+
+    private function getTensesAvailableInPlatform()
+    {
+        $tenses = DB::table('tenses')->distinct('name')->pluck('name');        
+
+        foreach ($tenses as $tense) {
+            $tensesAvailableInPlatform[] = $tense;
+        }
+        return $tensesAvailableInPlatform;
+    }
+
+    private function getTensesRequestedByUser(Request $request, Array $tensesAvailableInPlatform) 
+    {
+        $tensesRequested = $request->all();
+        
+        $tensesRequestedByUser = [];
+        foreach ($tensesRequested as $tenseRequested) {
+            if(in_array($tenseRequested, $tensesAvailableInPlatform)) {
+                $tensesRequestedByUser[] = $tenseRequested;
+            }
+        }
+        
+        return $tensesRequestedByUser;     
     }
 
     /*
@@ -92,7 +101,7 @@ class QuizController extends Controller
         
         
 
-    	return view('quiz', compact('text', 'conjugationsOrdered'));
+    	return view('quiz', compact('text', 'conjugationsOrdered','tensesRequestedByUser'));
     }
 
     public function playPaying($tensesRequestedByUser)
@@ -159,6 +168,29 @@ class QuizController extends Controller
             $conjugationsOrdered[] = $spaceRepetitionSentence;
         }        
         return $conjugationsOrdered;
+    }
+
+    public function valuateAnswer(Request $request) {
+        
+        $conjugation = Conjugation::find($request->input('conjugationId'));
+
+        
+        if(strtolower($request->input('answer')) === strtolower($conjugation->name)) {
+            // Correct answer
+
+            // check whether the user is logged in,
+            // if is authorized take the id of the user
+            // take the id of the conjugation
+
+            // check whether this ids are already present in a record inside the space_repetition table
+            // if they exist update the table by decreasing the frequency and set update_at as now() 
+            // if the record that contains both id does not exist instert the record with a frequency of 5 and set update_at as now()
+        } 
+        
+
+
+        return $this->quiz($request);
+
     }
 }
 
