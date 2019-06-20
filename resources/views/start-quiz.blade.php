@@ -2,6 +2,7 @@
 
 @section('contentOne')
     <form method='POST' action='/quiz'>
+        @include('layouts.error')
         @method('POST')
         @csrf
 

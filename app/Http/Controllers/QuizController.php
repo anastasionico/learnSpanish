@@ -30,10 +30,14 @@ class QuizController extends Controller
     public function quiz(Request $request)
     {   
         $tenses = DB::table('tenses')->distinct('name')->pluck('name');        
+
         foreach ($tenses as $tense) {
             $tenseAvailableInPlatform[] = $tense;
         }
         
+
+        
+
         $tensesRequested = $request->all();
         
         $tensesRequestedByUser = [];
@@ -43,6 +47,11 @@ class QuizController extends Controller
             }
         }
         
+        // If the user does not choose any tense return a flash error to the start-quiz page
+        if(empty($tensesRequestedByUser)){
+            return back()->with('error','You need to select at least one tense');
+        }
+
     	$user = Auth::user();
 
     	// if user not logged in or user did not pay play for free
