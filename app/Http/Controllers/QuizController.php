@@ -125,7 +125,8 @@ class QuizController extends Controller
     	return view('quiz', compact('text', 'conjugationsOrdered'));
     }
 
-    private function getConjugationInOrder($conjugations, $tensesRequestedByUser) {
+    private function getConjugationInOrder($conjugations, $tensesRequestedByUser) 
+    {
         $userId = (isset(Auth::user()->id))? Auth::user()->id : 1 ;
         // select all the conjugations the are into the space_repetition and follow the criteria choosen by the user
         $spaceRepetitionSentences = DB::table('space_repetition')
@@ -143,7 +144,7 @@ class QuizController extends Controller
             ])
             ->whereIn('tenses.name', $tensesRequestedByUser)
             ->orderBy('space_repetition.frequency', 'desc')
-            ->orderBy('space_repetition.updated_at', 'desc')
+            ->orderBy('space_repetition.updated_at', 'asc')
             ->get();
         
         // creating an array to be evaluate inside in_array in order to get all the sentences not studied yet by the user
@@ -170,27 +171,65 @@ class QuizController extends Controller
         return $conjugationsOrdered;
     }
 
-    public function valuateAnswer(Request $request) {
+    public function valuateAnswer(Request $request) 
+    {
         
         $conjugation = Conjugation::find($request->input('conjugationId'));
-
+        $conjugationName = $conjugation->name;
+        $conjugationId = $conjugation->id;
         
-        if(strtolower($request->input('answer')) === strtolower($conjugation->name)) {
-            // Correct answer
+        
+        if(strtolower($request->input('answer')) === strtolower($conjugationName)) {
+            
 
             // check whether the user is logged in,
-            // if is authorized take the id of the user
-            // take the id of the conjugation
+            if (isset(Auth::user()->id)){
+                // if is authorized take the id of the user
+                $userId = Auth::user()->id;
 
-            // check whether this ids are already present in a record inside the space_repetition table
-            // if they exist update the table by decreasing the frequency and set update_at as now() 
-            // if the record that contains both id does not exist instert the record with a frequency of 5 and set update_at as now()
-        } 
+                // take the id of the conjugation    
+                // check whether this ids are already present in a record inside the space_repetition table
+                $spaceRepetitionConjugation = DB::table('space_repetition')
+                    ->where('user_id', $userId)
+                    ->where('conjugation_id', $conjugationId)
+                    ->first();
+                
+                
+                $dateNow = date_format(date_create(), 'Y-m-d H:i:s');
+                
+                // if the answer exist inside space_repetition update the table by decreasing the frequency and set update_at as now() 
+                if (isset($spaceRepetitionConjugation)) {
+                    $queryDecreaseFrequency = DB::table('space_repetition')
+                    ->where('id', $spaceRepetitionConjugation->id)
+                    ->update([
+                        'frequency' => --$spaceRepetitionConjugation->frequency,
+                        'updated_at' => $dateNow
+                    ]);
+
+                } else {
+                    // if the record that contains both id does not exist instert the record 
+                    // add a frequency of 5 and set update_at as now()        
+                    DB::table('space_repetition')->insert([
+                        'user_id' => $userId, 
+                        'conjugation_id' => $conjugationId,
+                        'frequency' => 5,
+                        'created_at' => $dateNow,
+                        'updated_at' => $dateNow,
+                    ]);
+                }
+            }
+        } else {
+            // refactor the code below by updating the updated_at field of the conjugation 
+            DB::table('space_repetition')->insert([
+                'user_id' => $userId, 
+                'conjugation_id' => $conjugationId,
+                'frequency' => 5,
+                'created_at' => $dateNow,
+                'updated_at' => $dateNow,
+            ]);
+        }
         
-
-
         return $this->quiz($request);
-
     }
 }
 
