@@ -1,3 +1,6 @@
+{{-- @php
+    dd($conjugationsOrdered)
+@endphp --}}
 @extends('layouts.master')
 
 @section('contentOne')
