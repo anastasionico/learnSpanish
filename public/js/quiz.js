@@ -60,43 +60,30 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 47);
+/******/ 	return __webpack_require__(__webpack_require__.s = 45);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 47:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(48);
+module.exports = __webpack_require__(46);
 
 
 /***/ }),
 
-/***/ 48:
+/***/ 46:
 /***/ (function(module, exports) {
 
-// the following function make a confirmation pop up appear at any delete request
-function confirmDelete() {
-	var DeleteButtons = document.querySelectorAll('.deleteItem');
-	console.log(DeleteButtons);
+document.getElementById("quizForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  alert('hello');
+});
 
-	DeleteButtons.forEach(function (DeleteButton) {
-		DeleteButton.addEventListener("click", function (event) {
-
-			if (confirm('Are you sure you want to delete the item from the database?')) {
-				console.log('item gone');
-			} else {
-				console.log('action cancelled');
-				event.preventDefault();
-			}
-		});
-	});
-}
-
-window.onload = function () {
-	confirmDelete();
-};
+// THE FORM NEEDS TO SEND THE DATA TO THE JAVASCRIPT FUCTION 
+// THAT THEN NEEDS TO VALIDATE THE ANSWER SHOW THE POP UP OF THE RIGHT COLOR
+// THEN GO TO THE /valuateAnswer AND GET THE ALGORITH TO WORK
 
 /***/ })
 

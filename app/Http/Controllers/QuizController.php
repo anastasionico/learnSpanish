@@ -98,8 +98,10 @@ class QuizController extends Controller
             ->get();
         
         $conjugationsOrdered = $this->getConjugationRandomly($conjugations, $tensesRequestedByUser);
+        // get the first element and send it to the view
+        $conjugation = $conjugationsOrdered[0];
         
-    	return view('quiz', compact('text', 'conjugationsOrdered','tensesRequestedByUser'));
+    	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
     }
 
     public function playPaying($tensesRequestedByUser)
@@ -118,9 +120,12 @@ class QuizController extends Controller
 			->inRandomOrder()
             ->get();
 
+        
         $conjugationsOrdered = $this->getConjugationInOrder($conjugations, $tensesRequestedByUser);
+        // get the first element and send it to the view
+        $conjugation = $conjugationsOrdered[0];
 
-    	return view('quiz', compact('text', 'conjugationsOrdered'));
+    	return view('quiz', compact('text', 'conjugation'));
     }
 
     private function getConjugationRandomly($conjugations, $tensesRequestedByUser) 
