@@ -76,14 +76,62 @@ module.exports = __webpack_require__(46);
 /***/ 46:
 /***/ (function(module, exports) {
 
-document.getElementById("quizForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-  alert('hello');
-});
+window.onload = function () {
 
-// THE FORM NEEDS TO SEND THE DATA TO THE JAVASCRIPT FUCTION 
-// THAT THEN NEEDS TO VALIDATE THE ANSWER SHOW THE POP UP OF THE RIGHT COLOR
-// THEN GO TO THE /valuateAnswer AND GET THE ALGORITH TO WORK
+			var quizForm = document.getElementById("quizForm");
+			var correctAlert = document.getElementById("correctAlert");
+			var incorrectAlert = document.getElementById("incorrectAlert");
+			var incorrectAlertAnswer = document.getElementsByClassName("answer-outcome-bottom-english");
+			var incorrectAlertAnswerFirst = incorrectAlertAnswer[0];
+
+			quizForm.addEventListener("submit", function (event) {
+						event.preventDefault();
+
+						// get the right anwer 
+						var conjugationName = document.forms["quizForm"]["conjugationName"].value;
+						// get the answer from the player
+						var answer = document.forms["quizForm"]["answer"].value;
+
+						if (answer.toLowerCase() === conjugationName.toLowerCase()) {
+
+									correctAlert.style.opacity = 1;
+									incorrectAlert.style.display = 'none';
+									// alert("correct answer");
+									// return false;
+						} else {
+
+									incorrectAlert.style.opacity = 1;
+									correctAlert.style.display = 'none';
+									incorrectAlertAnswerFirst.innerHTML = conjugationName;
+									// alert("wrong");
+									// return true;
+						}
+			});
+
+			$.ajaxSetup({
+						headers: {
+									'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+						}
+			});
+			$(".answer-outcome-bottom-continue_a").click(function (e) {
+						e.preventDefault();
+
+						var answers = document.forms["quizForm"].getElementsByTagName("input");
+						console.log(answers);
+
+						$.ajax({
+									type: 'POST',
+									url: '/valuateAnswer',
+									data: { data: answers },
+									success: function success(data) {
+												alert(data.success);
+									}
+						});
+			});
+};
+
+// GET THE ANSWER INTO DIFFERENT VARIABLES 
+// GET THEM INTO DATA IN AJAX AND SEND THEM TO THE /valuateAnswer AND GET THE ALGORITH TO WORK
 
 /***/ })
 

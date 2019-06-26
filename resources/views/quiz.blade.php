@@ -31,8 +31,8 @@
                     </div>
                     
                     <h5>{{ $conjugation->pronoun }}</h5>
-                    {{-- <form action="" method="POST" class="clearfix" id="quizForm"> --}}
-                    <form action="/valuateAnswer" method="POST" class="clearfix" id="quizForm">
+                    <form action="" method="POST" class="clearfix" id="quizForm">
+                    {{-- <form action="/valuateAnswer" method="POST" class="clearfix" id="quizForm"> --}}
                         @csrf
 
                         @foreach($tensesRequestedByUser as $tenseRequestedByUser)
@@ -41,7 +41,8 @@
                         @endforeach
 
                         <input type="hidden" name="conjugationId" value="{{ $conjugation->id }}">
-                        
+                        <input type="hidden" name="conjugationName" value="{{ $conjugation->name }}">
+
                         <div class="row">
                             <div class="col-sm-12 col-lg-8">
                                 <div class="form-group m-0 mb-3">
@@ -93,7 +94,7 @@
 @endsection
 
 @section('contentTwo')
-    <div>
+    <div id="incorrectAlert">
         <div class="row bg-orange-opaque c-orange answer-outcome-top">
             <div class="col-sm-12 col-lg-2 pt-3">
             </div>
@@ -115,11 +116,11 @@
                 </a>
             </div>
             <div class="col-sm-12 col-lg-2 answer-outcome-bottom-continue">
-                <a href="#" class="button border-orange c-orange bg-empty button-orange">Continue</a>
+                <a href="#" class="button border-orange c-orange bg-empty button-orange answer-outcome-bottom-continue_a">Continue</a>
             </div>
         </div>
     </div>
-    <div>
+    <div id="correctAlert">
         <div class="row bg-greenLight-opaque c-greenLight answer-outcome-top">
             <div class="col-sm-12 col-lg-2 pt-3">
             </div>
@@ -141,7 +142,7 @@
                 </a>
             </div>
             <div class="col-sm-12 col-lg-2 answer-outcome-bottom-continue">
-                <a href="#" class="button border-greenLight c-greenLight bg-empty button-greenLight">Continue</a>
+                <a href="#" class="button border-greenLight c-greenLight bg-empty button-greenLight answer-outcome-bottom-continue_a">Continue</a>
             </div>
         </div>
     </div>

@@ -12329,6 +12329,18 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
+#incorrectAlert {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#correctAlert {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
 @media (min-width: 0px) {
   .quiz {
     padding: 1rem;
