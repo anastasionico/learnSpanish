@@ -222,7 +222,7 @@ class QuizController extends Controller
 
     public function valuateAnswer(Request $request) 
     {
-        dd($request->all());
+
         $conjugation = Conjugation::find($request->input('conjugationId'));
         $conjugationName = $conjugation->name;
         $conjugationId = $conjugation->id;
@@ -292,6 +292,9 @@ class QuizController extends Controller
             }
         } 
         
+        // dd('hello');
+        // return redirect()->route('quiz', compact($request));
+        // Route::post("quiz", "QuizController@quiz");
         return $this->quiz($request);
     }
 }

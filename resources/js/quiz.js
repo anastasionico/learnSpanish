@@ -6,7 +6,6 @@ window.onload = function () {
 	const incorrectAlertAnswer = document.getElementsByClassName("answer-outcome-bottom-english");
 	const incorrectAlertAnswerFirst = incorrectAlertAnswer[0];
 	
-	
 	quizForm.addEventListener("submit", function(event){
 	  event.preventDefault();
 	  
@@ -34,34 +33,74 @@ window.onload = function () {
 	});
 
 
-
-
-    $.ajaxSetup({
-	    headers: {
+	
+	const continueButton = document.getElementsByClassName("answer-outcome-bottom-continue_a");
+	$.ajaxSetup({
+		headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    $(".answer-outcome-bottom-continue_a").click(function(e){
-        e.preventDefault();
+
+	for (var i = 0; i < continueButton.length; i++) {
+	    continueButton[i].addEventListener('click', function(event){
+    	
+			event.preventDefault();
+			var data = $('quizForm').serialize();
+			// $.post('/valuateAnswer', data);
+			var _token = $("input[name=_token]").val();
+			var tenses = $("input[name='tenses\\[\\]']")
+							.map(function(){return $(this).val();}).get();
+			
+			var conjugationId = $("input[name=conjugationId]").val();
+			var conjugationName = $("input[name=conjugationName]").val();
+			
+			// 	console.log(conjugationName);
+			$.ajax({
+	        	url: '/valuateAnswer',
+	          	// dataType : 'string',
+	          	type: 'POST',
+	          	data:{token:_token,tenses:tenses,conjugationId:conjugationId,conjugationName:conjugationName},
+	          	
+	           	
+	          	// contentType: false,
+	          	// processData: false,
+	          	success:function(data){
+				  	location.href = window.location.href;
+			  	},
+	     //      	error: function(errorThrown){
+			   //  	console.log(errorThrown);
+			   //  }       
+	     	});
+		}, false);
+	}
+
+	    
+	
+
+
+
+
+ //    $(".answer-outcome-bottom-continue_a").click(function(e){
+ //        e.preventDefault();
 
 		
-		let answers = document.forms["quizForm"].getElementsByTagName("input");
-        console.log(answers);
-        
+	// 	let answers = document.forms["quizForm"].getElementsByTagName("input");
+ //        console.log(answers);
+ //        debugger;
    
-        $.ajax({
-           type:'POST',
-           url:'/valuateAnswer',
-           data:{data:answers},
-           success:function(data){
-              alert(data.success);
-           }
-        });
-	});
+ //        // $.ajax({
+ //        //    type:'POST',
+ //        //    url:'/valuateAnswer',
+ //        //    data:{data:answers},
+ //        //    success:function(data){
+ //        //       alert(data.success);
+ //        //    }
+ //        // });
+	// });
 
 
 
-};
+}
 
 
 // GET THE ANSWER INTO DIFFERENT VARIABLES 

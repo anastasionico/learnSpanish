@@ -34,7 +34,7 @@ Route::get('/pricing', function () {
 Auth::routes();
 
 Route::get("start-quiz", "QuizController@start");
-Route::post("quiz", "QuizController@quiz");
+Route::get("quiz", "QuizController@quiz");
 Route::post("valuateAnswer", "QuizController@valuateAnswer");
 
 

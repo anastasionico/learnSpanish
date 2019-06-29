@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
 @section('contentOne')
-    <form method='POST' action='/quiz'>
+    <form method='GET' action='/quiz'>
         @include('layouts.error')
-        @method('POST')
-        @csrf
+        {{-- @method('POST') --}}
+        {{-- @csrf --}}
 
         
         {{-- Tense's div --}}
@@ -34,7 +34,7 @@
             <div class="col-sm-12 col-lg-4"></div>
             <div class="col-sm-12 col-lg-4">
                 <p class="mb-5"><small>Create an account to unlock tenses</small></p>
-                <input type="submit" name="submit" class="button button-orange-stripe border-orange c-orange bg-empty mx-1 hover-orange" value="Start">
+                <input type="submit" class="button button-orange-stripe border-orange c-orange bg-empty mx-1 hover-orange" value="Start">
                 {{-- <a href='/quiz' class="">
                     Start
                 </a> --}}

@@ -32,12 +32,12 @@
                     
                     <h5>{{ $conjugation->pronoun }}</h5>
                     <form action="" method="POST" class="clearfix" id="quizForm">
-                    {{-- <form action="/valuateAnswer" method="POST" class="clearfix" id="quizForm"> --}}
+                    {{-- <form action="/valuateAnswer" method="POST" class="clearfix"> --}}
                         @csrf
 
                         @foreach($tensesRequestedByUser as $tenseRequestedByUser)
-                            <input type="hidden" name="{{$tenseRequestedByUser}}" value="{{$tenseRequestedByUser}}">
-
+                            {{-- <input type="hidden" name="{{$tenseRequestedByUser}}" value="{{$tenseRequestedByUser}}"> --}}
+                            <input type="hidden" name="tenses[]" value="{{$tenseRequestedByUser}}">
                         @endforeach
 
                         <input type="hidden" name="conjugationId" value="{{ $conjugation->id }}">
@@ -116,7 +116,7 @@
                 </a>
             </div>
             <div class="col-sm-12 col-lg-2 answer-outcome-bottom-continue">
-                <a href="#" class="button border-orange c-orange bg-empty button-orange answer-outcome-bottom-continue_a">Continue</a>
+                <a class="button border-orange c-orange bg-empty button-orange answer-outcome-bottom-continue_a">Continue</a>
             </div>
         </div>
     </div>
@@ -142,7 +142,7 @@
                 </a>
             </div>
             <div class="col-sm-12 col-lg-2 answer-outcome-bottom-continue">
-                <a href="#" class="button border-greenLight c-greenLight bg-empty button-greenLight answer-outcome-bottom-continue_a">Continue</a>
+                <a class="button border-greenLight c-greenLight bg-empty button-greenLight answer-outcome-bottom-continue_a">Continue</a>
             </div>
         </div>
     </div>

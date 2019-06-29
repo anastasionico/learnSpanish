@@ -78,56 +78,94 @@ module.exports = __webpack_require__(46);
 
 window.onload = function () {
 
-			var quizForm = document.getElementById("quizForm");
-			var correctAlert = document.getElementById("correctAlert");
-			var incorrectAlert = document.getElementById("incorrectAlert");
-			var incorrectAlertAnswer = document.getElementsByClassName("answer-outcome-bottom-english");
-			var incorrectAlertAnswerFirst = incorrectAlertAnswer[0];
+	var quizForm = document.getElementById("quizForm");
+	var correctAlert = document.getElementById("correctAlert");
+	var incorrectAlert = document.getElementById("incorrectAlert");
+	var incorrectAlertAnswer = document.getElementsByClassName("answer-outcome-bottom-english");
+	var incorrectAlertAnswerFirst = incorrectAlertAnswer[0];
 
-			quizForm.addEventListener("submit", function (event) {
-						event.preventDefault();
+	quizForm.addEventListener("submit", function (event) {
+		event.preventDefault();
 
-						// get the right anwer 
-						var conjugationName = document.forms["quizForm"]["conjugationName"].value;
-						// get the answer from the player
-						var answer = document.forms["quizForm"]["answer"].value;
+		// get the right anwer 
+		var conjugationName = document.forms["quizForm"]["conjugationName"].value;
+		// get the answer from the player
+		var answer = document.forms["quizForm"]["answer"].value;
 
-						if (answer.toLowerCase() === conjugationName.toLowerCase()) {
+		if (answer.toLowerCase() === conjugationName.toLowerCase()) {
 
-									correctAlert.style.opacity = 1;
-									incorrectAlert.style.display = 'none';
-									// alert("correct answer");
-									// return false;
-						} else {
+			correctAlert.style.opacity = 1;
+			incorrectAlert.style.display = 'none';
+			// alert("correct answer");
+			// return false;
+		} else {
 
-									incorrectAlert.style.opacity = 1;
-									correctAlert.style.display = 'none';
-									incorrectAlertAnswerFirst.innerHTML = conjugationName;
-									// alert("wrong");
-									// return true;
-						}
+			incorrectAlert.style.opacity = 1;
+			correctAlert.style.display = 'none';
+			incorrectAlertAnswerFirst.innerHTML = conjugationName;
+			// alert("wrong");
+			// return true;
+		}
+	});
+
+	var continueButton = document.getElementsByClassName("answer-outcome-bottom-continue_a");
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});
+
+	for (var i = 0; i < continueButton.length; i++) {
+		continueButton[i].addEventListener('click', function (event) {
+
+			event.preventDefault();
+			var data = $('quizForm').serialize();
+			// $.post('/valuateAnswer', data);
+			var _token = $("input[name=_token]").val();
+			var tenses = $("input[name='tenses\\[\\]']").map(function () {
+				return $(this).val();
+			}).get();
+
+			var conjugationId = $("input[name=conjugationId]").val();
+			var conjugationName = $("input[name=conjugationName]").val();
+
+			// 	console.log(conjugationName);
+			$.ajax({
+				url: '/valuateAnswer',
+				// dataType : 'string',
+				type: 'POST',
+				data: { token: _token, tenses: tenses, conjugationId: conjugationId, conjugationName: conjugationName },
+
+				// contentType: false,
+				// processData: false,
+				success: function success(data) {
+					location.href = window.location.href;
+				}
+				//      	error: function(errorThrown){
+				//  	console.log(errorThrown);
+				//  }       
 			});
+		}, false);
+	}
 
-			$.ajaxSetup({
-						headers: {
-									'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-						}
-			});
-			$(".answer-outcome-bottom-continue_a").click(function (e) {
-						e.preventDefault();
+	//    $(".answer-outcome-bottom-continue_a").click(function(e){
+	//        e.preventDefault();
 
-						var answers = document.forms["quizForm"].getElementsByTagName("input");
-						console.log(answers);
 
-						$.ajax({
-									type: 'POST',
-									url: '/valuateAnswer',
-									data: { data: answers },
-									success: function success(data) {
-												alert(data.success);
-									}
-						});
-			});
+	// 	let answers = document.forms["quizForm"].getElementsByTagName("input");
+	//        console.log(answers);
+	//        debugger;
+
+	//        // $.ajax({
+	//        //    type:'POST',
+	//        //    url:'/valuateAnswer',
+	//        //    data:{data:answers},
+	//        //    success:function(data){
+	//        //       alert(data.success);
+	//        //    }
+	//        // });
+	// });
+
 };
 
 // GET THE ANSWER INTO DIFFERENT VARIABLES 
