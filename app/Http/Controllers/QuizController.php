@@ -15,7 +15,8 @@ class QuizController extends Controller
     * The start method returns all the tense available from the database
     * And show them into a form with switcher that the user can select
     */
-    public function start () {
+    public function start() 
+    {
     
         $tenses = DB::table('tenses')->distinct('name')->pluck('name');
     
@@ -98,9 +99,12 @@ class QuizController extends Controller
             ->get();
         
         $conjugationsOrdered = $this->getConjugationRandomly($conjugations, $tensesRequestedByUser);
-        // get the first element and send it to the view
-        $conjugation = $conjugationsOrdered[0];
         
+        $conjugation = $this->getFirstConjugation($conjugationsOrdered);
+        if(!$conjugation){
+            return back()->with('error','There are no tenses that match your request');
+        }
+
     	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
     }
 
@@ -122,10 +126,20 @@ class QuizController extends Controller
 
         
         $conjugationsOrdered = $this->getConjugationInOrder($conjugations, $tensesRequestedByUser);
-        // get the first element and send it to the view
-        $conjugation = $conjugationsOrdered[0];
+        
+
+        $conjugation = $this->getFirstConjugation($conjugationsOrdered);
 
     	return view('quiz', compact('text', 'conjugation'));
+    }
+
+    private function getFirstConjugation($conjugationsOrdered)
+    {
+        // get the first element and if exists send it to the view otherwise show an error
+        if (!isset($conjugationsOrdered[0])){
+            return false;
+        }
+        return $conjugation = $conjugationsOrdered[0];
     }
 
     private function getConjugationRandomly($conjugations, $tensesRequestedByUser) 
