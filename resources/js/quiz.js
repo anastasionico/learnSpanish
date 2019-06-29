@@ -45,7 +45,7 @@ window.onload = function () {
 	    continueButton[i].addEventListener('click', function(event){
     	
 			event.preventDefault();
-			var data = $('quizForm').serialize();
+			// var data = $('quizForm').serialize();
 			// $.post('/valuateAnswer', data);
 			var _token = $("input[name=_token]").val();
 			var tenses = $("input[name='tenses\\[\\]']")
@@ -53,23 +53,20 @@ window.onload = function () {
 			
 			var conjugationId = $("input[name=conjugationId]").val();
 			var conjugationName = $("input[name=conjugationName]").val();
-			
-			// 	console.log(conjugationName);
+			var answer = $("input[name=answer]").val();
+
 			$.ajax({
 	        	url: '/valuateAnswer',
-	          	// dataType : 'string',
-	          	type: 'POST',
-	          	data:{token:_token,tenses:tenses,conjugationId:conjugationId,conjugationName:conjugationName},
 	          	
-	           	
-	          	// contentType: false,
-	          	// processData: false,
+	          	type: 'POST',
+	          	data:{token:_token,tenses:tenses,conjugationId:conjugationId,conjugationName:conjugationName,answer:answer},
+	          	
 	          	success:function(data){
-				  	location.href = window.location.href;
+	          		location.href = window.location.href;
 			  	},
-	     //      	error: function(errorThrown){
-			   //  	console.log(errorThrown);
-			   //  }       
+	          	error: function(errorThrown){
+			    	console.log(errorThrown);
+			    }       
 	     	});
 		}, false);
 	}

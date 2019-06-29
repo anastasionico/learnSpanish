@@ -222,17 +222,13 @@ class QuizController extends Controller
 
     public function valuateAnswer(Request $request) 
     {
-
         $conjugation = Conjugation::find($request->input('conjugationId'));
         $conjugationName = $conjugation->name;
         $conjugationId = $conjugation->id;
-        
-        // Check if answer is correct
-        // Check Id of user
-        // Check if aswer is in space repetiion
 
         // check whether the user is logged in,
         if (isset(Auth::user()->id)){
+
             // if is authorized take the id of the user
             $userId = Auth::user()->id;
 
@@ -247,15 +243,16 @@ class QuizController extends Controller
             $dateNow = date_format(date_create(), 'Y-m-d H:i:s');
 
             if(strtolower($request->input('answer')) === strtolower($conjugationName)) {
+                
                 // if the answer exist inside space_repetition update the table by decreasing the frequency and set update_at as now() 
-
                 if (isset($spaceRepetitionConjugation)) {
+
                     $queryDecreaseFrequency = DB::table('space_repetition')
-                    ->where('id', $spaceRepetitionConjugation->id)
-                    ->update([
-                        'frequency' => ($spaceRepetitionConjugation->frequency > 1)? --$spaceRepetitionConjugation->frequency : 1,
-                        'updated_at' => $dateNow
-                    ]);
+                        ->where('id', $spaceRepetitionConjugation->id)
+                        ->update([
+                            'frequency' => ($spaceRepetitionConjugation->frequency > 1)? --$spaceRepetitionConjugation->frequency : 1,
+                            'updated_at' => $dateNow
+                        ]);
 
                 } else {
                     // if the record that contains both id does not exist instert the record 
@@ -272,11 +269,11 @@ class QuizController extends Controller
                 // if the answer exist inside space_repetition update the table by decreasing the frequency and set update_at as now() 
                 if (isset($spaceRepetitionConjugation)) {
                     $queryDecreaseFrequency = DB::table('space_repetition')
-                    ->where('id', $spaceRepetitionConjugation->id)
-                    ->update([
-                        'frequency' => ($spaceRepetitionConjugation->frequency < 5)? ++$spaceRepetitionConjugation->frequency : 5,
-                        'updated_at' => $dateNow
-                    ]);
+                        ->where('id', $spaceRepetitionConjugation->id)
+                        ->update([
+                            'frequency' => ($spaceRepetitionConjugation->frequency < 5)? ++$spaceRepetitionConjugation->frequency : 5,
+                            'updated_at' => $dateNow
+                        ]);
 
                 } else {
                     // if the record that contains both id does not exist instert the record 
@@ -292,9 +289,6 @@ class QuizController extends Controller
             }
         } 
         
-        // dd('hello');
-        // return redirect()->route('quiz', compact($request));
-        // Route::post("quiz", "QuizController@quiz");
         return $this->quiz($request);
     }
 }

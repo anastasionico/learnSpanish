@@ -146,7 +146,9 @@
             </div>
         </div>
     </div>
-    <script src="/js/quiz.js"></script>
+    <script type="application/javascript" src="{{ asset('js/quiz.js') }}"></script>
+
+
 @endsection
 
 {{-- @section('contentThree')
