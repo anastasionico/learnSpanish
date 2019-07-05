@@ -12335,10 +12335,28 @@ input:checked + .slider:before {
   transition: opacity 0.3s ease-in-out;
 }
 
+@media (min-width: 1024px) {
+  #incorrectAlert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
 #correctAlert {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  #correctAlert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 @media (min-width: 0px) {
@@ -12361,7 +12379,7 @@ input:checked + .slider:before {
 
 @media (min-width: 768px) {
   .quiz {
-    padding: 3rem 0;
+    padding: 7rem 0;
   }
 
   .quiz h1 {

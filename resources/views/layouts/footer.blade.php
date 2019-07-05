@@ -1,7 +1,8 @@
 @php
     $request_uri = "$_SERVER[REQUEST_URI]";
 @endphp
-@if($request_uri !== '/quiz')
+
+@if(!strstr($request_uri, '/quiz'))
     <footer  class="container-fluid"  style="background-image: url({{asset('img/footer.jpg')}});">
         <div class="row c-greenLight footer-upper">
             <div class="col-sm-12 col-lg-4 text-left slogan">

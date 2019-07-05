@@ -55,9 +55,9 @@
 
                                         " 
                                         id="name" 
-                                        {{-- placeholder="Your Answer ..."  --}}
-                                        placeholder="{{ $conjugation->name }}" 
-                                        name='answer'>
+                                        placeholder="Insert Your Answer ..." 
+                                        {{-- placeholder="{{ $conjugation->name }}"  --}}
+                                        name='answer' autofocus>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-4">
