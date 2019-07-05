@@ -256,7 +256,7 @@ class QuizController extends Controller
             
             $dateNow = date_format(date_create(), 'Y-m-d H:i:s');
 
-            if(strtolower($request->input('answer')) === strtolower($conjugationName)) {
+            if(strtolower($request->input('answer')) === trim(strtolower($conjugationName))) {
                 
                 // if the answer exist inside space_repetition update the table by decreasing the frequency and set update_at as now() 
                 if (isset($spaceRepetitionConjugation)) {

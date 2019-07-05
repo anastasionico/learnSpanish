@@ -66,13 +66,13 @@
                         </div>
                     </form>
                     <div class="py-3">
-                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">á</em>
-                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">é</em>
-                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">í</em>
-                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">ó</em>
-                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">ú</em>
-                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">ü</em>    
-                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer">ñ</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer" id="letterá">á</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer" id="letteré">é</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer" id="letterí">í</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer" id="letteró">ó</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer" id="letterú">ú</em>
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer" id="letterü">ü</em>    
+                        <em class="bg-greenLight c-white rounded p-2 mr-1 pointer" id="letterñ">ñ</em>
                     </div>
                 </div>        
             </div>

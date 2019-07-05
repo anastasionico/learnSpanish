@@ -79,10 +79,18 @@ module.exports = __webpack_require__(46);
 window.onload = function () {
 
 	var quizForm = document.getElementById("quizForm");
+	var name = document.getElementById("name");
 	var correctAlert = document.getElementById("correctAlert");
 	var incorrectAlert = document.getElementById("incorrectAlert");
 	var incorrectAlertAnswer = document.getElementsByClassName("answer-outcome-bottom-english");
 	var incorrectAlertAnswerFirst = incorrectAlertAnswer[0];
+	var letterá = document.getElementById("letterá");
+	var letteré = document.getElementById("letteré");
+	var letterí = document.getElementById("letterí");
+	var letteró = document.getElementById("letteró");
+	var letterú = document.getElementById("letterú");
+	var letterü = document.getElementById("letterü");
+	var letterñ = document.getElementById("letterñ");
 
 	quizForm.addEventListener("submit", function (event) {
 		event.preventDefault();
@@ -92,7 +100,7 @@ window.onload = function () {
 		// get the answer from the player
 		var answer = document.forms["quizForm"]["answer"].value;
 
-		if (answer.toLowerCase() === conjugationName.toLowerCase()) {
+		if (answer.trim().toLowerCase() === conjugationName.toLowerCase()) {
 
 			correctAlert.style.opacity = 1;
 			incorrectAlert.style.display = 'none';
@@ -146,28 +154,28 @@ window.onload = function () {
 		}, false);
 	}
 
-	//    $(".answer-outcome-bottom-continue_a").click(function(e){
-	//        e.preventDefault();
-
-
-	// 	let answers = document.forms["quizForm"].getElementsByTagName("input");
-	//        console.log(answers);
-	//        debugger;
-
-	//        // $.ajax({
-	//        //    type:'POST',
-	//        //    url:'/valuateAnswer',
-	//        //    data:{data:answers},
-	//        //    success:function(data){
-	//        //       alert(data.success);
-	//        //    }
-	//        // });
-	// });
-
+	letterá.onclick = function () {
+		name.value += 'á';
+	};
+	letteré.onclick = function () {
+		name.value += 'é';
+	};
+	letterí.onclick = function () {
+		name.value += 'í';
+	};
+	letteró.onclick = function () {
+		name.value += 'ó';
+	};
+	letterú.onclick = function () {
+		name.value += 'ú';
+	};
+	letterü.onclick = function () {
+		name.value += 'ü';
+	};
+	letterñ.onclick = function () {
+		name.value += 'ñ';
+	};
 };
-
-// GET THE ANSWER INTO DIFFERENT VARIABLES 
-// GET THEM INTO DATA IN AJAX AND SEND THEM TO THE /valuateAnswer AND GET THE ALGORITH TO WORK
 
 /***/ })
 

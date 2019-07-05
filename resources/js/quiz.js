@@ -1,10 +1,20 @@
 window.onload = function () {
 
 	const quizForm = document.getElementById("quizForm");
+	const name = document.getElementById("name");
 	const correctAlert = document.getElementById("correctAlert");
 	const incorrectAlert = document.getElementById("incorrectAlert");
 	const incorrectAlertAnswer = document.getElementsByClassName("answer-outcome-bottom-english");
 	const incorrectAlertAnswerFirst = incorrectAlertAnswer[0];
+	const letterá = document.getElementById("letterá");
+	const letteré = document.getElementById("letteré");
+	const letterí = document.getElementById("letterí");
+	const letteró = document.getElementById("letteró");
+	const letterú = document.getElementById("letterú");
+	const letterü = document.getElementById("letterü");
+	const letterñ = document.getElementById("letterñ");
+	
+
 	
 	quizForm.addEventListener("submit", function(event){
 	  event.preventDefault();
@@ -14,7 +24,7 @@ window.onload = function () {
 	  // get the answer from the player
 	  let answer = document.forms["quizForm"]["answer"].value;
 
-	  if (answer.toLowerCase() === conjugationName.toLowerCase()) {
+	  if (answer.trim().toLowerCase() === conjugationName.toLowerCase()) {
 	    
 	    correctAlert.style.opacity = 1;
 	    incorrectAlert.style.display = 'none';
@@ -32,8 +42,6 @@ window.onload = function () {
 	  }
 	});
 
-
-	
 	const continueButton = document.getElementsByClassName("answer-outcome-bottom-continue_a");
 	$.ajaxSetup({
 		headers: {
@@ -71,34 +79,27 @@ window.onload = function () {
 		}, false);
 	}
 
-	    
+	letterá.onclick = function(){
+		name.value += 'á';
+	};
+	letteré.onclick = function(){
+		name.value += 'é';
+	};
+	letterí.onclick = function(){
+		name.value += 'í';
+	};
+	letteró.onclick = function(){
+		name.value += 'ó';
+	};
+	letterú.onclick = function(){
+		name.value += 'ú';
+	};
+	letterü.onclick = function(){
+		name.value += 'ü';
+	};
+	letterñ.onclick = function(){
+		name.value += 'ñ';
+	};
 	
-
-
-
-
- //    $(".answer-outcome-bottom-continue_a").click(function(e){
- //        e.preventDefault();
-
-		
-	// 	let answers = document.forms["quizForm"].getElementsByTagName("input");
- //        console.log(answers);
- //        debugger;
-   
- //        // $.ajax({
- //        //    type:'POST',
- //        //    url:'/valuateAnswer',
- //        //    data:{data:answers},
- //        //    success:function(data){
- //        //       alert(data.success);
- //        //    }
- //        // });
-	// });
-
-
-
 }
 
-
-// GET THE ANSWER INTO DIFFERENT VARIABLES 
-// GET THEM INTO DATA IN AJAX AND SEND THEM TO THE /valuateAnswer AND GET THE ALGORITH TO WORK
