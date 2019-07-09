@@ -23,12 +23,14 @@ Route::get('/privacy', function () {
 Route::get('/start-quiz', function () {
     return view('start-quiz');
 });
-// Route::get('/quiz', function () {
-//     return view('quiz');
-// });
 Route::get('/pricing', function () {
     return view('pricing');
 });
+
+Route::get("/profile", "ProfilesController@edit");
+Route::patch("profile/{user}", "ProfilesController@update");
+Route::get("editpassword", "ProfilesController@editpassword");
+Route::patch("updatepassword", "ProfilesController@updatepassword");
 
 
 Auth::routes();

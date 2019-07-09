@@ -75,30 +75,9 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->name = request('name');
-        $user->email = request('email');
-        $user->password = request('password');
-        if ( ! $request->has('is_admin')) {
-            $user->is_admin = 0;      // Do something when checkbox isn't checked.
-        } else {
-            $user->is_admin = request('is_admin');    
-        }
-        if ( ! $request->has('is_marketable')) {
-            $user->is_marketable = 0;      // Do something when checkbox isn't checked.
-        } else {
-            $user->is_marketable = request('is_marketable');    
-        }        
-        if ($request->has('country')) {
-            $user->country = request('country');    
-        }        
-        if ($request->has('first_language')) {
-            $user->first_language = request('first_language');    
-        }        
-        if ($request->has('sex')) {
-            $user->sex = request('sex');    
-        }        
-        $user->dob = request('dob');
-        $user->save();
+        $user = User::find($user)->first();
+        
+        $response = $user->updateUser($request);
 
         return redirect()->action('UsersController@index');
     }
@@ -128,4 +107,6 @@ class UsersController extends Controller
         
         return view('admin/users/conjugationchart', compact('conjugations','user'));
     }
+
+
 }
