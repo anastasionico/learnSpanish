@@ -17,8 +17,9 @@
             <p>Choose from one of the following two account options:</p>
         </div>
     </div>
+    
     <div class="row bg-grayLight p-4 section-pricing">
-        <div class="col-sm-12 col-lg-4 p-2 bg-white rounded section-pricing-div">
+        <div class="col-sm-12 col-lg-12 p-2 mb-5 bg-white rounded section-pricing-div">
             <h6 class="c-greenLight">Option 1: Free Plan</h6>
             <h2 class="c-greenLight">No Fees</h2>
             
@@ -32,30 +33,100 @@
             
             <p>Benefit from our spaced repetition Bots Unlocks all tenses and access to more verb forms.</p>
             <a href='/start-quiz' class="button bg-orange">
-                Sign up
+                Start Now
             </a>    
         </div>
-        <div class="col-sm-12 col-lg-1"></div>
         
-        <div class="col-sm-12 col-lg-7 bg-white p-2 rounded section-pricing-div">
-            <h6 class="c-greenLight">Option 2: Paid Account</h6>
-            <h2 class="c-greenLight">$4.99/Year</h2>
-            <p>Benefit from our spaced repetition Bots</p>
-            <p>Unlock all tenses <b>and</b> all verb forms within our database</p>
-            <p>Ad-free learning</p>
-            <p>We will not automatically renew your subscription</p>
-            <a href='/start-quiz' class="button bg-orange">
-                Sign Up
-            </a>    
-        
-            {{-- <div class="bg-white p-4 rounded">
-                <strong class="c-greenLight">We’ve brought together over ????</strong>
-                <p>Different Spanish verb forms all in one place. If you simply want to practice Spanish verbs, then espapaya.com is for you.</p>
-                
-            </div> --}}
-            
-        </div>
+        @php
+            $i=1;
+        @endphp
+        @foreach($plans as $plan)
+            <div class="col-sm-12 col-lg-5 p-2 mb-5 bg-white rounded section-pricing-div">
+                <h6 class="c-greenLight">Option {{++$i}}: {{$plan->name}}</h6>
+                <h2 class="c-greenLight">£ {{$plan->cost}}/Month</h2>
+                <p>{{$plan->description}}</p>
+                <a href='showplan/{{$plan->name}}' class="button bg-orange">
+                    Sign Up
+                </a>    
+            </div>    
+            <div class="col-sm-12 col-lg-2"></div>
+        @endforeach
+
+
+        {{-- @if(isset($plans[0]))
+        <div class="col-sm-12 col-lg-5 p-2 bg-white rounded section-pricing-div">
+                <h6 class="c-greenLight">Option 2: {{$plans[0]->name}}</h6>
+                <h2 class="c-greenLight">£ {{$plans[0]->cost}}/Month</h2>
+                <p>{{$plans[0]->description}}</p>
+                <a href='showplan/{{$plans[0]->name}}' class="button bg-orange">
+                    Sign Up
+                </a>    
+            </div>    
+        @endif --}}
     </div>
 
-    
+    {{-- <div class="row bg-grayLight p-4 section-pricing">
+        @if(isset($plans[1]))
+            <div class="col-sm-12 col-lg-7 bg-white p-2 rounded section-pricing-div">
+                <h6 class="c-greenLight">Option 2: Paid Account</h6>
+                <h2 class="c-greenLight">$4.99/Year</h2>
+                <p>Benefit from our spaced repetition Bots</p>
+                <p>Unlock all tenses <b>and</b> all verb forms within our database</p>
+                <p>Ad-free learning</p>
+                <p>We will not automatically renew your subscription</p>
+                <a href='/start-quiz' class="button bg-orange">
+                    Sign Up
+                </a>    
+            </div>    
+        @endif
+
+        <div class="col-sm-12 col-lg-1"></div>
+        
+        @if(isset($plans[0]))
+            <div class="col-sm-12 col-lg-4 p-2 bg-white rounded section-pricing-div">
+                <h6 class="c-greenLight">Option 1: Free Plan</h6>
+                <h2 class="c-greenLight">No Fees</h2>
+                
+                <div class="py-4">
+                    <small>3 tenses</small><br>
+                    <small>Verb Practice Gameplay</small><br>
+                    <small>Efficient Learning</small><br>
+                    <small>Durable knowledge retentions</small><br>
+                    <small>Ad-free learning</small><br>
+                </div>
+                
+                <p>Benefit from our spaced repetition Bots Unlocks all tenses and access to more verb forms.</p>
+                <a href='/start-quiz' class="button bg-orange">
+                    Sign up
+                </a>    
+            </div>
+        @endif
+    </div>
+
+    @if(count($plans) > 3)
+        @foreach($plans as $plan)
+            <div class="col-sm-12 col-lg-6 p-2 bg-white rounded section-pricing-div">
+                <h6 class="c-greenLight">Option 1: Free Plan</h6>
+                <h2 class="c-greenLight">No Fees</h2>
+                
+                <div class="py-4">
+                    <small>3 tenses</small><br>
+                    <small>Verb Practice Gameplay</small><br>
+                    <small>Efficient Learning</small><br>
+                    <small>Durable knowledge retentions</small><br>
+                    <small>Ad-free learning</small><br>
+                </div>
+                
+                <p>Benefit from our spaced repetition Bots Unlocks all tenses and access to more verb forms.</p>
+                <a href='/start-quiz' class="button bg-orange">
+                    Sign up
+                </a>    
+            </div>
+        
+        @endforeach
+
+    @endif
+ --}}
+
+
 @endsection

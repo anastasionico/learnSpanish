@@ -33,6 +33,11 @@
                </a>
             </li>                     
             <li class="sidebar-item"> 
+               <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/plans" aria-expanded="false">
+               <i class="mdi mdi-credit-card-multiple"></i><span class="hide-menu">Plans</span>
+               </a>
+            </li>                     
+            {{-- <li class="sidebar-item"> 
                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="charts.html" aria-expanded="false">
                <i class="mdi mdi-message-text"></i><span class="hide-menu">Messages</span>
                </a>
@@ -41,7 +46,7 @@
                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="charts.html" aria-expanded="false">
                <i class="mdi mdi-twitter-retweet"></i><span class="hide-menu">Social</span>
                </a>
-            </li>                     
+            </li>                      --}}
          </ul>
       </nav>
       <!-- End Sidebar navigation -->

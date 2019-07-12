@@ -23,9 +23,7 @@ Route::get('/privacy', function () {
 Route::get('/start-quiz', function () {
     return view('start-quiz');
 });
-Route::get('/pricing', function () {
-    return view('pricing');
-});
+
 
 Route::get("/profile", "ProfilesController@edit");
 Route::patch("profile/{user}", "ProfilesController@update");
@@ -35,6 +33,7 @@ Route::patch("updatepassword", "ProfilesController@updatepassword");
 // Stripe payment
 Route::get('showplan/{plan}', 'PlansController@show');
 Route::post('subscription', 'SubscriptionsController@create');
+Route::get('pricing', 'PlansController@pricing');
 
 Auth::routes();
 
@@ -64,7 +63,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::resource('conjugation','ConjugationsController');
 
 	Route::get('plans', 'PlansController@index');
-
+	Route::get('plans/create', 'PlansController@create');
+	Route::post('plans', 'PlansController@store');
+	Route::get('plans/{plan}/edit', 'PlansController@edit');
+	Route::delete('plans/{plan}', 'PlansController@destroy');
+	Route::patch('plans/{plan}', 'PlansController@update');
 	
 	
 	
