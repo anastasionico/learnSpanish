@@ -38,6 +38,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="/showplan/basic" class="dropdown-item">
+                                        <i class="fas fa-user"></i> Checkout
+                                    </a>                                    
+
 
                                     <a href="profile" class="dropdown-item">
                                         <i class="fas fa-user"></i> Profile

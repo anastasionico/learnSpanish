@@ -32,6 +32,9 @@ Route::patch("profile/{user}", "ProfilesController@update");
 Route::get("editpassword", "ProfilesController@editpassword");
 Route::patch("updatepassword", "ProfilesController@updatepassword");
 
+// Stripe payment
+Route::get('showplan/{plan}', 'PlansController@show');
+Route::post('subscription', 'SubscriptionsController@create');
 
 Auth::routes();
 
@@ -60,6 +63,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::resource('tenses','TensesController');
 	Route::resource('conjugation','ConjugationsController');
 
+	Route::get('plans', 'PlansController@index');
 
 	
 	
