@@ -27,7 +27,14 @@
                 <div class="form-group row">
                     <label for="name" class="col-sm-3 text-right control-label col-form-label">Name <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' placeholder="Insert the name of the plan" required>
+                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' placeholder="Insert the name of the plan (equal to Stripe Dashboard)" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="Identifier" class="col-sm-3 text-right control-label col-form-label">Identifier <sub>(Required)</sub></label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="identifier" name='identifier' placeholder="Insert the id of the plan (equal to Stripe Dashboard)" required>
                     </div>
                 </div>
 

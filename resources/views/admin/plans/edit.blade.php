@@ -33,6 +33,13 @@
                 </div>
 
                 <div class="form-group row">
+                    <label for="Identifier" class="col-sm-3 text-right control-label col-form-label">Identifier <sub>(Required)</sub></label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="Identifier" name='identifier' value="{{$plan->stripe_plan}}" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
                     <label for="cost" class="col-sm-3 text-right control-label col-form-label">Cost <sub>(Required)</sub></label>
                     <div class="col-sm-1">
                         <input type="number" name="cost" min="0" step='0.01' value="{{$plan->cost}}" required>

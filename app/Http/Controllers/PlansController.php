@@ -27,6 +27,7 @@ class PlansController extends Controller
 	{
 		$request->validate([
             'name' => ['required','string','unique:plans,name'],
+            'identifier' => ['required','string','unique:plans,stripe_plan'],
             'cost' => ['required','numeric','min:0'],
             'description' => ['string'],
         ]);
@@ -34,7 +35,7 @@ class PlansController extends Controller
         Plan::create([
             'name' => ucfirst(request('name')),
             'slug' => str_slug(request('name'), '-'),
-            'stripe_plan' => ucfirst(request('name')),
+            'stripe_plan' => ucfirst(request('identifier')),
             'cost' => request('cost'),
             'description' => request('description'),
         ]);
@@ -51,7 +52,7 @@ class PlansController extends Controller
 		
         $plan->name = ucfirst(request('name'));
         $plan->slug = str_slug(request('name'), '-');
-        $plan->stripe_plan = ucfirst(request('name'));
+        $plan->stripe_plan = ucfirst(request('identifier'));
         $plan->cost = request('cost');
         $plan->description = request('description');
         
