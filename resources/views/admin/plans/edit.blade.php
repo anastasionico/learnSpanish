@@ -29,6 +29,7 @@
                     <label for="name" class="col-sm-3 text-right control-label col-form-label">Name <sub>(Required)</sub></label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' value="{{$plan->name}}" required>
+                        <small>It must be equal to the one in product on the Stripe Dashboard, capital letter will be added automatically</small>
                     </div>
                 </div>
 
@@ -36,13 +37,15 @@
                     <label for="Identifier" class="col-sm-3 text-right control-label col-form-label">Identifier <sub>(Required)</sub></label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="Identifier" name='identifier' value="{{$plan->stripe_plan}}" required>
+                        <small>It must be equal to the one in plan details on the Stripe Dashboard, (example plan_FRl3T4FQhqRcdai</small>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="cost" class="col-sm-3 text-right control-label col-form-label">Cost <sub>(Required)</sub></label>
-                    <div class="col-sm-1">
+                    <div class="col-sm-9">
                         <input type="number" name="cost" min="0" step='0.01' value="{{$plan->cost}}" required>
+                        <small>It must be equal to the one in product details on the Stripe Dashboard</small>
                     </div>
                 </div>
 

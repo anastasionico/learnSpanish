@@ -38,16 +38,13 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a href="/showplan/basic" class="dropdown-item">
-                                        <i class="fas fa-user"></i> Checkout
-                                    </a>                                    
-
-
                                     <a href="profile" class="dropdown-item">
                                         <i class="fas fa-user"></i> Profile
                                     </a>
 
-
+                                    <a href="pricing" class="dropdown-item">
+                                        <i class="fas fa-puzzle-piece"></i></i> Plans
+                                    </a>                                    
 
                                     <a class="dropdown-item" 
                                         href="{{ route('logout') }}"

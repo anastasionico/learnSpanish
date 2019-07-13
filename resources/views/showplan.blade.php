@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('contentOne')
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -8,6 +9,7 @@
                     <p>You will be charged ${{ number_format($plan->cost, 2) }} for {{ $plan->name }} Plan</p>
                 </div>
                 <div class="card">
+                  
                     <form action="/subscription" method="post" id="payment-form">
                         @csrf                    
                         <div class="form-group">
@@ -36,10 +38,13 @@
     </div>
 
 @endsection
+
 @section('scripts')
+  
     <script src="https://js.stripe.com/v3/"></script>
     <script>
-        // Create a Stripe client.
+      window.onload = function () {
+         // Create a Stripe client.
         var stripe = Stripe('{{ env("STRIPE_KEY") }}');
 
         // Create an instance of Elements.
@@ -110,5 +115,7 @@
           // Submit the form
           form.submit();
         }
+      }
+       
     </script>
 @endsection

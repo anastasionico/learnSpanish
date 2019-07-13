@@ -27,21 +27,25 @@
                 <div class="form-group row">
                     <label for="name" class="col-sm-3 text-right control-label col-form-label">Name <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' placeholder="Insert the name of the plan (equal to Stripe Dashboard)" required>
+                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' placeholder="Insert the name of the plan/product " required>
+                        <small>It must be equal to the one in product on the Stripe Dashboard, capital letter will be added automatically</small>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="Identifier" class="col-sm-3 text-right control-label col-form-label">Identifier <sub>(Required)</sub></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="identifier" name='identifier' placeholder="Insert the id of the plan (equal to Stripe Dashboard)" required>
+                        <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="identifier" name='identifier' placeholder="Insert the plan identifier of the plan (equal to Stripe Dashboard)" required>
+                        <small>It must be equal to the one in plan details on the Stripe Dashboard, (example plan_FRl3T4FQhqRcdai</small>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="cost" class="col-sm-3 text-right control-label col-form-label">Cost <sub>(Required)</sub></label>
-                    <div class="col-sm-1">
+                    <div class="col-sm-9">
                         <input type="number" name="cost" min="0" step='0.01' required>
+                        <br>
+                        <small>It must be equal to the one in product details on the Stripe Dashboard</small>
                     </div>
                 </div>
 

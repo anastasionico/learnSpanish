@@ -5,8 +5,6 @@
         <div class="col-sm-12 col-lg-2"></div>    
     
         <div class="col-sm-12 col-lg-8 rounded bg-white regulation-section">
-            @include('layouts.error')
-            
             <form method="POST" action="updatepassword" class="form-horizontal">
                 @method('PATCH')
                 @csrf

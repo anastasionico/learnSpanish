@@ -35,7 +35,7 @@ class PlansController extends Controller
         Plan::create([
             'name' => ucfirst(request('name')),
             'slug' => str_slug(request('name'), '-'),
-            'stripe_plan' => ucfirst(request('identifier')),
+            'stripe_plan' => request('identifier'),
             'cost' => request('cost'),
             'description' => request('description'),
         ]);
@@ -52,7 +52,7 @@ class PlansController extends Controller
 		
         $plan->name = ucfirst(request('name'));
         $plan->slug = str_slug(request('name'), '-');
-        $plan->stripe_plan = ucfirst(request('identifier'));
+        $plan->stripe_plan = request('identifier');
         $plan->cost = request('cost');
         $plan->description = request('description');
         

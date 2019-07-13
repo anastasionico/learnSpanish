@@ -27,6 +27,7 @@
     
        	<main>
             <div class="container-fluid">
+                @include('layouts.error')
                 @yield('hero')
     			@yield('contentOne')
     			@yield('contentTwo')
