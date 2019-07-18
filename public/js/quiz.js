@@ -156,24 +156,45 @@ window.onload = function () {
 
 	letterá.onclick = function () {
 		name.value += 'á';
+		var index = name.value.length;
+		name.focus();
+		name.setSelectionRange(index, index);
 	};
 	letteré.onclick = function () {
 		name.value += 'é';
+		var index = name.value.length;
+		name.focus();
+		name.setSelectionRange(index, index);
 	};
 	letterí.onclick = function () {
 		name.value += 'í';
+		var index = name.value.length;
+		name.focus();
+		name.setSelectionRange(index, index);
 	};
 	letteró.onclick = function () {
 		name.value += 'ó';
+		var index = name.value.length;
+		name.focus();
+		name.setSelectionRange(index, index);
 	};
 	letterú.onclick = function () {
 		name.value += 'ú';
+		var index = name.value.length;
+		name.focus();
+		name.setSelectionRange(index, index);
 	};
 	letterü.onclick = function () {
 		name.value += 'ü';
+		var index = name.value.length;
+		name.focus();
+		name.setSelectionRange(index, index);
 	};
 	letterñ.onclick = function () {
 		name.value += 'ñ';
+		var index = name.value.length;
+		name.focus();
+		name.setSelectionRange(index, index);
 	};
 };
 
