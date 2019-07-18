@@ -48,7 +48,7 @@
                         <td>{{$user->country}}</td>
                         <td>
                           
-                          @if(isset($user->trial_ends_at) && $user->trial_ends_at > date('Y-m-d h:i:s') )
+                          @if(isset($user->stripe_id) )
                             <i class="fas fa-check-square"></i>
                           @else
                             <i class="far fa-square"></i>

@@ -41,11 +41,11 @@ class QuizController extends Controller
     	$user = Auth::user();
 
     	// if user not logged in or user did not pay play for free
-    	if(is_null($user) || !isset($user->trial_ends_at)) {
+    	if(is_null($user) || !isset($user->stripe_id)) {
 			return $this->playForFree($tensesRequestedByUser);
 		}
 		// if user is logged in and he has paid play the paid method
-    	if(isset($user->trial_ends_at) && $user->trial_ends_at > date('Y-m-d h:i:s')){
+    	if(isset($user->stripe_id) && $user->stripe_id > date('Y-m-d h:i:s')){
     		return $this->playPaying($tensesRequestedByUser);	
     	} 
     }

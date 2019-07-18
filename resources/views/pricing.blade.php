@@ -19,7 +19,7 @@
     </div>
     
     <div class="row bg-grayLight p-4 section-pricing">
-        <div class="col-sm-12 col-lg-12 p-2 mb-5 bg-white rounded section-pricing-div">
+        <div class="col-sm-12 col-lg-12 p-3 mb-5 bg-white rounded section-pricing-div">
             <h6 class="c-greenLight">Option 1: Free Plan</h6>
             <h2 class="c-greenLight">No Fees</h2>
             
@@ -41,7 +41,7 @@
             $i=1;
         @endphp
         @foreach($plans as $plan)
-            <div class="col-sm-12 col-lg-5 p-2 mb-5 bg-white rounded section-pricing-div">
+            <div class="col-sm-12 col-lg-5 p-3 mb-5 bg-white rounded section-pricing-div">
                 <h6 class="c-greenLight">Option {{++$i}}: {{$plan->name}}</h6>
                 <h2 class="c-greenLight">£ {{$plan->cost}}/Month</h2>
                 <p>{{$plan->description}}</p>
