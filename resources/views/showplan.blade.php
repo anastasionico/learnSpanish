@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12 p-3 mb-5">
                 <div class="">
-                  <p>You will be charged ${{ number_format($plan->cost, 2) }} for {{ $plan->name }} Plan</p>
+                  <p>You will be charged £{{ number_format($plan->cost, 2) }} for {{ $plan->name }} Plan</p>
                 </div>
                 <div class="card">
                   
