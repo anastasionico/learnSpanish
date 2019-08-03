@@ -10,7 +10,7 @@
                 </div>
                 <div class="card">
                   
-                    <form action="/subscription" method="post" id="payment-form">
+                    <form action="/swapsubscription" method="post" id="payment-form">
                         @csrf                    
                         <div class="form-group">
                             <div class="card-header">

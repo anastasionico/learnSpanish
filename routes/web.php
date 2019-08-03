@@ -32,7 +32,10 @@ Route::patch("updatepassword", "ProfilesController@updatepassword");
 
 // Stripe payment
 Route::get('showplan/{plan}', 'PlansController@show');
+Route::get('swapplan/{plan}', 'PlansController@swap');
+
 Route::post('subscription', 'SubscriptionsController@create');
+Route::post('swapsubscription', 'SubscriptionsController@swap');
 Route::get('pricing', 'PlansController@pricing');
 
 Auth::routes();

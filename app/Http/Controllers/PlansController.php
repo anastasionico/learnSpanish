@@ -83,20 +83,25 @@ class PlansController extends Controller
 	    return view('showplan', compact('plan'));
 	}
 
+    public function swap(Plan $plan, Request $request)
+    {
+        return view('swapplan', compact('plan'));
+    }
+
 	public function pricing()
 	{
         $plans = Plan::all();
 
         $user = Auth::user();
 
-        if ($user->subscribed('main')) {
-            dd("user subscribed");
-        } else {
-            dd('user not subscibed');
+        // Check if the user is already subscribed with some plan so I can show the swap button instead of sign-in button
+        foreach ($plans as $plan) {
+            if($user->subscribed($plan->name)){
+                $userSubscribed = true;
+            }
         }
-
         
-		return view('pricing', compact('plans','user'));
+		return view('pricing', compact('plans','user', 'userSubscribed'));
 	}
 	
 }

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('contentOne')
+    
     <div class="row bg-grayLight c-greenLight section-pricing-description">
         <div class="col-sm-12">
             <h1>Pricing</h1>
@@ -45,10 +46,44 @@
                 <h6 class="c-greenLight">Option {{++$i}}: {{$plan->name}}</h6>
                 <h2 class="c-greenLight">£ {{$plan->cost}}/Month</h2>
                 <p>{{$plan->description}}</p>
-                <a href='showplan/{{$plan->name}}' class="button bg-orange">
-                    Sign Up
-                </a>    
+
+
+
+                @if($user->subscribed($plan->name))
+                    <span class="button bg-grayLight" disabled="disabled">
+                        Plan in Use
+                    </span>    
+                    {{-- <form method="post" action='subscriptionCancel'>
+                        <button type="submit" value="Cancel" class="button bg-grayLight no-border">Cancel</button>
+                        
+                    </form> --}}
+
+                @else
+                    @if(!$userSubscribed)
+                        <a href='showplan/{{$plan->name}}' class="button bg-orange">
+                            Sign Up
+                        </a>    
+                    @else
+                        <a href='swapplan/{{$plan->name}}' class="button bg-orange">
+                            Swap 
+                        </a>    
+                    @endif
+                @endif
+
+
+{{-- 
+
+                @if(!$user->subscribed($plan->name))
+                    <a href='showplan/{{$plan->name}}' class="button bg-orange">
+                        Sign Up
+                    </a>    
+                @else
+                    <span class="button bg-grayLight" disabled="disabled">
+                        Plan in Use
+                    </span>    
+                @endif --}}
             </div>    
+
             <div class="col-sm-12 col-lg-2"></div>
         @endforeach
 
