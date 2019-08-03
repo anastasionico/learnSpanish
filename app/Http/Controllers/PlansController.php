@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Plan;
+
 
 class PlansController extends Controller
 {
@@ -83,8 +85,18 @@ class PlansController extends Controller
 
 	public function pricing()
 	{
-		$plans = Plan::all();
-		return view('pricing', compact('plans'));
+        $plans = Plan::all();
+
+        $user = Auth::user();
+
+        if ($user->subscribed('main')) {
+            dd("user subscribed");
+        } else {
+            dd('user not subscibed');
+        }
+
+        
+		return view('pricing', compact('plans','user'));
 	}
 	
 }

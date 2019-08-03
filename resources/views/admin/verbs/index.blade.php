@@ -29,15 +29,21 @@
                         <td>
                           @switch($verb->importance)
                             @case('1')
-                                <i class="fas fa-thermometer-quarter fa-2x"></i>
+                                <i class="fas fa-thermometer-quarter" style="color: #24412A">
+                                  <small>({{ $verb->importance }}) Not Important</small>
+                                </i>
                                 @break
 
                             @case('2')
-                                <i class="fas fa-thermometer-half fa-2x"></i>
+                                <i class="fas fa-thermometer-half" style="color: #a42">
+                                  <small>({{ $verb->importance }}) Fairly Important</small>
+                                </i>
                                 @break
 
                             @case('3')
-                                <i class="fas fa-thermometer-full fa-2x"></i>
+                                <i class="fas fa-thermometer-full" style="color: #f00">
+                                  <small>({{ $verb->importance }}) Very Important</small>
+                                </i>
                                 @break
                             
                           @endswitch
@@ -45,9 +51,13 @@
                         </td>
                         <td>
                           @if($verb->is_active == 1)
-                            <i class="fas fa-lightbulb"></i>
+                            <i class="fas fa-lightbulb" style="color: #f00">
+                                  <small>Active</small>
+                                </i>
                           @else
-                            <i class="far fa-lightbulb"></i>
+                            <i class="far fa-lightbulb" style="color: #24412A">
+                                  <small>Inactive</small>
+                                </i>
                           @endif
                         </td>
                         <td>

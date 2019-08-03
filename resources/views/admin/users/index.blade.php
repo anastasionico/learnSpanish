@@ -32,26 +32,47 @@
                         <td>{{$user->email}}</td>
                         <td>
                           @if($user->is_admin == 1)
-                            <i class="fas fa-check-square"></i>
+                            <i class="fas fa-user-cog" style="color: #f00">
+                              <small>Admin</small>
+                            </i>
                           @else
-                            <i class="far fa-square"></i>
+                            <i class="fas fa-user" style="color: #24412A">
+                              <small>User</small>
+                            </i>
                           @endif
                         </td>
                         <td>
                           @if($user->is_marketable == 1)
-                            <i class="fas fa-check-square"></i>
+                            <i class="fas fa-envelope-open-text" style="color: #f00">
+                              <small>Marketable</small>
+                            </i>
                           @else
-                            <i class="far fa-square"></i>
+                            <i class="fas fa-envelope" style="color: #24412A">
+                              <small>Reserved</small>
+                            </i>
                           @endif
                         </td>
-                        <td>{{$user->sex}}</td>
+                        <td>
+                          @if($user->sex === 'male')
+                            <i class="fas fa-male" style="color: #24412A">
+                              <small>Male</small>
+                            </i>
+                          @else
+                            <i class="fas fa-female" style="color: #24412A">
+                              <small>Female</small>
+                            </i>
+                          @endif
+                        </td>
                         <td>{{$user->country}}</td>
                         <td>
-                          
                           @if(isset($user->stripe_id) )
-                            <i class="fas fa-check-square"></i>
+                            <i class="fas fa-money-bill" style="color: #f00">
+                              <small>Premium</small>
+                            </i>
                           @else
-                            <i class="far fa-square"></i>
+                            <i class="fas fa-money-bill" style="color: #24412A">
+                              <small>Free</small>
+                            </i>
                           @endif
                         </td>
                         <td>

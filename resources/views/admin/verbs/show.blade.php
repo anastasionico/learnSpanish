@@ -100,27 +100,37 @@
                             <td>{{$conjugation->name}}</td>
                             <td>
                               @if($conjugation->is_active == 1)
-                                <i class="fas fa-lightbulb"></i>
-                                Active
+                                <i class="fas fa-lightbulb" style="color: #f00">
+                                      <small>Active</small>
+                                    </i>
                               @else
-                                <i class="far fa-lightbulb"></i>
-                                Not Active
+                                <i class="far fa-lightbulb" style="color: #24412A">
+                                      <small>Inactive</small>
+                                    </i>
                               @endif
                             </td>
+                            
                             <td>
-                              @if($conjugation->is_free == 1)
-                                Free
+                              @if(!$conjugation->is_free == 1)
+                                <i class="fas fa-money-bill" style="color: #f00">
+                                  <small>To Pay</small>
+                                </i>
                               @else
-                                <i class="fas fa-money-bill"></i>
-                                To Pay 
+                                <i class="fas fa-money-bill" style="color: #24412A">
+                                  <small>Free</small>
+                                </i>
                               @endif
                             </td>
+
                             <td>
                               @if($conjugation->is_irregular == 1)
-                                <i class="fas fa-exclamation-triangle"></i>
-                                Irregular
+                                <i class="fas fa-exclamation-triangle" style="color: #f00">
+                                  <small>Irregular</small>
+                                </i>
                               @else
-                                Regular
+                                <i class="fas fa-check" style="color: #24412A">
+                                  <small>Regular</small>
+                                </i>
                               @endif
                             </td>
                             
