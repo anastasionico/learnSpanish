@@ -131,4 +131,19 @@ class ConjugationsController extends Controller
         $conjugation->save();
         return redirect()->back();
     }
+
+    public function setAllFeatures(Conjugation $conjugation)
+    {
+        if ($conjugation->is_active === 0) {
+            $conjugation->is_irregular = 1;
+            $conjugation->is_active = 1;
+            $conjugation->is_free = 2;
+        } else {
+            $conjugation->is_irregular = 0;
+            $conjugation->is_active = 0;
+            $conjugation->is_free = 0;
+        }
+        $conjugation->save();
+        return redirect()->back();   
+    }
 }

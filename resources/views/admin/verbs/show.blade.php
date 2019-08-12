@@ -85,6 +85,7 @@
                     <table class="table">
                       <thead>
                         <tr>
+                          <th scope="col"></th>
                           <th scope="col">Pronoun</th>
                           <th scope="col">Conjugation</th>
                           <th scope="col">Irregular</th>
@@ -96,6 +97,12 @@
                       <tbody>
                         @foreach($tense->conjugations as $conjugation)
                           <tr>
+                            <td>
+                              <a href="/admin/conjugation/setAllFeatures/{{$conjugation->id}}">
+                                <i class="fas fa-atom"></i>
+                              </a>
+                              
+                            </td>
                             <td>{{$conjugation->pronoun}}</td>
                             <td>{{$conjugation->name}}</td>
                             <td>
