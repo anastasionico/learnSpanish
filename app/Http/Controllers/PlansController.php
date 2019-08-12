@@ -100,6 +100,8 @@ class PlansController extends Controller
                 $userSubscribed = true;
             }
         }
+
+        // I need to check if the field end_at of the subscription table is null in order to show the proper button
         
 		return view('pricing', compact('plans','user', 'userSubscribed'));
 	}

@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="form-group row">
-                  <label for="name" class="col-sm-3 text-right control-label col-form-label">name <sub>(Required)</sub></label>
+                  <label for="name" class="col-sm-3 text-right control-label col-form-label">Conjugation <sub>(Required)</sub></label>
                   <div class="col-sm-9">
                     <input type="text" class="form-control {{$errors->has('name')? 'is-invalid' : ''}}" id="name" name='name' value='{{$conjugation->name}}' required>
                   </div>
@@ -47,8 +47,29 @@
 
                 <div class="form-group row">
                   <label for="is_free" class="col-sm-3 text-right control-label col-form-label">Free</label>
-                  <div class="col-sm-1">
-                      <input type="checkbox" class="form-control {{$errors->has('is_free')? 'is-invalid' : ''}}" id="is_free"  name='is_free' value="1" {{($conjugation->is_free)? 'checked' : '' }}>
+
+                  <div class="col-sm-5">
+                    <select id="is_free"  name='is_free' class="form-control">
+                      @switch($conjugation->is_free)
+                        @case(0)
+                            <option value="0" selected>Free</option>
+                            <option value="1">Free Account</option>
+                            <option value="2">Paid Account</option>
+                            @break
+
+                        @case(1)
+                            <option value="0">Free</option>
+                            <option value="1" selected>Free Account</option>
+                            <option value="2">Paid Account</option>
+                            @break
+
+                        @case(2)
+                            <option value="0">Free</option>
+                            <option value="1">Free Account</option>
+                            <option value="2" selected>Paid Account</option>
+                            @break
+                      @endswitch
+                    </select>
                   </div>
                 </div>
 

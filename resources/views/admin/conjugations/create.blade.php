@@ -51,7 +51,11 @@
                 <div class="form-group row">
                   <label for="is_free" class="col-sm-3 text-right control-label col-form-label">Free</label>
                   <div class="col-sm-1">
-                      <input type="checkbox" class="form-control {{$errors->has('is_free')? 'is-invalid' : ''}}" id="is_free"  name='is_free' value="1" checked>
+                    <select id="is_free"  name='is_free'>
+                      <option value="0">Free</option>
+                      <option value="1">Free Account</option>
+                      <option value="2">Paid Account</option>
+                    </select>
                   </div>
                 </div>
 

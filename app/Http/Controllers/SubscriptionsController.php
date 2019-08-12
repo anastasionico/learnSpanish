@@ -36,4 +36,11 @@ class SubscriptionsController extends Controller
     
     return redirect('/')->with('success', 'You changed plan successfully, enjoy your learning');
   }
+
+  public function destroy(Request $request)
+  {
+    $user = $request->user();
+    $user->subscription($request->plan)->cancel();
+    return redirect('/')->with('success', 'Your subscription plan has been deleted, we are sorry to see you go');
+  }
 }

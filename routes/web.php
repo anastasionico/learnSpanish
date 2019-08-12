@@ -36,6 +36,7 @@ Route::get('swapplan/{plan}', 'PlansController@swap');
 
 Route::post('subscription', 'SubscriptionsController@create');
 Route::post('swapsubscription', 'SubscriptionsController@swap');
+Route::post('cancelsubscription', 'SubscriptionsController@destroy');
 Route::get('pricing', 'PlansController@pricing');
 
 Auth::routes();
@@ -64,6 +65,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 
 	Route::resource('tenses','TensesController');
 	Route::resource('conjugation','ConjugationsController');
+	Route::get('conjugation/setRegularity/{conjugation}','ConjugationsController@setRegularity');
+	Route::get('conjugation/setAvailability/{conjugation}','ConjugationsController@setAvailability');
+	Route::get('conjugation/setFormat/{conjugation}','ConjugationsController@setFormat');
 
 	Route::get('plans', 'PlansController@index');
 	Route::get('plans/create', 'PlansController@create');

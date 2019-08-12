@@ -53,10 +53,16 @@
                     <span class="button bg-grayLight" disabled="disabled">
                         Plan in Use
                     </span>    
-                    {{-- <form method="post" action='subscriptionCancel'>
-                        <button type="submit" value="Cancel" class="button bg-grayLight no-border">Cancel</button>
+                    
+                    
+                    <form method="POST" action='cancelsubscription'>
+                        @csrf
+                        <input type="hidden" name="plan" value="{{$plan->name}}">
+                        <button type="submit" value="Cancel" class="button bg-grayLight">
+                            Cancel
+                        </button>
                         
-                    </form> --}}
+                    </form>
 
                 @else
                     @if(!$userSubscribed)

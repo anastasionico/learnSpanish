@@ -40,7 +40,6 @@ class ConjugationsController extends Controller
      */
     public function store(Request $request)
     {
-
         $tense = Tense::find($request->tense_id);
         $verb = Verb::find($request->verb_id);
         
@@ -81,7 +80,7 @@ class ConjugationsController extends Controller
         $conjugation->pronoun = request('pronoun');
         $conjugation->name = request('name');
         $conjugation->is_active = (request()->has('is_active'))? 1 : 0;
-        $conjugation->is_free = (request()->has('is_free'))? 1 : 0;
+        $conjugation->is_free = request('is_free');
         $conjugation->is_irregular = (request()->has('is_irregular'))? 1 : 0;
         $conjugation->save();
 
@@ -104,5 +103,32 @@ class ConjugationsController extends Controller
         $verb = Verb::find($request->verb);
 
         return view("admin/verbs/show", compact('verb'));
+    }
+
+    public function setRegularity(Conjugation $conjugation)
+    {
+        $conjugation->is_irregular = ($conjugation->is_irregular === 0)? 1 : 0;
+        $conjugation->save();
+        return redirect()->back();
+    }
+
+    public function setAvailability(Conjugation $conjugation)
+    {
+        $conjugation->is_active = ($conjugation->is_active === 0)? 1 : 0;
+        $conjugation->save();
+        return redirect()->back();
+    }
+
+    public function setFormat(Conjugation $conjugation)
+    {
+        if($conjugation->is_free === 0) {
+            $conjugation->is_free = 1;
+        } else if($conjugation->is_free === 1) {
+            $conjugation->is_free = 2;
+        } else if($conjugation->is_free === 2) {
+            $conjugation->is_free = 0;
+        }
+        $conjugation->save();
+        return redirect()->back();
     }
 }

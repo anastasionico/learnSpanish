@@ -86,10 +86,10 @@
                       <thead>
                         <tr>
                           <th scope="col">Pronoun</th>
-                          <th scope="col">Name</th>
+                          <th scope="col">Conjugation</th>
+                          <th scope="col">Irregular</th>
                           <th scope="col">Active</th>
                           <th scope="col">Format</th>
-                          <th scope="col">Irregular</th>
                           <th scope="col"></th>
                         </tr>
                       </thead>
@@ -99,40 +99,54 @@
                             <td>{{$conjugation->pronoun}}</td>
                             <td>{{$conjugation->name}}</td>
                             <td>
-                              @if($conjugation->is_active == 1)
-                                <i class="fas fa-lightbulb" style="color: #f00">
-                                      <small>Active</small>
-                                    </i>
-                              @else
-                                <i class="far fa-lightbulb" style="color: #24412A">
-                                      <small>Inactive</small>
-                                    </i>
-                              @endif
+                              <a href="/admin/conjugation/setRegularity/{{$conjugation->id}}">
+                                @if($conjugation->is_irregular == 1)
+                                  <i class="fas fa-exclamation-triangle" style="color: #f00">
+                                    <small>Irregular</small>
+                                  </i>
+                                @else
+                                  <i class="fas fa-check" style="color: #24412A">
+                                    <small>Regular</small>
+                                  </i>
+                                @endif
+                              </a>
+                              
+                            </td>
+                            <td>
+                              <a href="/admin/conjugation/setAvailability/{{$conjugation->id}}">
+                                @if($conjugation->is_active == 1)
+                                  <i class="fas fa-lightbulb" style="color: #f00">
+                                        <small>Active</small>
+                                      </i>
+                                @else
+                                  <i class="far fa-lightbulb" style="color: #24412A">
+                                        <small>Inactive</small>
+                                      </i>
+                                @endif
+                              </a>
+                              
                             </td>
                             
                             <td>
-                              @if(!$conjugation->is_free == 1)
-                                <i class="fas fa-money-bill" style="color: #f00">
-                                  <small>To Pay</small>
-                                </i>
-                              @else
-                                <i class="fas fa-money-bill" style="color: #24412A">
-                                  <small>Free</small>
-                                </i>
-                              @endif
+                              <a href="/admin/conjugation/setFormat/{{$conjugation->id}}">
+                                @if($conjugation->is_free == 0)
+                                  <i class="far fa-smile" style="color: #24412A">
+                                    <small>Free</small>
+                                  </i>
+                                @elseif($conjugation->is_free == 1)
+                                  <i class="fas fa-user" style="color: #a42">
+                                    <small>Free Account</small>
+                                  </i>
+                                @elseif($conjugation->is_free == 2)
+                                  <i class="fas fa-money-bill" style="color: #f00">
+                                    <small>Paying Account</small>
+                                  </i>
+                                @endif
+                              </a>
+                              
                             </td>
 
-                            <td>
-                              @if($conjugation->is_irregular == 1)
-                                <i class="fas fa-exclamation-triangle" style="color: #f00">
-                                  <small>Irregular</small>
-                                </i>
-                              @else
-                                <i class="fas fa-check" style="color: #24412A">
-                                  <small>Regular</small>
-                                </i>
-                              @endif
-                            </td>
+                          
                             
                             <td>
                               <form method="POST" action="/admin/conjugation/{{$conjugation->id}}" class="d-inline">
