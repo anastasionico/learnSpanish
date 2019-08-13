@@ -39,14 +39,14 @@ class QuizController extends Controller
         }
 
     	$user = Auth::user();
-
+        
     	// if user not logged in or user did not pay play for free
     	if(is_null($user) || !isset($user->stripe_id)) {
 			return $this->playForFree($tensesRequestedByUser);
 		}
 		// if user is logged in and he has paid play the paid method
-    	if(isset($user->stripe_id) && $user->stripe_id > date('Y-m-d h:i:s')){
-    		return $this->playPaying($tensesRequestedByUser);	
+    	if(isset($user->stripe_id)){
+            return $this->playPaying($tensesRequestedByUser);	
     	} 
     }
 
@@ -105,12 +105,13 @@ class QuizController extends Controller
             return back()->with('error','There are no tenses that match your request');
         }
 
+
     	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
     }
 
     public function playPaying($tensesRequestedByUser)
     {
-    	$text = 'Paying Mode';	
+        $text = 'Paying Mode';	
     	
     	$conjugations = DB::table('conjugations')
             ->join('tenses', 'tenses.id', '=', 'conjugations.tense_id')
@@ -130,7 +131,7 @@ class QuizController extends Controller
 
         $conjugation = $this->getFirstConjugation($conjugationsOrdered);
 
-    	return view('quiz', compact('text', 'conjugation'));
+    	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
     }
 
     private function getFirstConjugation($conjugationsOrdered)
