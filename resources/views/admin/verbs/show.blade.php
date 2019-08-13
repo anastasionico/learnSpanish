@@ -85,24 +85,44 @@
                     <table class="table">
                       <thead>
                         <tr>
-                          <th scope="col"></th>
                           <th scope="col">Pronoun</th>
                           <th scope="col">Conjugation</th>
-                          <th scope="col">Irregular</th>
-                          <th scope="col">Active</th>
-                          <th scope="col">Format</th>
+                          <th scope="col">
+                            Irregular
+                            <a href="/admin/conjugation/setRegularityAll/{{ $tense->id }}/1">
+                              <i class="fas fa-exclamation-triangle"></i>
+                            </a>
+                            <a href="/admin/conjugation/setRegularityAll/{{ $tense->id }}/0">
+                              <i class="fas fa-check"></i>
+                            </a>
+                          </th>
+                          <th scope="col">
+                            Active
+                            <a href="/admin/conjugation/setAvailabilityAll/{{ $tense->id }}/1">
+                              <i class="fas fa-lightbulb"></i>
+                            </a>
+                            <a href="/admin/conjugation/setAvailabilityAll/{{ $tense->id }}/0">
+                              <i class="far fa-lightbulb"></i>
+                            </a>
+                          </th>
+                          <th scope="col">
+                            Format
+                            <a href="/admin/conjugation/setFormatAll/{{ $tense->id }}/0">
+                              <i class="far fa-smile"></i>
+                            </a>
+                            <a href="/admin/conjugation/setFormatAll/{{ $tense->id }}/1">
+                              <i class="fas fa-user"></i>
+                            </a>
+                            <a href="/admin/conjugation/setFormatAll/{{ $tense->id }}/2">
+                              <i class="fas fa-money-bill"></i>
+                            </a>
+                          </th>
                           <th scope="col"></th>
                         </tr>
                       </thead>
                       <tbody>
                         @foreach($tense->conjugations as $conjugation)
                           <tr>
-                            <td>
-                              <a href="/admin/conjugation/setAllFeatures/{{$conjugation->id}}">
-                                <i class="fas fa-atom"></i>
-                              </a>
-                              
-                            </td>
                             <td>{{$conjugation->pronoun}}</td>
                             <td>{{$conjugation->name}}</td>
                             <td>

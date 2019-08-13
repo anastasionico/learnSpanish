@@ -68,7 +68,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::get('conjugation/setRegularity/{conjugation}','ConjugationsController@setRegularity');
 	Route::get('conjugation/setAvailability/{conjugation}','ConjugationsController@setAvailability');
 	Route::get('conjugation/setFormat/{conjugation}','ConjugationsController@setFormat');
-	Route::get('conjugation/setAllFeatures/{conjugation}','ConjugationsController@setAllFeatures');
+	Route::get('conjugation/setRegularityAll/{tense}/{status}','ConjugationsController@setRegularityAll');
+	Route::get('conjugation/setAvailabilityAll/{tense}/{status}','ConjugationsController@setAvailabilityAll');
+	Route::get('conjugation/setFormatAll/{tense}/{status}','ConjugationsController@setFormatAll');
+	
 
 	Route::get('plans', 'PlansController@index');
 	Route::get('plans/create', 'PlansController@create');

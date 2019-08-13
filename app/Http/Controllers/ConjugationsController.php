@@ -132,18 +132,32 @@ class ConjugationsController extends Controller
         return redirect()->back();
     }
 
-    public function setAllFeatures(Conjugation $conjugation)
+    public function setRegularityAll(Tense $tense, $value)
     {
-        if ($conjugation->is_active === 0) {
-            $conjugation->is_irregular = 1;
-            $conjugation->is_active = 1;
-            $conjugation->is_free = 2;
-        } else {
-            $conjugation->is_irregular = 0;
-            $conjugation->is_active = 0;
-            $conjugation->is_free = 0;
+        foreach ($tense->conjugations as $conjugation) {
+            $conjugation->is_irregular = $value;
+            $conjugation->save();
         }
-        $conjugation->save();
-        return redirect()->back();   
+        
+        return redirect()->back();
+    }
+    public function setAvailabilityAll(Tense $tense, $value)
+    {
+        foreach ($tense->conjugations as $conjugation) {
+            $conjugation->is_active = $value;
+            $conjugation->save();
+        }
+        
+        return redirect()->back();
+    }
+
+    public function setFormatAll(Tense $tense, $value)
+    {
+        foreach ($tense->conjugations as $conjugation) {
+            $conjugation->is_free = $value;
+            $conjugation->save();
+        }
+        
+        return redirect()->back();
     }
 }

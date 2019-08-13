@@ -24,7 +24,7 @@ class LoginController extends Controller
     // check if authenticated, then redirect to dashboard
     protected function authenticated(Request $request, $user) {
         if ($user->is_admin == 1) {
-            return redirect('/admin/index');
+            return redirect('/admin/verbs');
         } else {
             return redirect('/');
         }
