@@ -40,14 +40,30 @@ class QuizController extends Controller
 
     	$user = Auth::user();
         
+        // if user is not logged-in he can only play with free format conjugations
+        if (is_null($user)) {
+            return $this->playFreeFormat($tensesRequestedByUser);
+        } 
+        // if user is logged but has not paid play with free-account format
+        else if (!is_null($user) && !isset($user->stripe_id)) {
+            return $this->playFreeAccountFormat($tensesRequestedByUser);  
+        }
+        // if user is logged and has paid play with paid format
+        else if (isset($user->stripe_id)) {
+            return $this->playPaidFormat($tensesRequestedByUser);   
+        }
+        
+        
+
+
     	// if user not logged in or user did not pay play for free
-    	if(is_null($user) || !isset($user->stripe_id)) {
-			return $this->playForFree($tensesRequestedByUser);
-		}
-		// if user is logged in and he has paid play the paid method
-    	if(isset($user->stripe_id)){
-            return $this->playPaying($tensesRequestedByUser);	
-    	} 
+  //   	if(is_null($user) || !isset($user->stripe_id)) {
+		// 	return $this->playForFree($tensesRequestedByUser);
+		// }
+		// // if user is logged in and he has paid play the paid method
+  //   	if(isset($user->stripe_id)){
+  //           return $this->playPaying($tensesRequestedByUser);	
+  //   	} 
     }
 
     private function getTensesAvailableInPlatform()
@@ -75,14 +91,14 @@ class QuizController extends Controller
     }
 
     /*
-    * In this method I retrieve all the conjugations that can be seen by a standard free-user 
+    * In this method I retrieve all the conjugations that can be seen by a not logged user 
     * then I retrieve all the conjugation that the user has already played and are present into the space_repetition table
     * eventually I create an array that includes all the conjugations not yet seen by the user and
     * all the conjugations that the user has seen according to its own space_repetition algorithm
     */
-    public function playForFree($tensesRequestedByUser)
+    public function playFreeFormat($tensesRequestedByUser)
     {
-    	$text = 'Free Mode';	
+        $text = 'Free Mode';	
     	// get all the conjugations that belong to the category choosen by the user
     	$conjugations = DB::table('conjugations')
             ->join('tenses', 'tenses.id', '=', 'conjugations.tense_id')
@@ -92,7 +108,7 @@ class QuizController extends Controller
 		    	['verbs.is_active', '=', '1'],
 		    	['tenses.is_free', '=', '1'],
 				['conjugations.is_active', '=', '1'],
-		    	['conjugations.is_free', '=', '1'],
+		    	['conjugations.is_free', '=', '0'],
 			])
             ->whereIn('tenses.name', $tensesRequestedByUser)
 			->inRandomOrder()
@@ -105,11 +121,40 @@ class QuizController extends Controller
             return back()->with('error','There are no tenses that match your request');
         }
 
-
     	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
     }
 
-    public function playPaying($tensesRequestedByUser)
+    public function playFreeAccountFormat($tensesRequestedByUser)
+    {
+        $text = 'Free Mode';    
+        // get all the conjugations that belong to the category choosen by the user
+        $conjugations = DB::table('conjugations')
+            ->join('tenses', 'tenses.id', '=', 'conjugations.tense_id')
+            ->join('verbs', 'verbs.id', '=', 'tenses.verb_id')
+            ->select('conjugations.*', 'tenses.name as tense', 'verbs.verb_eng as verb_eng', 'verbs.verb_spa as verb_spa')
+            ->where([
+                ['verbs.is_active', '=', '1'],
+                ['tenses.is_free', '=', '1'],
+                ['conjugations.is_active', '=', '1'],
+                
+            ])
+            ->whereIn('conjugations.is_free', [0, 1])
+            ->whereIn('tenses.name', $tensesRequestedByUser)
+            ->inRandomOrder()
+            ->get();
+        
+        $conjugationsOrdered = $this->getConjugationRandomly($conjugations, $tensesRequestedByUser);
+        
+        $conjugation = $this->getFirstConjugation($conjugationsOrdered);
+        if(!$conjugation){
+            return back()->with('error','There are no tenses that match your request');
+        }
+
+
+        return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
+    }
+
+    public function playPaidFormat($tensesRequestedByUser)
     {
         $text = 'Paying Mode';	
     	
@@ -120,7 +165,8 @@ class QuizController extends Controller
 			->where([
 		    	['verbs.is_active', '=', '1'],
 		    	['conjugations.is_active', '=', '1'],
-		    ])
+            ])
+            ->whereIn('conjugations.is_free', [0, 1, 2])
             ->whereIn('tenses.name', $tensesRequestedByUser)
 			->inRandomOrder()
             ->get();
@@ -130,6 +176,9 @@ class QuizController extends Controller
         
 
         $conjugation = $this->getFirstConjugation($conjugationsOrdered);
+        if(!$conjugation){
+            return back()->with('error','There are no tenses that match your request');
+        }
 
     	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
     }
