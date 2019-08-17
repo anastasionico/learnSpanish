@@ -6,41 +6,51 @@
       <div class="row">
         <div class="col-12">
           <div id="accordian-4">
-            <h1>{{ $verb->verb_spa}}</h1>
+            <h1 style="display: inline-block;margin-right:1rem;">
+              {{ $verb->verb_spa}}
+            </h1> 
             
-            <h3>
+            <h3 style="display: inline-block;margin-right:1rem;">
               to {{ $verb->verb_eng}} 
             </h3>
             
             <h5>
-              @switch($verb->importance)
-                @case('1')
-                    <i class="fas fa-thermometer-quarter fa-2x"></i>  
-                    Rarely used
-                    @break
+              
+              <div style="display: inline-block;margin-right:1rem;">
+                @switch($verb->importance)
+                  @case('1')
+                      <i class="fas fa-thermometer-quarter"></i>  
+                      Rarely used
+                      @break
 
-                @case('2')
-                    <i class="fas fa-thermometer-half fa-2x"></i>
-                    Basic Verb
-                    @break
+                  @case('2')
+                      <i class="fas fa-thermometer-half"></i>
+                      Basic Verb
+                      @break
 
-                @case('3')
-                    <i class="fas fa-thermometer-full fa-2x"></i>
-                    Very Important
-                    @break
-              @endswitch
+                  @case('3')
+                      <i class="fas fa-thermometer-full"></i>
+                      Very Important
+                      @break
+                @endswitch  
+              </div>
+              <div style="display: inline-block;margin:0 1rem;">
+                @if($verb->is_active == 1)
+                    <i class="fas fa-lightbulb"></i>
+                    Active
+                @else
+                    <i class="far fa-lightbulb"></i>
+                    Not Active
+                @endif  
+              </div>
+              
             </h5>
             
-            <h5>
-              @if($verb->is_active == 1)
-                  <i class="fas fa-lightbulb fa-2x"></i>
-                  Active
-              @else
-                  <i class="far fa-lightbulb fa-2x"></i>
-                  Not Active
-              @endif
-            </h5>
-            
+            <a href="/admin/verbs/{{$verb->id}}/edit" class="btn btn-info btn-sm d-inline" style="cursor:pointer;">
+              Edit Verb   <i class="fas fa-pencil-alt" style="margin-left: 1rem;"></i>
+            </a>    
+
+            <hr>              
             <br><br><br>
             
             <div class="row">
@@ -59,7 +69,9 @@
                   <i class="seticon fa fa-arrow-right" aria-hidden="true"></i>
                   <span>{{$tense->name}}</span>
                   @if($tense->is_free == 0)
-                      <i class="fas fa-money-bill"></i>
+                    <i class="fas fa-money-bill"></i>
+                  @else
+                    <i class="far fa-smile"></i>
                   @endif
                 </a>  
                 <div>
