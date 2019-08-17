@@ -154,11 +154,11 @@
                             <td>
                               <a href="/admin/conjugation/setAvailability/{{$conjugation->id}}">
                                 @if($conjugation->is_active == 1)
-                                  <i class="fas fa-lightbulb" style="color: #f00">
+                                  <i class="fas fa-lightbulb" style="color: #24412A">
                                         <small>Active</small>
                                       </i>
                                 @else
-                                  <i class="far fa-lightbulb" style="color: #24412A">
+                                  <i class="far fa-lightbulb" style="color: #f00">
                                         <small>Inactive</small>
                                       </i>
                                 @endif
@@ -167,7 +167,40 @@
                             </td>
                             
                             <td>
-                              <a href="/admin/conjugation/setFormat/{{$conjugation->id}}">
+                              <a href="/admin/conjugation/setFormat/{{$conjugation->id}}/0">
+                                <i class="far fa-smile" 
+                                  style='color:{{
+                                    ($conjugation->is_free == 0)? "red" : "#24412A"}}'>
+                                  </i>
+                              </a>
+                              <a href="/admin/conjugation/setFormat/{{$conjugation->id}}/1">
+                                <i class="fas fa-user"
+                                  style='color:{{
+                                    ($conjugation->is_free == 1)? "red" : "#24412A"}}'>
+                                  </i>
+                              </a>
+                              <a href="/admin/conjugation/setFormat/{{$conjugation->id}}/2">
+                                <i class="fas fa-money-bill"
+                                  style='color:{{
+                                    ($conjugation->is_free == 2)? "red" : "#24412A"}}'>
+                                  </i>
+                              </a>
+                              @switch($conjugation->is_free)
+                                @case(0)
+                                  <small style="font-size: 60%">Everyone can play with this sentence</small>
+                                  @break
+                                @case(1)
+                                  <small style="font-size: 60%">Only users with an account can play with this sentence</small>
+                                  @break
+                                @case(2)
+                                  <small style="font-size: 60%">Only paying users can play with this sentence</small>
+                                  @break
+                              @endswitch
+
+
+
+
+                              {{-- <a href="/admin/conjugation/setFormat/{{$conjugation->id}}/0">
                                 @if($conjugation->is_free == 0)
                                   <i class="far fa-smile" style="color: #24412A">
                                     <small>Free</small>
@@ -181,7 +214,7 @@
                                     <small>Paying Account</small>
                                   </i>
                                 @endif
-                              </a>
+                              </a> --}}
                               
                             </td>
 

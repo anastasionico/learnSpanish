@@ -119,15 +119,10 @@ class ConjugationsController extends Controller
         return redirect()->back();
     }
 
-    public function setFormat(Conjugation $conjugation)
+    public function setFormat(Conjugation $conjugation, int $format)
     {
-        if($conjugation->is_free === 0) {
-            $conjugation->is_free = 1;
-        } else if($conjugation->is_free === 1) {
-            $conjugation->is_free = 2;
-        } else if($conjugation->is_free === 2) {
-            $conjugation->is_free = 0;
-        }
+        $conjugation->is_free = $format;
+        
         $conjugation->save();
         return redirect()->back();
     }
@@ -141,6 +136,7 @@ class ConjugationsController extends Controller
         
         return redirect()->back();
     }
+
     public function setAvailabilityAll(Tense $tense, $value)
     {
         foreach ($tense->conjugations as $conjugation) {
