@@ -1,5 +1,4 @@
 .form-control{
-	// height: 20px;
 	@include borderRadius(0);
  	background: rgba(0, 0, 0, 0);
 	color:$greenLight;
@@ -14,6 +13,7 @@
 		border-bottom:1px solid $greenLight;
 		outline: none;
 		box-shadow:none;
+		color:$greenLight;
 	}
 	&.disabled{
 		&::placeholder{

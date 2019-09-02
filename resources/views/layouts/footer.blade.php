@@ -12,20 +12,19 @@
             </div>
             <div class="col-sm-12 col-lg-4  text-left">
                 <h5 class="mb-3">Contact Us</h5>
-
-                <form action="/messages">
+                <form method="POST" action="/messages/add">
                     @csrf
                     
                     <div class="form-group m-0 mb-3">
-                        <input type="text" class="form-control p-0" id="name" placeholder="Name (required)">
+                        <input type="text" class="form-control p-0" id="name" name="name" placeholder="Name (required)">
                     </div>
                     <div class="form-group m-0 mb-3">
-                        <input type="email" class="form-control p-0" id="email"  placeholder="E-mail Address (required)">
+                        <input type="email" class="form-control p-0" id="email" name="email" placeholder="E-mail Address (required)">
                     </div>
                     
 
                     <div class="form-group m-0 mb-3">
-                        <textarea name='message' class="form-control p-0" rows="1">Message
+                        <textarea name='message' class="form-control p-0" id="footerMessage" rows="1">Message
                         </textarea>
                     </div>
                     <button type="submit" class="button border-greenLight c-greenLight bg-empty">

@@ -196,30 +196,8 @@
                                   <small style="font-size: 60%">Only paying users can play with this sentence</small>
                                   @break
                               @endswitch
-
-
-
-
-                              {{-- <a href="/admin/conjugation/setFormat/{{$conjugation->id}}/0">
-                                @if($conjugation->is_free == 0)
-                                  <i class="far fa-smile" style="color: #24412A">
-                                    <small>Free</small>
-                                  </i>
-                                @elseif($conjugation->is_free == 1)
-                                  <i class="fas fa-user" style="color: #a42">
-                                    <small>Free Account</small>
-                                  </i>
-                                @elseif($conjugation->is_free == 2)
-                                  <i class="fas fa-money-bill" style="color: #f00">
-                                    <small>Paying Account</small>
-                                  </i>
-                                @endif
-                              </a> --}}
-                              
                             </td>
 
-                          
-                            
                             <td>
                               <form method="POST" action="/admin/conjugation/{{$conjugation->id}}" class="d-inline">
                                 @method('DELETE')

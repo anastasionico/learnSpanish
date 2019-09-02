@@ -45,7 +45,8 @@ Route::get("start-quiz", "QuizController@start");
 Route::get("quiz", "QuizController@quiz");
 Route::post("valuateAnswer", "QuizController@valuateAnswer");
 
-
+Route::post('messages/add', 'MessagesController@store');
+	
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::get('login', function () {
 	    return view('admin/login');
@@ -80,7 +81,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::delete('plans/{plan}', 'PlansController@destroy');
 	Route::patch('plans/{plan}', 'PlansController@update');
 	
-	
+
 	
 	
 });

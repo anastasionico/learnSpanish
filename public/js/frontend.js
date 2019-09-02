@@ -60,42 +60,29 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 46);
+/******/ 	return __webpack_require__(__webpack_require__.s = 48);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 46:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(47);
+module.exports = __webpack_require__(49);
 
 
 /***/ }),
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, exports) {
 
-// the following function make a confirmation pop up appear at any delete request
-function confirmDelete() {
-	var DeleteButtons = document.querySelectorAll('.deleteItem');
-	console.log(DeleteButtons);
 
-	DeleteButtons.forEach(function (DeleteButton) {
-		DeleteButton.addEventListener("click", function (event) {
-
-			if (confirm('Are you sure you want to delete the item from the database?')) {
-				console.log('item gone');
-			} else {
-				console.log('action cancelled');
-				event.preventDefault();
-			}
-		});
-	});
+function resetFooterMessage() {
+	document.getElementById("footerMessage").innerHTML = '';
 }
 
 window.onload = function () {
-	confirmDelete();
+	document.getElementById("footerMessage").addEventListener("focus", resetFooterMessage);
 };
 
 /***/ })
