@@ -81,8 +81,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::delete('plans/{plan}', 'PlansController@destroy');
 	Route::patch('plans/{plan}', 'PlansController@update');
 	
-
-	
+	Route::get('messages', 'MessagesController@index');
+	Route::resource('messages','MessagesController');
 	
 });
 

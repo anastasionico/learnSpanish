@@ -26,4 +26,18 @@ class MessagesController extends Controller
         return redirect()->back();
         
     }
+
+    public function index()
+    {
+        $messages = Message::all();
+    
+        return view('admin/messages/index', compact('messages'));
+    }
+
+    public function destroy(Message $message)
+    {
+        $message->delete();
+
+        return redirect('/admin/messages');
+    }
 }
