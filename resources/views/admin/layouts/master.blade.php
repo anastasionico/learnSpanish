@@ -8,7 +8,8 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- Favicon icon -->
-      <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="{{ asset('img/faviconAdmin.ico') }}">
+      
       <title>Matrix Template - The Ultimate Multipurpose admin template</title>
       <!-- Custom CSS -->
       <link href="{{asset('admin/assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">

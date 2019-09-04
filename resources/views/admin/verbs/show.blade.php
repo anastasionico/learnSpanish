@@ -68,11 +68,6 @@
                 <a class="card-header link" data-toggle="collapse" data-parent="#accordian-4" href="#Toggle-{{$toggleIncrement}}" aria-expanded="false" aria-controls="Toggle-{{$toggleIncrement}}">
                   <i class="seticon fa fa-arrow-right" aria-hidden="true"></i>
                   <span>{{$tense->name}}</span>
-                  @if($tense->is_free == 0)
-                    <i class="fas fa-money-bill"></i>
-                  @else
-                    <i class="far fa-smile"></i>
-                  @endif
                 </a>  
                 <div>
                   <a href="/admin/verbs/{{$verb->id}}/tenses/{{$tense->id}}/edit" class="float-right btn btn-info btn-sm d-inline" style="margin:-2rem 4.5rem 0 0; cursor:pointer;">

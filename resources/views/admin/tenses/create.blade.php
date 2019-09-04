@@ -25,6 +25,7 @@
                 <br>
                 <input type="hidden" name="verb_id" value="{{$verb->id}}">
                 <input type="hidden" name="sequence_number" value="1">
+                <input type="hidden" name="is_free" value="1">
 
                 <div class="form-group row">
                     <label for="name" class="col-sm-3 text-right control-label col-form-label">Name <sub>(Required)</sub></label>
@@ -33,12 +34,12 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     <label for="is_free" class="col-sm-3 text-right control-label col-form-label">Free to Play <sub>(Required)</sub></label>
                     <div class="col-sm-1">
                         <input type="checkbox" class="form-control {{$errors->has('is_free')? 'is-invalid' : ''}}" id="is_free"  name='is_free' value="1" checked>
                     </div>
-                </div>
+                </div> --}}
               </div>
               <div class="border-top">
                 <div class="card-body">

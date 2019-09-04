@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     <label for="is_free" class="col-sm-3 text-right control-label col-form-label">Free to Play <sub>(Required)</sub></label>
                     <div class="col-sm-1">
                         <input 
@@ -46,7 +46,8 @@
                           {{ ($tense->is_free == 1)? 'checked' : ''}}
                         >
                     </div>
-                </div>
+                </div> --}}
+                <input type="hidden" name="is_free" value="1">
               </div>
               <div class="border-top">
                 <div class="card-body">
