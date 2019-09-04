@@ -17,17 +17,17 @@
         <div class="col-sm-12 col-lg-8 bg-white rounded">
             <div class="row">
                 <div class="col-12 p-3 rounded">
-                    <h4>{{ $conjugation->tense }}</h4>
+                    <h4>{{ strtolower($conjugation->tense) }}</h4>
                     <div class="row">
                         <div class="col-sm-12 col-lg-8">
-                            <h1>{{ $conjugation->verb_spa }}</h1>
+                            <h1>{{ strtolower($conjugation->verb_spa) }}</h1>
                         </div>
                         <div class="col-sm-12 col-lg-4 text-right verb-eng">
-                            <h3><i>To {{ $conjugation->verb_eng }}</i></h3>
+                            <h3><i>to {{ strtolower($conjugation->verb_eng) }}</i></h3>
                         </div>
                     </div>
                     
-                    <h5>{{ $conjugation->pronoun }}</h5>
+                    <h5>{{ strtolower($conjugation->pronoun) }}</h5>
                     <form action="" method="POST" class="clearfix" id="quizForm">
                     {{-- <form action="/valuateAnswer" method="POST" class="clearfix"> --}}
                         @csrf
@@ -52,7 +52,7 @@
 
                                         " 
                                         id="name" 
-                                        placeholder="Insert Your Answer ..." 
+                                        placeholder="insert your answer ..." 
                                         {{-- placeholder="{{ $conjugation->name }}"  --}}
                                         name='answer' autofocus autocomplete="off">
                                 </div>

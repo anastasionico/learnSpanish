@@ -14,7 +14,7 @@
                 @foreach($tenses as $tense)
                     <div class="row py-1">
                         <div class="col-8 pl-5">
-                            {{ $tense }}
+                            {{ strtolower($tense) }}
                         </div>
                         <div class="col-4">
                             <label class="switch">
