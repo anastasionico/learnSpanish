@@ -25,11 +25,11 @@
                         <th scope="row">{{$message->id}}</th>
                         <td>{{$message->name}}</td>
                         <td>{{$message->email}}</td>
-                        <td>{{$message->message}}</td>
+                        <td style="max-width: 380px">{{$message->message}}</td>
                         <td>
-                          {{-- <a href="messages/{{$message->id}}/edit" class="btn btn-info btn-sm d-inline" style="margin:0.4rem;cursor:pointer;">
-                            <i class="fas fa-pencil-alt"></i>
-                          </a>     --}}
+                          <a href="mailto:{{$message->email}}?Subject=From Espapaya" target="_top" class="btn btn-info btn-sm d-inline">
+                                <i class="fas fa-envelope"></i>
+                          </a>
                           
                           <form method="POST" action="messages/{{$message->id}}" class="d-inline">
                             @method('DELETE')
