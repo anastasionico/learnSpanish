@@ -63,6 +63,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::get("verbs/{verb}/tenses/create", "TensesController@create");
 	Route::get("verbs/{verb}/tenses/{tense}/edit", "TensesController@edit");
 	Route::get("verbs/{verb}/tenses/{tense}/conjugation/create", "ConjugationsController@create");
+	Route::get('verb/exportcsv', 'VerbsController@exportCsv');
 
 	Route::resource('tenses','TensesController');
 	Route::resource('conjugation','ConjugationsController');
@@ -83,6 +84,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	
 	Route::get('messages', 'MessagesController@index');
 	Route::resource('messages','MessagesController');
+
+
 	
 });
 

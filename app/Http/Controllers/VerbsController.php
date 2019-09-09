@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Verb;
 
+
 class VerbsController extends Controller
 {
     /**
@@ -116,5 +117,11 @@ class VerbsController extends Controller
         $verb->delete();
         
         return redirect('admin/verbs');
+    }
+
+    public  function exportCsv() {
+        $file= public_path(). "/file/template.csv";
+        return response()->download($file);
+        
     }
 }
