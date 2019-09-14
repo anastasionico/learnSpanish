@@ -39,6 +39,7 @@ class VerbsController extends Controller
      */
     public function store(Request $request)
     {
+        
         $is_active = (request()->has('is_active'))? 1 : 0;
     
         $request->validate([
@@ -119,9 +120,11 @@ class VerbsController extends Controller
         return redirect('admin/verbs');
     }
 
-    public  function exportCsv() {
-        $file= public_path(). "/file/template.csv";
-        return response()->download($file);
-        
-    }
+    
+
+    
+
+    
+
+    
 }

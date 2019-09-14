@@ -1,5 +1,4 @@
 @extends('admin/layouts.master')
-
 @section('page-wrapper')
   <div class="page-wrapper">
     <div class="container-fluid">
@@ -9,7 +8,8 @@
                 <div class="card-body">
                     <h1 class="card-title m-b-0">Verbs</h1>
                     <a href="/admin/verbs/create" class="btn btn-primary btn-sm">Create</a>
-                    <a href="/admin/verb/exportcsv" class="btn btn-info btn-sm">Download Template</a>
+                    <a href="/admin/csv/exportfile" class="btn btn-info btn-sm">Download Template</a>
+                    <a href="/admin/csv/importcsv" class="btn btn-info btn-sm">Upload Template</a>
                 </div>
                 <div class="">
                 <table class="table">
