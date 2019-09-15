@@ -124,20 +124,20 @@ class CsvController extends Controller
 
     public function importConjugationFromCsv(int $tense_id, array $row) :int
     {
-      	$is_irregular = ($row[2])? 1 : 0 ;
+    	$is_irregular = ($row[3] === 'true'|| $row[3] === 'TRUE')? 1 : 0 ;
       	$newConjugation = new \Illuminate\Http\Request();  
 		$newConjugation->replace([
             'tense_id' => $tense_id,
-            'pronoun' => $row[1],
-            'name' => $row[2],
+            'pronoun' => mb_convert_encoding($row[1], "UTF-8"),
+            'name' => mb_convert_encoding($row[2], "UTF-8"),
             'is_active' => 0,
-            'is_free' => 0,
+            'is_free' => 2,
             'is_irregular' => $is_irregular,
 		]);
 
 		$newConjugation->validate([
             'tense_id' => ['required'],
-            'pronoun' => ['required','string'],
+            'pronoun' => ['string'],
             'name' => ['required','string'],
             'is_free' => ['required','int'],
         ]);
@@ -152,7 +152,7 @@ class CsvController extends Controller
             'is_free' => $newConjugation->is_free,
             'is_irregular' => $newConjugation->is_irregular,
         ]);
-
+        
         if(is_integer($conjugationCreated->id)){
             return $conjugationCreated->id;
         }
