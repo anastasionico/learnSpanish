@@ -8,8 +8,12 @@
                 <div class="card-body">
                     <h1 class="card-title m-b-0">Verbs</h1>
                     <a href="/admin/verbs/create" class="btn btn-primary btn-sm">Create</a>
-                    <a href="/admin/csv/exportfile" class="btn btn-info btn-sm">Download Template</a>
-                    <a href="/admin/csv/importcsv" class="btn btn-info btn-sm">Upload Template</a>
+                    <a href="/admin/csv/exportfile" class="btn btn-info btn-sm">
+                      <i class="fas fa-file-download"></i> Download Template
+                    </a>
+                    <a href="/admin/csv/importcsv" class="btn btn-info btn-sm">
+                      <i class="fas fa-file-upload"></i> Upload Template
+                    </a>
                 </div>
                 <div class="">
                 <table class="table">

@@ -27,7 +27,12 @@
                         </div>
                     </div>
                     
-                    <h5>{{ strtolower($conjugation->pronoun) }}</h5>
+                    <h5>
+                        @if(isset($conjugation->pronoun))
+                            {{ strtolower($conjugation->pronoun) }}
+                        @endif
+                    </h5>
+
                     <form action="" method="POST" class="clearfix" id="quizForm">
                     {{-- <form action="/valuateAnswer" method="POST" class="clearfix"> --}}
                         @csrf

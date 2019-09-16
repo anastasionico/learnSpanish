@@ -10,7 +10,10 @@
               
               @csrf
               <div class="card-body">              
-                <h4 class="card-title">Import new verb</h4>
+                <h4 class="card-title">Import new template</h4>
+                <small><i class="fas fa-info-circle"></i> To accept Spanish characters the imported file need to be in UTF8 format</small>
+
+                <br><br>
 
                 @if ($errors->any()) 
                   <h5>Error</h5>
