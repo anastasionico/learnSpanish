@@ -37,6 +37,9 @@ class CsvController extends Controller
                 	$conjugation_id = $this->importConjugationFromCsv($tense_id, $row);
                 } 
 
+                if($verb_id === 0 || $tense_id === 0 || $conjugation_id === 0) { 
+                    return redirect("admin/verbs")->withWarning('The CSV has been saved using incorrect format, please check the file again.');
+                }
                 $data[] = $row;
                 $i++;
             }
@@ -49,7 +52,11 @@ class CsvController extends Controller
 
     public function importVerbFromCsv(array $row) :int
     {
-      	// create a new request that will be filled with the first row of the template, validate and saved
+        if(!isset($row[1])){
+            return 0;
+        }
+
+        // create a new request that will be filled with the first row of the template, validate and saved
         $newVerb = new \Illuminate\Http\Request();        
         $newVerb->replace([
             'verb_spa' => $row[0],

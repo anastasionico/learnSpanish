@@ -7,6 +7,11 @@
             <div class="card table-responsive">
                 <div class="card-body">
                     <h1 class="card-title m-b-0">Verbs</h1>
+
+                    @if( Session::has('warning'))
+                      <div class="alert alert-danger">{{ Session::get( 'warning' ) }}</div>
+                    @endif
+
                     <a href="/admin/verbs/create" class="btn btn-primary btn-sm">Create</a>
                     <a href="/admin/csv/exportfile" class="btn btn-info btn-sm">
                       <i class="fas fa-file-download"></i> Download Template
