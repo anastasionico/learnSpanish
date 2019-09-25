@@ -33,17 +33,24 @@ class CsvController extends Controller
                 if($i === 1) {
                     $verb_id = $this->importVerbFromCsv($row);
                 } else {
-                	$tense_id = $this->importTenceFromCsv($verb_id, $row[0]);
+                    $tense_id = $this->importTenceFromCsv($verb_id, $row[0]);
                 	$conjugation_id = $this->importConjugationFromCsv($tense_id, $row);
                 } 
 
-                if($verb_id === 0 || $tense_id === 0 || $conjugation_id === 0) { 
+                if(isset($verb_id) && $verb_id === 0) {
                     return redirect("admin/verbs")->withWarning('The CSV has been saved using incorrect format, please check the file again.');
                 }
+                if(isset($tense_id) && $tense_id === 0) {
+                    return redirect("admin/tenses")->withWarning('The CSV has been saved using incorrect format, please check the file again.');
+                }
+                if(isset($conjugation_id) && $conjugation_id === 0) {
+                    return redirect("admin/tenses")->withWarning('The CSV has been saved using incorrect format, please check the file again.');
+                }
+                
                 $data[] = $row;
                 $i++;
             }
-            
+
             fclose($handle);
         }
 
@@ -55,11 +62,11 @@ class CsvController extends Controller
         if(!isset($row[1])){
             return 0;
         }
-
+        
         // create a new request that will be filled with the first row of the template, validate and saved
         $newVerb = new \Illuminate\Http\Request();        
         $newVerb->replace([
-            'verb_spa' => $row[0],
+            'verb_spa' => utf8_encode($row[0]),
             'verb_eng' => $row[1],
             'importance' => (int) $row[2],
             'is_active' => $row[3],
@@ -88,6 +95,8 @@ class CsvController extends Controller
 
     public function importTenceFromCsv(int $verb_id, string $tense) :int
     {
+        $tense = utf8_encode($tense);
+
     	// check it the tense already exists for this verb
     	$tenseExist = Tense::where('name', $tense)
            ->where('verb_id', $verb_id)
@@ -131,12 +140,12 @@ class CsvController extends Controller
 
     public function importConjugationFromCsv(int $tense_id, array $row) :int
     {
-    	$is_irregular = ($row[3] === 'true'|| $row[3] === 'TRUE')? 1 : 0 ;
+        $is_irregular = ($row[3] === 'true'|| $row[3] === 'TRUE')? 1 : 0 ;
       	$newConjugation = new \Illuminate\Http\Request();  
 		$newConjugation->replace([
             'tense_id' => $tense_id,
-            'pronoun' => mb_convert_encoding($row[1], "UTF-8"),
-            'name' => mb_convert_encoding($row[2], "UTF-8"),
+            'pronoun' => utf8_encode($row[1]),
+            'name' => utf8_encode($row[2]),
             'is_active' => 0,
             'is_free' => 2,
             'is_irregular' => $is_irregular,
@@ -149,6 +158,7 @@ class CsvController extends Controller
             'is_free' => ['required','int'],
         ]);
 
+        
            
 
         $conjugationCreated =  Conjugation::create([
