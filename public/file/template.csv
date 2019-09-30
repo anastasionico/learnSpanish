@@ -2,79 +2,59 @@ insert spanish verb here (string),insert english verb here (string),insert impor
 present,yo,insert conjugation here,insert true if irregular
 present,tú,insert conjugation here,insert true if irregular
 present,usted,insert conjugation here,insert true if irregular
-present,él,insert conjugation here,insert true if irregular
-present,ella,insert conjugation here,insert true if irregular
+present,él / ella,insert conjugation here,insert true if irregular
 present,nosotros,insert conjugation here,insert true if irregular
 present,vosotros,insert conjugation here,insert true if irregular
 present,ustedes,insert conjugation here,insert true if irregular
-present,ellos,insert conjugation here,insert true if irregular
-present,ellas,insert conjugation here,insert true if irregular
+present,ellos / ellas,insert conjugation here,insert true if irregular
 preterite,yo,insert conjugation here,insert true if irregular
 preterite,tú,insert conjugation here,insert true if irregular
 preterite,usted,insert conjugation here,insert true if irregular
-preterite,él,insert conjugation here,insert true if irregular
-preterite,ella,insert conjugation here,insert true if irregular
+preterite,él / ella,insert conjugation here,insert true if irregular
 preterite,nosotros,insert conjugation here,insert true if irregular
 preterite,vosotros,insert conjugation here,insert true if irregular
 preterite,ustedes,insert conjugation here,insert true if irregular
-preterite,ellos,insert conjugation here,insert true if irregular
-preterite,ellas,insert conjugation here,insert true if irregular
+preterite,ellos / ellas,insert conjugation here,insert true if irregular
 imperfect,yo,insert conjugation here,insert true if irregular
 imperfect,tú,insert conjugation here,insert true if irregular
 imperfect,usted,insert conjugation here,insert true if irregular
-imperfect,él,insert conjugation here,insert true if irregular
-imperfect,él,insert conjugation here,insert true if irregular
+imperfect,él / ella,insert conjugation here,insert true if irregular
 imperfect,nosotros,insert conjugation here,insert true if irregular
 imperfect,vosotros,insert conjugation here,insert true if irregular
 imperfect,ustedes,insert conjugation here,insert true if irregular
-imperfect,ellos,insert conjugation here,insert true if irregular
-imperfect,ellas,insert conjugation here,insert true if irregular
+imperfect,ellos / ellas,insert conjugation here,insert true if irregular
 future,yo,insert conjugation here,insert true if irregular
 future,tú,insert conjugation here,insert true if irregular
 future,usted,insert conjugation here,insert true if irregular
-future,él,insert conjugation here,insert true if irregular
-future,ella,insert conjugation here,insert true if irregular
+future,él / ella,insert conjugation here,insert true if irregular
 future,nosotros,insert conjugation here,insert true if irregular
 future,vosotros,insert conjugation here,insert true if irregular
 future,ustedes,insert conjugation here,insert true if irregular
-future,ellos,insert conjugation here,insert true if irregular
-future,ellas,insert conjugation here,insert true if irregular
+future,ellos / ellas,insert conjugation here,insert true if irregular
 conditional,yo,insert conjugation here,insert true if irregular
 conditional,tú,insert conjugation here,insert true if irregular
 conditional,usted,insert conjugation here,insert true if irregular
-conditional,él,insert conjugation here,insert true if irregular
-conditional,ella,insert conjugation here,insert true if irregular
+conditional,él / ella,insert conjugation here,insert true if irregular
 conditional,nosotros,insert conjugation here,insert true if irregular
 conditional,vosotros,insert conjugation here,insert true if irregular
 conditional,ustedes,insert conjugation here,insert true if irregular
-conditional,ellos,insert conjugation here,insert true if irregular
-conditional,ellas,insert conjugation here,insert true if irregular
+conditional,ellos / ellas,insert conjugation here,insert true if irregular
 present subjunctive,yo,insert conjugation here,insert true if irregular
 present subjunctive,tú,insert conjugation here,insert true if irregular
 present subjunctive,usted,insert conjugation here,insert true if irregular
-present subjunctive,él,insert conjugation here,insert true if irregular
-present subjunctive,ella,insert conjugation here,insert true if irregular
+present subjunctive,él / ella,insert conjugation here,insert true if irregular
 present subjunctive,nosotros,insert conjugation here,insert true if irregular
 present subjunctive,vosotros,insert conjugation here,insert true if irregular
-present subjunctive,ellos,insert conjugation here,insert true if irregular
-present subjunctive,ellas,insert conjugation here,insert true if irregular
+present subjunctive,ellos / ellas,insert conjugation here,insert true if irregular
 present subjunctive,ustedes,insert conjugation here,insert true if irregular
 imperfect subjunctive,yo,insert conjugation here,insert true if irregular
-imperfect subjunctive,yo,insert conjugation here,insert true if irregular
-imperfect subjunctive,tú,insert conjugation here,insert true if irregular
 imperfect subjunctive,tú,insert conjugation here,insert true if irregular
 imperfect subjunctive,usted,insert conjugation here,insert true if irregular
-imperfect subjunctive,usted,insert conjugation here,insert true if irregular
-imperfect subjunctive,él,insert conjugation here,insert true if irregular
-imperfect subjunctive,ella,insert conjugation here,insert true if irregular
-imperfect subjunctive,nosotros,insert conjugation here,insert true if irregular
+imperfect subjunctive,él / ella,insert conjugation here,insert true if irregular
 imperfect subjunctive,nosotros,insert conjugation here,insert true if irregular
 imperfect subjunctive,vosotros,insert conjugation here,insert true if irregular
-imperfect subjunctive,vosotros,insert conjugation here,insert true if irregular
 imperfect subjunctive,ustedes,insert conjugation here,insert true if irregular
-imperfect subjunctive,ustedes,insert conjugation here,insert true if irregular
-imperfect subjunctive,ellos,insert conjugation here,insert true if irregular
-imperfect subjunctive,ellas,insert conjugation here,insert true if irregular
+imperfect subjunctive,ellos / ellas,insert conjugation here,insert true if irregular
 imperative affirmative,tú,insert conjugation here,insert true if irregular
 imperative affirmative,usted,insert conjugation here,insert true if irregular
 imperative affirmative,nosotros,insert conjugation here,insert true if irregular
