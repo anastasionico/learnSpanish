@@ -1,4 +1,4 @@
-insert spanish verb here (string),insert english verb here (string),insert importance ranking (integer),insert true if the verb will be active straight away
+insert spanish verb here (string),insert english verb here (string),insert importance ranking (1not -2fairly -3very),insert true if the verb will be active straight away
 present,yo,insert conjugation here,insert true if irregular
 present,tú,insert conjugation here,insert true if irregular
 present,usted,insert conjugation here,insert true if irregular
