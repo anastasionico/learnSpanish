@@ -38,9 +38,13 @@
                 {{-- <a href='/quiz' class="">
                     Start
                 </a> --}}
-                <a href='/pricing' class="button bg-orange c-orange mx-1">
+
+
+
+                {{-- This page has been temporarily hidden until Ian wants to unlock it --}}
+                {{-- <a href='/pricing' class="button bg-orange c-orange mx-1">
                     Sign Up
-                </a>
+                </a> --}}
             </div>
             <div class="col-sm-12 col-lg-4"></div>
         </div>

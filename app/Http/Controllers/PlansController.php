@@ -90,6 +90,7 @@ class PlansController extends Controller
 
 	public function pricing()
 	{
+        $userSubscribed = false;
         $plans = Plan::all();
 
         $user = Auth::user();
