@@ -1,4 +1,4 @@
-insert spanish verb here (string),insert english verb here (string),insert importance ranking (1not -2fairly -3very),insert true if the verb will be active straight away
+insert spanish verb here (string),insert english verb here (string),insert importance ranking (integer),insert true if the verb will be active straight away
 present,yo,insert conjugation here,insert true if irregular
 present,tú,insert conjugation here,insert true if irregular
 present,usted,insert conjugation here,insert true if irregular
@@ -47,22 +47,22 @@ present subjunctive,nosotros,insert conjugation here,insert true if irregular
 present subjunctive,vosotros,insert conjugation here,insert true if irregular
 present subjunctive,ellos/ellas,insert conjugation here,insert true if irregular
 present subjunctive,ustedes,insert conjugation here,insert true if irregular
-imperfect subjunctive,yo,insert conjugation here,insert true if irregular
-imperfect subjunctive,tú,insert conjugation here,insert true if irregular
-imperfect subjunctive,usted,insert conjugation here,insert true if irregular
-imperfect subjunctive,él/ella,insert conjugation here,insert true if irregular
-imperfect subjunctive,nosotros,insert conjugation here,insert true if irregular
-imperfect subjunctive,vosotros,insert conjugation here,insert true if irregular
-imperfect subjunctive,ustedes,insert conjugation here,insert true if irregular
-imperfect subjunctive,ellos/ellas,insert conjugation here,insert true if irregular
-imperfect subjunctive,yo,insert conjugation here,insert true if irregular
-imperfect subjunctive,tú,insert conjugation here,insert true if irregular
-imperfect subjunctive,usted,insert conjugation here,insert true if irregular
-imperfect subjunctive,él/ella,insert conjugation here,insert true if irregular
-imperfect subjunctive,nosotros,insert conjugation here,insert true if irregular
-imperfect subjunctive,vosotros,insert conjugation here,insert true if irregular
-imperfect subjunctive,ustedes,insert conjugation here,insert true if irregular
-imperfect subjunctive,ellos/ellas,insert conjugation here,insert true if irregular
+imperfect subjunctive 1,yo,insert conjugation here,insert true if irregular
+imperfect subjunctive 1,tú,insert conjugation here,insert true if irregular
+imperfect subjunctive 1,usted,insert conjugation here,insert true if irregular
+imperfect subjunctive 1,él/ella,insert conjugation here,insert true if irregular
+imperfect subjunctive 1,nosotros,insert conjugation here,insert true if irregular
+imperfect subjunctive 1,vosotros,insert conjugation here,insert true if irregular
+imperfect subjunctive 1,ustedes,insert conjugation here,insert true if irregular
+imperfect subjunctive 1,ellos/ellas,insert conjugation here,insert true if irregular
+imperfect subjunctive 2,yo,insert conjugation here,insert true if irregular
+imperfect subjunctive 2,tú,insert conjugation here,insert true if irregular
+imperfect subjunctive 2,usted,insert conjugation here,insert true if irregular
+imperfect subjunctive 2,él/ella,insert conjugation here,insert true if irregular
+imperfect subjunctive 2,nosotros,insert conjugation here,insert true if irregular
+imperfect subjunctive 2,vosotros,insert conjugation here,insert true if irregular
+imperfect subjunctive 2,ustedes,insert conjugation here,insert true if irregular
+imperfect subjunctive 2,ellos/ellas,insert conjugation here,insert true if irregular
 affirmative imperative,tú,insert conjugation here,insert true if irregular
 affirmative imperative,usted,insert conjugation here,insert true if irregular
 affirmative imperative,nosotros,insert conjugation here,insert true if irregular
