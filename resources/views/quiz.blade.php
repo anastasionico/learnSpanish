@@ -112,10 +112,27 @@
             </div>
             <div class="col-sm-12 col-lg-8 answer-outcome-bottom-info">
                 <small>Correct answer:</small>
-                <b class="mb-0 answer-outcome-bottom-english">Yo miento</b>
-                <a href="#" class="button button-small border-orange c-orange bg-empty button-orange answer-outcome-bottom-report position-absolute">
-                    <i class="fas fa-flag"></i> Report
-                </a>
+                <b class="mb-0 answer-outcome-bottom-english">&nbsp;</b>
+
+                <form method="POST" action="/messages/add">
+                    @csrf
+                    
+                    <div class="form-group m-0 mb-3">
+                        <input type="hidden" class="form-control p-0" id="name" name="name" value="{{ Auth::user()->name }}">
+                    </div>
+                    <div class="form-group m-0 mb-3">
+                        <input type="hidden" class="form-control p-0" id="email" name="email" value="{{ Auth::user()->email }}">
+                    </div>
+                    
+
+                    <div class="form-group m-0 mb-3">
+                        <input type="hidden" class="form-control p-0" id="message" name="message" value="user {{ Auth::user()->name }} ({{ Auth::user()->email }}) reported error with {{ strtolower($conjugation->verb_spa) }} of {{ strtolower($conjugation->verb_spa) }} on {{ $conjugation->name }}">
+                    </div>
+                    <button type="submit" class="button button-small border-orange c-orange bg-empty button-orange answer-outcome-bottom-report position-absolute">
+                        <i class="fas fa-flag"></i> Report
+                    </button>
+                </form>
+            
             </div>
             <div class="col-sm-12 col-lg-2 answer-outcome-bottom-continue">
                 <a class="button border-orange c-orange bg-empty button-orange answer-outcome-bottom-continue_a">Continue</a>
@@ -139,9 +156,26 @@
             <div class="col-sm-12 col-lg-8 answer-outcome-bottom-info ">
                 <small>&nbsp;</small>
                 <b class="mb-0 answer-outcome-bottom-english">&nbsp;</b>
-                <a href="#" class="button button-small border-greenLight c-greenLight bg-empty button-greenLight answer-outcome-bottom-report position-absolute">
-                    <i class="fas fa-flag"></i> Report
-                </a>
+                
+                <form method="POST" action="/messages/add">
+                    @csrf
+                    
+                    <div class="form-group m-0 mb-3">
+                        <input type="hidden" class="form-control p-0" id="name" name="name" value="{{ Auth::user()->name }}">
+                    </div>
+                    <div class="form-group m-0 mb-3">
+                        <input type="hidden" class="form-control p-0" id="email" name="email" value="{{ Auth::user()->email }}">
+                    </div>
+                    
+
+                    <div class="form-group m-0 mb-3">
+                        <input type="hidden" class="form-control p-0" id="message" name="message" value="user {{ Auth::user()->name }} ({{ Auth::user()->email }}) reported error with {{ strtolower($conjugation->verb_spa) }} of {{ strtolower($conjugation->verb_spa) }} on {{ $conjugation->name }}">
+                    </div>
+                    <button type="submit" class="button button-small border-orange c-orange bg-empty button-orange answer-outcome-bottom-report position-absolute">
+                        <i class="fas fa-flag"></i> Report
+                    </button>
+                </form>
+
             </div>
             <div class="col-sm-12 col-lg-2 answer-outcome-bottom-continue">
                 <a class="button border-greenLight c-greenLight bg-empty button-greenLight answer-outcome-bottom-continue_a">Continue</a>

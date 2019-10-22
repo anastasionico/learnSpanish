@@ -9,7 +9,8 @@ class MessagesController extends Controller
 {
     public function store(Request $request)
     {
-     	$request->validate([
+        // dd($request->all());
+        $request->validate([
             'name' => ['required','string'],
             'email' => ['required','email:rfc,dns'],
             'message' => ['required','string'],

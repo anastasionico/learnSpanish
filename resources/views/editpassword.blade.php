@@ -11,13 +11,13 @@
                 
                 <h4 class="c-greenLight">Update Password</h4>
                 <div class="form-group row">
-                    <label for="password" class="col-sm-3 text-right control-label col-form-label">Password</label>
+                    <label for="password" class="col-sm-3 text-right control-label col-form-label">Type new password</label>
                     <div class="col-sm-4">
                         <input type="password" class="form-control" id="password" name='password' value="{{Auth::user()->password}}" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="password_confirmation" class="col-sm-3 text-right control-label col-form-label">Confirm Password</label>
+                    <label for="password_confirmation" class="col-sm-3 text-right control-label col-form-label">Confirm new password</label>
                     <div class="col-sm-4">
                         <input type="password" class="form-control" id="password_confirmation" name='password_confirmation' required>
                     </div>
