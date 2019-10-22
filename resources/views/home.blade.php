@@ -13,7 +13,7 @@
             </span>
             <div class="position-absolute text-center pb-4 salesPitch"  style="bottom: 0; left: 0; right: 0;">
                 <p class="c-white">
-                    Learn Spanish Verbs. <b>More Efficiently.</b>
+                    Learn Spanish verbs. <b>More Efficiently.</b>
                 </p  class="c-white bg-orange">
                 <a href='/start-quiz' class="button bg-orange">
                     Start Today
@@ -43,7 +43,7 @@
     <div class="row bg-white c-greenLight description">
         <div class="col-sm-12 col-lg-1"></div>
         <div class="col-sm-12 col-lg-10">
-            We’ve brought together thousands of different Spanish verb forms all in one place. If you simply want to practice Spanish verbs, then <b>espapaya.com</b> is for you.
+            We’ve brought together thousands of different Spanish verb forms all in one place. If you simply want to practise Spanish verbs, then <b>espapaya.com</b> is for you.
         </div>
         <div class="col-sm-12 col-lg-1"></div>
     </div>
@@ -52,8 +52,8 @@
 @section('contentTwo')
     <div class="row text-left bg-grayLight usp">
         <div class="col-sm-12 col-lg-8">
-            <h2 class="c-orange">Verb Practice Gameplay</h2>
-            <p>Our verb practice gameplay brings together the most important Spanish verb conjugations over all tenses: present, preterite, imperfect, conditional, future, present subjunctive, imperfect subjunctives, affirmative and negative imperatives.</p>
+            <h2 class="c-orange">Verb practice gameplay</h2>
+            <p>Our verb practice gameplay brings together key Spanish verb conjugations over the most important tenses: present, preterite, imperfect, future, conditional, present subjunctive, both imperfect subjunctives, affirmative and negative imperatives, as well as the present and past participles. </p>
         </div>
         <div class="col-sm-12 col-lg-4 text-center">
             <img src="{{asset('img/home/target.png')}}" class="w-50">
@@ -67,8 +67,8 @@
             <img src="{{asset('img/home/userIcon.png')}}" class="w-50">
         </div>
         <div class="col-sm-12 col-lg-8">
-            <h2 class="c-warning">Efficient Learning</h2>
-            <p>Make your learning more efficient by creating an account; account holders can select any combination of tenses to learn, and our bots will track your learning from one session to the next.
+            <h2 class="c-warning">Efficient learning</h2>
+            <p>Make your learning more efficient by creating an account; account–holders can select any combination of tenses to learn, and our bots will track your learning from one session to the next.
             </p>
             <p>
                 <b>Click <a href="pricing">here</a> to create an account</b>we won’t use your details for our marketing unless you opt in and you can completely delete your personal details at any time.
@@ -95,7 +95,7 @@
         </div>
         <div class="col-sm-12 col-lg-8">
             <h2 class="c-alert">Ad-free learning</h2>
-            <p>Create a paid account for ad-free learning and access to our entire database of verb forms. <b>Click <a href="pricing">here</a> to create a paid account</b>
+            <p>Create a paid account for ad-free learning and access to our entire database of verb forms. <b>Click <a href="/">here</a> to create a paid account.</b>
             </p>
         </div>
     </div>
