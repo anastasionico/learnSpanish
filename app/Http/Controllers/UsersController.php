@@ -73,9 +73,9 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user = User::find($user)->first();
+        $User = User::find($user->id);
         
-        $response = $user->updateUser($request);
+        $response = $User->updateUser($request);
 
         return redirect()->action('UsersController@index');
     }

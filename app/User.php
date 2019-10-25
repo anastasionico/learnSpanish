@@ -37,7 +37,7 @@ class User extends Authenticatable
         return $this->hasMany(SpaceRepetition::class);
     }
 
-    public function updateUser($request)
+    public function updateUser(\Illuminate\Http\Request $request)
     {
         $this->name = request('name');
         $this->email = request('email');
