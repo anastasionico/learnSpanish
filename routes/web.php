@@ -21,6 +21,7 @@ Route::get('/privacy', function () {
     return view('privacy');
 });
 Route::get('/start-quiz', function () {
+	
     return view('start-quiz');
 });
 
