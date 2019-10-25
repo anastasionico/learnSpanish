@@ -47,49 +47,53 @@ Route::post("valuateAnswer", "QuizController@valuateAnswer");
 
 Route::post('messages/add', 'MessagesController@store');
 	
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-	Route::get('login', function () {
-	    return view('admin/login');
-	});
-	Route::get('index', function () {
-	    return view('admin/index');
-	});
+Route::group([
+	'prefix' => 'admin', 
+	'middleware' => ['auth', 'admin']
+	], 
+	function() {
+		Route::get('login', function () {
+		    return view('admin/login');
+		});
+		Route::get('index', function () {
+		    return view('admin/index');
+		});
 
-	
-	Route::resource('users','UsersController');
-	Route::get("users/{user}/conjugationchart", "UsersController@conjugationChart");
-	
-	Route::resource('verbs','VerbsController');
-	Route::get("verbs/{verb}/tenses/create", "TensesController@create");
-	Route::get("verbs/{verb}/tenses/{tense}/edit", "TensesController@edit");
-	Route::get("verbs/{verb}/tenses/{tense}/conjugation/create", "ConjugationsController@create");
+		
+		Route::resource('users','UsersController');
+		Route::get("users/{user}/conjugationchart", "UsersController@conjugationChart");
+		
+		Route::resource('verbs','VerbsController');
+		Route::get("verbs/{verb}/tenses/create", "TensesController@create");
+		Route::get("verbs/{verb}/tenses/{tense}/edit", "TensesController@edit");
+		Route::get("verbs/{verb}/tenses/{tense}/conjugation/create", "ConjugationsController@create");
 
-	
+		
 
 
-	Route::resource('tenses','TensesController');
-	Route::resource('conjugation','ConjugationsController');
-	Route::get('conjugation/setRegularity/{conjugation}','ConjugationsController@setRegularity');
-	Route::get('conjugation/setAvailability/{conjugation}','ConjugationsController@setAvailability');
-	Route::get('conjugation/setFormat/{conjugation}/{format}','ConjugationsController@setFormat');
-	Route::get('conjugation/setRegularityAll/{tense}/{status}','ConjugationsController@setRegularityAll');
-	Route::get('conjugation/setAvailabilityAll/{tense}/{status}','ConjugationsController@setAvailabilityAll');
-	Route::get('conjugation/setFormatAll/{tense}/{status}','ConjugationsController@setFormatAll');
-	
+		Route::resource('tenses','TensesController');
+		Route::resource('conjugation','ConjugationsController');
+		Route::get('conjugation/setRegularity/{conjugation}','ConjugationsController@setRegularity');
+		Route::get('conjugation/setAvailability/{conjugation}','ConjugationsController@setAvailability');
+		Route::get('conjugation/setFormat/{conjugation}/{format}','ConjugationsController@setFormat');
+		Route::get('conjugation/setRegularityAll/{tense}/{status}','ConjugationsController@setRegularityAll');
+		Route::get('conjugation/setAvailabilityAll/{tense}/{status}','ConjugationsController@setAvailabilityAll');
+		Route::get('conjugation/setFormatAll/{tense}/{status}','ConjugationsController@setFormatAll');
+		
 
-	Route::get('plans', 'PlansController@index');
-	Route::get('plans/create', 'PlansController@create');
-	Route::post('plans', 'PlansController@store');
-	Route::get('plans/{plan}/edit', 'PlansController@edit');
-	Route::delete('plans/{plan}', 'PlansController@destroy');
-	Route::patch('plans/{plan}', 'PlansController@update');
-	
-	Route::get('messages', 'MessagesController@index');
-	Route::resource('messages','MessagesController');
+		Route::get('plans', 'PlansController@index');
+		Route::get('plans/create', 'PlansController@create');
+		Route::post('plans', 'PlansController@store');
+		Route::get('plans/{plan}/edit', 'PlansController@edit');
+		Route::delete('plans/{plan}', 'PlansController@destroy');
+		Route::patch('plans/{plan}', 'PlansController@update');
+		
+		Route::get('messages', 'MessagesController@index');
+		Route::resource('messages','MessagesController');
 
-	Route::any('csv/exportfile', 'CsvController@exportCsv');
-	Route::get('csv/importcsv', 'CsvController@importCsv');
-	Route::post('csv/importverb', 'CsvController@importVerb');
-	
+		Route::any('csv/exportfile', 'CsvController@exportCsv');
+		Route::get('csv/importcsv', 'CsvController@importCsv');
+		Route::post('csv/importverb', 'CsvController@importVerb');
+		
 });
 

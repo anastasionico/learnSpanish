@@ -81,7 +81,14 @@ class User extends Authenticatable
         // if($this->save()) {
         //     return true;
         // }
-
     }
 
+    public function authIsAdmin(int $user) :bool {
+        $userRole = User::select('is_admin')
+            ->where('id', $user)
+            ->get()
+            ->first();
+
+        return $userRole->is_admin;
+    }
 }
