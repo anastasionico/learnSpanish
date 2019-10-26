@@ -13,7 +13,7 @@
             </span>
             <div class="position-absolute text-center pb-4 salesPitch"  style="bottom: 0; left: 0; right: 0;">
                 <p class="c-white">
-                    Learn Spanish verbs. <b>More Efficiently.</b>
+                    Learn Spanish verbs. <b>More efficiently.</b>
                 </p  class="c-white bg-orange">
                 <a href='/start-quiz' class="button bg-orange">
                     Start Today
@@ -68,10 +68,10 @@
         </div>
         <div class="col-sm-12 col-lg-8">
             <h2 class="c-warning">Efficient learning</h2>
-            <p>Make your learning more efficient by creating an account; account–holders can select any combination of tenses to learn, and our bots will track your learning from one session to the next.
+            <p>Make your learning more efficient by creating an account; account holders can select any combination of tenses to learn, and our bots will track your learning from one session to the next.
             </p>
             <p>
-                <b>Click <a href="pricing">here</a> to create an account</b>we won’t use your details for our marketing unless you opt in and you can completely delete your personal details at any time.
+                <b>Click <a href="register">here</a> to create an account</b> – we won’t use your details for our marketing unless you opt in and you can completely delete your personal details at any time.
             </p>
         </div>
     </div>
@@ -79,7 +79,7 @@
 @section('contentFour')
     <div class="row text-left bg-grayLight usp">
         <div class="col-sm-12 col-lg-8">
-            <h2 class="c-info">Durable knowledge retentions</h2>
+            <h2 class="c-info">Durable knowledge retention</h2>
             <p>Our bots use spaced repetition, revisiting information at increasing intervals of time to produce long-term durable retention of knowledge. Our advanced systems also group together identical and similar verb forms, so that you don’t waste time learning the same verb forms.</p>
         </div>
         <div class="col-sm-12 col-lg-4 text-center">

@@ -171,7 +171,7 @@
                     <div class="form-group m-0 mb-3">
                         <input type="hidden" class="form-control p-0" id="message" name="message" value="user {{ Auth::user()->name }} ({{ Auth::user()->email }}) reported error with {{ strtolower($conjugation->verb_spa) }} of {{ strtolower($conjugation->verb_spa) }} on {{ $conjugation->name }}">
                     </div>
-                    <button type="submit" class="button button-small border-orange c-orange bg-empty button-orange answer-outcome-bottom-report position-absolute">
+                    <button type="submit" class="button button-small border-greenLight c-greenLight bg-empty button-greenLight answer-outcome-bottom-report position-absolute">
                         <i class="fas fa-flag"></i> Report
                     </button>
                 </form>
