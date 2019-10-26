@@ -96,6 +96,20 @@
 @endsection
 
 @section('contentTwo')
+    @php
+        if (Auth::user() === null){
+            $name = 'visitor';
+            $email = 'visitor';
+        } else {
+            $name = Auth::user()->name;
+            $email = Auth::user()->email;
+        }
+    @endphp
+    
+    
+
+    
+
     <div id="incorrectAlert">
         <div class="row bg-orange-opaque c-orange answer-outcome-top">
             <div class="col-sm-12 col-lg-2 pt-3">
@@ -118,15 +132,14 @@
                     @csrf
                     
                     <div class="form-group m-0 mb-3">
-                        <input type="hidden" class="form-control p-0" id="name" name="name" value="{{ Auth::user()->name }}">
+                        <input type="hidden" class="form-control p-0" id="name" name="name" value="{{ $name}}">
                     </div>
                     <div class="form-group m-0 mb-3">
-                        <input type="hidden" class="form-control p-0" id="email" name="email" value="{{ Auth::user()->email }}">
+                        <input type="hidden" class="form-control p-0" id="email" name="email" value="{{ $email }}">
                     </div>
-                    
 
                     <div class="form-group m-0 mb-3">
-                        <input type="hidden" class="form-control p-0" id="message" name="message" value="user {{ Auth::user()->name }} ({{ Auth::user()->email }}) reported error with {{ strtolower($conjugation->verb_spa) }} of {{ strtolower($conjugation->verb_spa) }} on {{ $conjugation->name }}">
+                        <input type="hidden" class="form-control p-0" id="message" name="message" value="{{ $name }} ({{ $email }}) reported error with tense {{ strtolower($conjugation->tense) }} of {{ strtolower($conjugation->verb_spa) }} on conjugation: {{ $conjugation->name }}">
                     </div>
                     <button type="submit" class="button button-small border-orange c-orange bg-empty button-orange answer-outcome-bottom-report position-absolute">
                         <i class="fas fa-flag"></i> Report
@@ -161,16 +174,16 @@
                     @csrf
                     
                     <div class="form-group m-0 mb-3">
-                        <input type="hidden" class="form-control p-0" id="name" name="name" value="{{ Auth::user()->name }}">
+                        <input type="hidden" class="form-control p-0" id="name" name="name" value="{{ $name}}">
                     </div>
                     <div class="form-group m-0 mb-3">
-                        <input type="hidden" class="form-control p-0" id="email" name="email" value="{{ Auth::user()->email }}">
+                        <input type="hidden" class="form-control p-0" id="email" name="email" value="{{ $email }}">
                     </div>
-                    
 
                     <div class="form-group m-0 mb-3">
-                        <input type="hidden" class="form-control p-0" id="message" name="message" value="user {{ Auth::user()->name }} ({{ Auth::user()->email }}) reported error with {{ strtolower($conjugation->verb_spa) }} of {{ strtolower($conjugation->verb_spa) }} on {{ $conjugation->name }}">
+                        <input type="hidden" class="form-control p-0" id="message" name="message" value="{{ $name }} ({{ $email }}) reported error with tense {{ strtolower($conjugation->tense) }} of {{ strtolower($conjugation->verb_spa) }} on conjugation: {{ $conjugation->name }}">
                     </div>
+                    
                     <button type="submit" class="button button-small border-greenLight c-greenLight bg-empty button-greenLight answer-outcome-bottom-report position-absolute">
                         <i class="fas fa-flag"></i> Report
                     </button>

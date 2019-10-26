@@ -12,7 +12,7 @@ class MessagesController extends Controller
         // dd($request->all());
         $request->validate([
             'name' => ['required','string'],
-            'email' => ['required','email:rfc,dns'],
+            'email' => ['required'],
             'message' => ['required','string'],
         ]);
     
