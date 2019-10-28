@@ -41,16 +41,17 @@
             <div class="col-sm-12 col-lg-2"></div>
             <div class="col-sm-12 col-lg-8">
                 @guest
-                    <a href='/register' class="d-block mt-1">
-                        Click here to unlock more tenses and activate our bots
+                    <p class="mt-2">Sign up to unlock more tenses and activate our bots</p>
+                @endguest                
+    
+                <input type="submit" class="button button-orange-stripe border-orange c-orange bg-empty mx-1 mt-5 hover-orange" value="Start">
+            
+                @guest
+                    <a href='/register' class="button bg-orange c-orange mx-1">
+                        Sign Up
                     </a>
                 @endguest                
-                <input type="submit" class="button button-orange-stripe border-orange c-orange bg-empty mx-1 mt-5 hover-orange" value="Start">
-
-                {{-- This page has been temporarily hidden until Ian wants to unlock it --}}
-                {{-- <a href='/pricing' class="button bg-orange c-orange mx-1">
-                    Sign Up
-                </a> --}}
+            
             </div>
             <div class="col-sm-12 col-lg-2"></div>
         </div>
