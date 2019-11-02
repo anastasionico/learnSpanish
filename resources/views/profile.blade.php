@@ -26,12 +26,12 @@
                 
                 <input type="hidden" name='is_admin' value="{{Auth::user()->is_admin}}">
                 
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     <label for="marketable" class="col-sm-3 text-right control-label col-form-label">Subscribe</label>
                     <div class="col-sm-1">
                         <input type="checkbox" class="form-control" id="marketable"  name='is_marketable' value="1" {{(Auth::user()->is_marketable)? "checked":""}}>
                     </div>
-                </div>
+                </div> --}}
             
                 <div class="form-group row">
                     <label for="dob" class="col-sm-3 text-right control-label col-form-label">Date of Birth</label>
