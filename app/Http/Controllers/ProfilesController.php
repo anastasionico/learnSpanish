@@ -16,7 +16,7 @@ class ProfilesController extends Controller
 
 	public function update(Request $request)
 	{
-		$user = User::find(Auth::user())->first();
+		$user = Auth::user();
 		
 		$response = $user->updateUser($request);
 
@@ -31,6 +31,7 @@ class ProfilesController extends Controller
 
 	public function updatepassword(Request $request)
 	{
+		
 		$user = User::find(Auth::user())->first();
 		
 		$response = $user->updateUserPassword($request);

@@ -26,6 +26,7 @@
                 
                 <input type="hidden" name='is_admin' value="{{Auth::user()->is_admin}}">
                 
+                
                 {{-- <div class="form-group row">
                     <label for="marketable" class="col-sm-3 text-right control-label col-form-label">Subscribe</label>
                     <div class="col-sm-1">
