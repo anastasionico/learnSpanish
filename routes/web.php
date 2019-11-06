@@ -20,10 +20,9 @@ Route::get('/terms', function () {
 Route::get('/privacy', function () {
     return view('privacy');
 });
-Route::get('/start-quiz', function () {
-	
-    return view('start-quiz');
-});
+// Route::get('/start-quiz', function () {
+// 	return view('start-quiz');
+// });
 
 
 Route::get("/profile", "ProfilesController@edit");

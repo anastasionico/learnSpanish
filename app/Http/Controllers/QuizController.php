@@ -31,8 +31,9 @@ class QuizController extends Controller
     public function quiz(Request $request)
     {   
         $tensesAvailableInPlatform = $this->getTensesAvailableInPlatform();
-        $tensesRequestedByUser = $this->getTensesRequestedByUser($request, $tensesAvailableInPlatform);
 
+        $tensesRequestedByUser = $this->getTensesRequestedByUser($request, $tensesAvailableInPlatform);
+        
         // If the user does not choose any tense return a flash error to the start-quiz page
         if(empty($tensesRequestedByUser)){
             return back()->with('error','You need to select at least one tense');
@@ -98,9 +99,10 @@ class QuizController extends Controller
     */
     public function playFreeFormat($tensesRequestedByUser)
     {
+
         $text = 'Free Mode';	
     	// get all the conjugations that belong to the category choosen by the user
-    	$conjugations = DB::table('conjugations')
+    	$conjugationsRecords = DB::table('conjugations')
             ->join('tenses', 'tenses.id', '=', 'conjugations.tense_id')
             ->join('verbs', 'verbs.id', '=', 'tenses.verb_id')
             ->select('conjugations.*', 'tenses.name as tense', 'verbs.verb_eng as verb_eng', 'verbs.verb_spa as verb_spa')
@@ -113,14 +115,18 @@ class QuizController extends Controller
             ->whereIn('tenses.name', $tensesRequestedByUser)
 			->inRandomOrder()
             ->get();
+                
         
-        $conjugationsOrdered = $this->getConjugationRandomly($conjugations, $tensesRequestedByUser);
+        // dd($conjugationsRecords);
+        // $conjugationsOrdered = $this->getConjugationRandomly($conjugationsRecords, $tensesRequestedByUser);
         
-        $conjugation = $this->getFirstConjugation($conjugationsOrdered);
+
+        $conjugation = $this->getFirstConjugation($conjugationsRecords);
+
         if(!$conjugation){
             return back()->with('error','There are no tenses that match your request');
         }
-
+        
     	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
     }
 
@@ -128,7 +134,7 @@ class QuizController extends Controller
     {
         $text = 'Free Mode';    
         // get all the conjugations that belong to the category choosen by the user
-        $conjugations = DB::table('conjugations')
+        $conjugationsRecords = DB::table('conjugations')
             ->join('tenses', 'tenses.id', '=', 'conjugations.tense_id')
             ->join('verbs', 'verbs.id', '=', 'tenses.verb_id')
             ->select('conjugations.*', 'tenses.name as tense', 'verbs.verb_eng as verb_eng', 'verbs.verb_spa as verb_spa')
@@ -142,8 +148,9 @@ class QuizController extends Controller
             ->whereIn('tenses.name', $tensesRequestedByUser)
             ->inRandomOrder()
             ->get();
+
         
-        $conjugationsOrdered = $this->getConjugationRandomly($conjugations, $tensesRequestedByUser);
+        $conjugationsOrdered = $this->getConjugationRandomly($conjugationsRecords, $tensesRequestedByUser);
         
         $conjugation = $this->getFirstConjugation($conjugationsOrdered);
         if(!$conjugation){
@@ -194,7 +201,6 @@ class QuizController extends Controller
 
     private function getConjugationRandomly($conjugations, $tensesRequestedByUser) 
     {
-        
         // select all the conjugations the are into the space_repetition and follow the criteria choosen by the user
         $spaceRepetitionSentences = DB::table('space_repetition')
             ->join('conjugations', 'conjugations.id', '=', 'space_repetition.conjugation_id')
@@ -207,12 +213,12 @@ class QuizController extends Controller
                 ['tenses.is_free', '=', '1'],
                 ['conjugations.is_active', '=', '1'],
                 ['conjugations.is_free', '=', '1'],
-        
             ])
             ->whereIn('tenses.name', $tensesRequestedByUser)
             ->inRandomOrder()
             ->get();
-        
+
+
         // creating an array to be evaluate inside in_array in order to get all the sentences not studied yet by the user
         $sentenceStudiedByUser = [];
         foreach ($spaceRepetitionSentences as $spaceRepetitionSentence) {
