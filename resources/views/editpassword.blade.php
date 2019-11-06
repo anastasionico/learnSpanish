@@ -13,7 +13,7 @@
                 <div class="form-group row">
                     <label for="password" class="col-sm-3 text-right control-label col-form-label">Type new password</label>
                     <div class="col-sm-4">
-                        <input type="password" class="form-control" id="password" name='password' value="{{Auth::user()->password}}" required>
+                        <input type="password" class="form-control" id="password" name='password' required>
                     </div>
                 </div>
                 <div class="form-group row">
