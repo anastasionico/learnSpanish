@@ -7,7 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Cashier\Billable;
 use App\spaceRepetition;
-
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -39,9 +39,38 @@ class User extends Authenticatable
 
     public function updateUser(\Illuminate\Http\Request $request)
     {
+
         $this->name = request('name');
         $this->email = request('email');
         
+        if ($request->has('password')) {
+            $this->password = Hash::make(request('password'));
+        }
+
+        if ($request->has('dob')) {
+            $this->dob = request('dob');    
+        }
+
+        if ($request->has('card_brand')) {
+            $this->card_brand = request('card_brand');    
+        }
+
+        if ($request->has('card_last_four')) {
+            $this->card_last_four = request('card_last_four');    
+        }
+
+        if ($request->has('trial_ends_at')) {
+            $this->trial_ends_at = request('trial_ends_at');    
+        }
+
+        if ($request->has('dob')) {
+            $this->dob = request('dob');    
+        }
+
+        if ($request->has('stripe_id')) {
+            $this->stripe_id = request('stripe_id');    
+        }
+
         if ( ! $request->has('is_admin')) {
             $this->is_admin = 0;      // Do something when checkbox isn't checked.
         } else {

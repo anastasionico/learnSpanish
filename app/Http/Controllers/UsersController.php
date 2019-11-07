@@ -73,10 +73,12 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        // dd($request->all());
+
         $User = User::find($user->id);
         
         $response = $User->updateUser($request);
-
+        
         return redirect()->action('UsersController@index');
     }
 
