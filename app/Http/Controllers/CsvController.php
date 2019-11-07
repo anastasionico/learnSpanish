@@ -164,7 +164,7 @@ class CsvController extends Controller
         $conjugationCreated =  Conjugation::create([
             'tense_id' => $newConjugation->tense_id,
             'pronoun' => $newConjugation->pronoun,
-            'name' => $newConjugation->name,
+            'name' => trim($newConjugation->name),
             'is_active' => $newConjugation->is_active,
             'is_free' => $newConjugation->is_free,
             'is_irregular' => $newConjugation->is_irregular,
