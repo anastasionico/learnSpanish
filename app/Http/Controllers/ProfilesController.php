@@ -31,8 +31,7 @@ class ProfilesController extends Controller
 
 	public function updatepassword(Request $request)
 	{
-		
-		$user = User::find(Auth::user())->first();
+		$user = Auth::user();
 		
 		$response = $user->updateUserPassword($request);
 

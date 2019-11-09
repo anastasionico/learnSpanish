@@ -27,7 +27,7 @@
                 <div class="form-group row">
                     <label for="password" class="col-sm-3 text-right control-label col-form-label">Password</label>
                     <div class="col-sm-4">
-                        <input type="password" class="form-control" id="password" name='password'  value="{{$user->password}}">
+                        <input type="password" class="form-control" id="password" name='password'>
                     </div>
                 </div>
                 <div class="form-group row">
