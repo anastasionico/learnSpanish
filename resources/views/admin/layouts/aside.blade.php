@@ -39,7 +39,11 @@
             </li>                     
             <li class="sidebar-item"> 
                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/messages" aria-expanded="false">
-               <i class="mdi mdi-message-text"></i><span class="hide-menu">Messages</span>
+                  <i class="mdi mdi-message-text"></i>
+                  <span class="hide-menu">Messages</span>
+                  @if($messageCount > 0) 
+                      <small style="margin-left:1rem;background: red;border-radius: 5%;padding: 0 1rem">{{ $messageCount}}</small>
+                  @endif
                </a>
             </li>                     
 {{--             <li class="sidebar-item"> 

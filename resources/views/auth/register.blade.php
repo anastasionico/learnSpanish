@@ -61,7 +61,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="newsletter" class="col-md-4 col-form-label text-md-right">{{ __('Register to the newsletter') }}</label>
+                            <label for="newsletter" class="col-md-4 col-form-label text-md-right">{{ __('Opt in to receive emails from espapaya.com') }}</label>
 
                             <div class="col-md-6">
                                 <label class="switch">

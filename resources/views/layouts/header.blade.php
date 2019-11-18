@@ -42,9 +42,9 @@
                                         <i class="fas fa-user"></i> Profile
                                     </a>
 
-                                    <a href="pricing" class="dropdown-item">
+                                    {{-- <a href="pricing" class="dropdown-item">
                                         <i class="fas fa-puzzle-piece"></i></i> Plans
-                                    </a>                                    
+                                    </a>                                     --}}
 
                                     <a class="dropdown-item" 
                                         href="{{ route('logout') }}"
