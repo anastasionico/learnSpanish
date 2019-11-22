@@ -23,7 +23,7 @@ class MessagesController extends Controller
             'message' => request('message'),
         ]);
 
-        $request->session()->flash('success', 'Message Send');
+        $request->session()->flash('success', 'Message Sent');
         return redirect()->back();
         
     }

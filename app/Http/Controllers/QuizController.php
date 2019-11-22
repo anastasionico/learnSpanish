@@ -124,7 +124,7 @@ class QuizController extends Controller
         $conjugation = $this->getFirstConjugation($conjugationsRecords);
 
         if(!$conjugation){
-            return back()->with('error','There are no tenses that match your request');
+            return back()->with('error','There are no conjugations that match your request');
         }
         
     	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
@@ -154,7 +154,7 @@ class QuizController extends Controller
         
         $conjugation = $this->getFirstConjugation($conjugationsOrdered);
         if(!$conjugation){
-            return back()->with('error','There are no tenses that match your request');
+            return back()->with('error','There are no conjugations that match your request');
         }
 
 
@@ -184,7 +184,7 @@ class QuizController extends Controller
 
         $conjugation = $this->getFirstConjugation($conjugationsOrdered);
         if(!$conjugation){
-            return back()->with('error','There are no tenses that match your request');
+            return back()->with('error','There are no conjugations that match your request');
         }
 
     	return view('quiz', compact('text', 'conjugation','tensesRequestedByUser'));
