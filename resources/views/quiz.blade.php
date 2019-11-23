@@ -8,8 +8,8 @@
             @if($text == 'Free Mode')
                 <div class="quiz-ad">
                     <h3>{{$text}}</h3>    
-                    <a href='/pricing' class="button bg-orange">
-                        Sign Up
+                    <a href='/register' class="button bg-orange">
+                        Register
                     </a>    
                 </div>
             @endif
@@ -86,8 +86,8 @@
                 @if($text == 'Free Mode')
                 <div class="quiz-ad">
                     <h3>{{$text}}</h3>    
-                    <a href='/pricing' class="button bg-orange">
-                        Sign Up
+                    <a href='/register' class="button bg-orange">
+                        Register
                     </a>    
                 </div>
             @endif
