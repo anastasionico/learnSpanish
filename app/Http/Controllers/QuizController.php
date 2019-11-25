@@ -132,7 +132,7 @@ class QuizController extends Controller
 
     public function playFreeAccountFormat($tensesRequestedByUser)
     {
-        $text = 'Free Mode';    
+        $text = 'logged-in Mode';    
         // get all the conjugations that belong to the category choosen by the user
         $conjugationsRecords = DB::table('conjugations')
             ->join('tenses', 'tenses.id', '=', 'conjugations.tense_id')

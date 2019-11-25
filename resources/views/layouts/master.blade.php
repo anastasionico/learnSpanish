@@ -25,6 +25,13 @@
 
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
     
+    {{-- recaptcha --}}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
+    </script>
 </head>
 <body>
     <div id="app">

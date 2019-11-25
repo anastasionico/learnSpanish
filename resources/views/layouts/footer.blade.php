@@ -27,7 +27,12 @@
                         <textarea name='message' class="form-control p-0" id="footerMessage" rows="1">Message
                         </textarea>
                     </div>
-                    <button type="submit" class="button border-greenLight c-greenLight bg-empty">
+                    
+                    <button 
+                        type="submit" 
+                        data-sitekey="6Le_lcQUAAAAAMcr6wq_Zf5eRcPFJ7W6gEhux-Ux" 
+                        data-callback='onSubmit'
+                        class="g-recaptcha button border-greenLight c-greenLight bg-empty">
                         <b>Get In Touch</b>
                     </button>
                 </form>
