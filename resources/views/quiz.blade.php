@@ -12,6 +12,10 @@
                         Register
                     </a>    
                 </div>
+            @elseif($text == 'Logged-in Mode')
+                <div class="quiz-ad">
+                    <h3>Free Mode</h3>    
+                </div>
             @endif
         </div>
         <div class="col-sm-12 col-lg-8 bg-white rounded">
@@ -83,12 +87,16 @@
         <div class="col-sm-12 col-lg-2">
             <br>
             <br>
-                @if($text == 'Free Mode')
+            @if($text == 'Free Mode')
                 <div class="quiz-ad">
                     <h3>{{$text}}</h3>    
                     <a href='/register' class="button bg-orange">
                         Register
                     </a>    
+                </div>
+            @elseif($text == 'Logged-in Mode')
+                <div class="quiz-ad">
+                    <h3>Free Mode</h3>    
                 </div>
             @endif
         </div>
