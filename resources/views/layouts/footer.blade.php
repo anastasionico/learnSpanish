@@ -12,7 +12,7 @@
             </div>
             <div class="col-sm-12 col-lg-4  text-left">
                 <h5 class="mb-3">Contact Us</h5>
-                <form method="POST" action="/messages/add">
+                <form method="POST" action="/messages/add" id="FooterForm">
                     @csrf
                     
                     <div class="form-group m-0 mb-3">
