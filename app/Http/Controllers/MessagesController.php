@@ -24,18 +24,18 @@ class MessagesController extends Controller
             'message' => request('message'),
         ]);
 
-        $this->sendEmail(request('name'), request('message'));
+        $this->sendEmail(request('name'), request('email'), request('message'));
 
         $request->session()->flash('success', 'Message Sent');
         return redirect()->back();
         
     }
 
-    public function sendEmail($name, $message)
+    public function sendEmail($contactName, $contactEmail, $contactMessage)
     {
-        Mail::raw($message, function ($mail) use($name) {
+        Mail::raw($contactMessage, function ($mail) use($contactName, $contactEmail) {
             $mail->to(env('MAIL_USERNAME'))
-            ->subject("Message from $name on Espapaya.com");
+            ->subject("Message from $contactName, ($contactEmail) on Espapaya.com");
         });
     }
 
